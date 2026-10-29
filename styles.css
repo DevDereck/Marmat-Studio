@@ -1,0 +1,360 @@
+/* ==========================================================================
+   MARMAT STUDIO 
+   ========================================================================== */
+
+:root {
+  /* Paleta Lila Pastel (Color Principal de Instagram @marmatstudio.cr) */
+  --color-lila-primary: #A378D8;
+  --color-lila-hover: #9161C9;
+  --color-lila-dark: #7644B2;
+  --color-lila-light: #CBB0F2;
+  --color-lila-soft: #F3EDFC;
+  --color-lila-tint: #FAF6FE;
+
+  /* Paleta Verde Agua / Menta (Color Secundario) */
+  --color-mint-secondary: #32B3A1;
+  --color-mint-hover: #269E8E;
+  --color-mint-dark: #1C7D70;
+  --color-mint-light: #65D5C6;
+  --color-mint-soft: #E4F7F4;
+  --color-mint-tint: #F2FCFB;
+
+  /* Superficies y Neutros */
+  --color-bg-body: #FAF8FD;
+  --color-bg-card: #FFFFFF;
+  --color-border: #EDE6F7;
+  --color-ink-primary: #231B2D;
+  --color-ink-muted: #645677;
+  --color-ink-light: #9B8EA9;
+  --color-gold: #C59A3F;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  background-color: var(--color-bg-body);
+  color: var(--color-ink-primary);
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: #E2D3F9;
+  color: #55278D;
+}
+
+/* Tipografía Editorial */
+.font-editorial {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* Glassmorphism de la Barra de Navegación */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Enlaces del Nav con subrayado elegante en hover */
+.nav-link {
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-lila-primary), var(--color-mint-secondary));
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(-50%);
+  border-radius: 9999px;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: var(--color-lila-primary);
+}
+
+/* Sombras suaves y luminosas de autor */
+.shadow-lila-soft {
+  box-shadow: 0 10px 28px -8px rgba(163, 120, 216, 0.26);
+}
+
+.shadow-lila-hover:hover {
+  box-shadow: 0 16px 36px -10px rgba(163, 120, 216, 0.36);
+  transform: translateY(-2px);
+}
+
+.shadow-mint-soft {
+  box-shadow: 0 10px 28px -8px rgba(50, 179, 161, 0.24);
+}
+
+.shadow-card-luxury {
+  box-shadow: 0 18px 40px -12px rgba(45, 27, 72, 0.07);
+}
+
+/* Animaciones flotantes sutiles */
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+.animate-float-gentle {
+  animation: floatGentle 5s ease-in-out infinite;
+}
+
+/* Scrollbar personalizada para selectores de categorías */
+.custom-scrollbar::-webkit-scrollbar {
+  height: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #F1ECF8;
+  border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #D4BFF2;
+  border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #B692E6;
+}
+
+/* ==========================================================================
+   ANIMACIÓN PURA CSS
+   ========================================================================== */
+
+@keyframes marmatMarquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.testimonials-marquee-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  user-select: none;
+}
+
+.marquee-track {
+  display: flex !important;
+  width: max-content !important;
+  animation: marmatMarquee 38s linear infinite !important;
+  will-change: transform;
+}
+
+/* Pausar al posar el mouse sobre cualquier tarjeta */
+.marquee-track:hover,
+.marquee-track.is-paused {
+  animation-play-state: paused !important;
+}
+
+/* Invertir dirección temporalmente si se presiona "Anterior" */
+.marquee-track.reverse-marquee {
+  animation-direction: reverse !important;
+}
+
+/* Acelerar suavemente si se presiona "Siguiente" */
+.marquee-track.fast-marquee {
+  animation-duration: 15s !important;
+}
+
+.marquee-group {
+  display: flex;
+  gap: 1.5rem;
+  padding-right: 1.5rem;
+  flex-shrink: 0;
+}
+
+/* Tarjetas de Testimonios del Carrusel */
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 310px;
+  min-width: 310px;
+  height: 100%;
+  min-height: 270px;
+  flex-shrink: 0;
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 1.5rem;
+  padding: 1.75rem;
+  transition: transform 0.3s cubic-bezier(0.2, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.2, 0, 0.2, 1), border-color 0.3s ease;
+}
+
+@media (min-width: 640px) {
+  .testimonial-card {
+    width: 380px;
+    min-width: 380px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .testimonial-card {
+    width: 410px;
+    min-width: 410px;
+  }
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-lila-light);
+  box-shadow: 0 20px 42px -12px rgba(163, 120, 216, 0.22);
+}
+
+/* Tarjetas de Galería Instagram con zoom suave - LEGACY (mantenido por compatibilidad) */
+.insta-card {
+  position: relative;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  background-color: #F1ECF8;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.insta-card img {
+  transition: transform 0.6s cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+.insta-card:hover img {
+  transform: scale(1.08);
+}
+
+.insta-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px -8px rgba(35, 27, 45, 0.14);
+}
+
+/* ==========================================================================
+   GALERÍA DE PRODUCTOS
+   ========================================================================== */
+
+@keyframes galleryFwd {
+  0%   { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes galleryRev {
+  0%   { transform: translate3d(-50%, 0, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
+.gallery-marquee-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.gallery-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+.gallery-track--fwd {
+  animation: galleryFwd 42s linear infinite;
+}
+
+.gallery-track--rev {
+  animation: galleryRev 36s linear infinite;
+}
+
+.gallery-track:hover {
+  animation-play-state: paused;
+}
+
+.gallery-group {
+  display: flex;
+  gap: 1rem;
+  padding-right: 1rem;
+  flex-shrink: 0;
+}
+
+/* Tarjeta de galería individual */
+.gallery-card {
+  position: relative;
+  flex-shrink: 0;
+  width: 240px;
+  height: 240px;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  background-color: #F1ECF8;
+  cursor: pointer;
+  box-shadow: 0 4px 16px -4px rgba(35, 27, 45, 0.10);
+}
+
+@media (min-width: 640px) {
+  .gallery-card {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+/* Overlay con nombre y botón CTA al hacer hover */
+.gallery-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(35, 27, 45, 0.78) 0%, rgba(35, 27, 45, 0.18) 55%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1.1rem;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.gallery-card:hover .gallery-card-overlay {
+  opacity: 1;
+}
+
+.gallery-card-label {
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.01em;
+}
+
+.gallery-card-btn {
+  display: inline-block;
+  padding: 0.3rem 0.9rem;
+  border-radius: 9999px;
+  background-color: var(--color-lila-primary);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.gallery-card-btn:hover {
+  background-color: var(--color-lila-hover);
+  transform: scale(1.05);
+}

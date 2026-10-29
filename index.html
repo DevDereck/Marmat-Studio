@@ -1,0 +1,1800 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marmat Studio</title>
+  <meta name="description" content="Atelier floral de autor y arte en globos orgánicos en Costa Rica. Piezas exclusivas para cumpleaños, aniversarios y eventos en todo el GAM." />
+  
+  <!-- Tipografías Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN con Paleta Lila Pastel & Verde Agua de Marmat Studio -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            // LILA PASTEL (COLOR PRINCIPAL - Línea Gráfica Marmat)
+            lila: {
+              DEFAULT: '#A378D8',
+              hover: '#9161C9',
+              dark: '#7644B2',
+              light: '#CBB0F2',
+              soft: '#F3EDFC',
+              subtle: '#F8F4FD',
+              tint: '#FAF6FE',
+            },
+            // VERDE AGUA / MENTA (COLOR SECUNDARIO)
+            mint: {
+              DEFAULT: '#32B3A1',
+              hover: '#269E8E',
+              dark: '#1C7D70',
+              light: '#65D5C6',
+              soft: '#E4F7F4',
+              subtle: '#F0FAF8',
+            },
+            ink: {
+              DEFAULT: '#231B2D',
+              muted: '#645677',
+              light: '#9B8EA9',
+            },
+            surface: {
+              DEFAULT: '#FAF8FD',
+              card: '#FFFFFF',
+              border: '#EDE6F7',
+            },
+            gold: {
+              DEFAULT: '#C59A3F',
+              soft: '#FEF9EE',
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Hoja de Estilos Externa -->
+  <link rel="stylesheet" href="styles.css" />
+  
+  <!-- Script JS Externo -->
+  <script src="script.js" defer></script>
+</head>
+
+<body class="bg-surface text-ink antialiased">
+
+  <!-- NAVEGACIÓN PRINCIPAL -->
+  <header class="sticky top-0 z-50 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- LOGO & BRANDING MARMAT -->
+      <a href="#" class="flex items-center gap-3.5 group">
+        <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-lila via-lila-light to-mint-light flex items-center justify-center text-white shadow-lila-soft group-hover:scale-105 transition-transform duration-300">
+          <span class="font-editorial text-2xl font-bold tracking-tighter">M</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-editorial text-2xl sm:text-[25px] font-semibold text-ink tracking-tight leading-none group-hover:text-lila transition-colors">
+            Marmat <span class="italic font-normal text-mint font-editorial">Studio</span>
+          </span>
+          <span class="text-[10px] sm:text-[11px] uppercase tracking-widest text-ink-muted font-semibold mt-1">
+            Regalos Personalizados, Sublimación y Papelería
+          </span>
+        </div>
+      </a>
+
+      <!-- ENLACES DE NAVEGACIÓN DESKTOP CON ESPACIADO ELEGANTE -->
+      <nav class="hidden lg:flex items-center gap-8 text-[14px] font-medium text-ink-muted">
+        <a href="#catalogo" class="nav-link py-1">Catálogo</a>
+        <a href="#cotizador-medida" class="nav-link py-1">Personalizados</a>
+        <a href="#historia" class="nav-link py-1">Nuestra Historia</a>
+        <a href="#como-pedir" class="nav-link py-1">Cómo Pedir</a>
+        <a href="#testimonios" class="nav-link py-1">Testimonios</a>
+        <a href="#instagram-feed" class="nav-link py-1">Instagram</a>
+        <a href="#faq" class="nav-link py-1">Preguntas</a>
+      </nav>
+
+      <!-- ACCESO DIRECTO DISCRETO INSTAGRAM & BOTÓN HAMBURGUESA MÓVIL -->
+      <div class="flex items-center gap-3">
+    
+
+        <!-- Botón Menú Móvil -->
+        <button id="mobile-menu-btn" type="button" aria-label="Abrir menú" class="lg:hidden p-2 rounded-2xl text-ink-muted hover:text-lila hover:bg-lila-soft transition-colors">
+          <span class="material-symbols-outlined text-[28px]">menu</span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- MENÚ DESPLEGABLE MÓVIL -->
+    <div id="mobile-menu" class="hidden lg:hidden border-b border-surface-border bg-white/95 backdrop-blur-xl px-6 py-6 space-y-4 shadow-xl">
+      <div class="flex flex-col space-y-3 font-medium text-ink">
+        <a href="#catalogo" class="mobile-nav-link py-2.5 px-3.5 rounded-2xl hover:bg-lila-soft hover:text-lila transition-colors flex items-center justify-between">
+          <span>🌸 Catálogo de Arreglos</span>
+          <span class="material-symbols-outlined text-[18px] text-ink-light">chevron_right</span>
+        </a>
+        <a href="#cotizador-medida" class="mobile-nav-link py-2.5 px-3.5 rounded-2xl hover:bg-lila-soft hover:text-lila transition-colors flex items-center justify-between">
+          <span>🎨 Diseña a Medida</span>
+          <span class="material-symbols-outlined text-[18px] text-ink-light">chevron_right</span>
+        </a>
+        <a href="#historia" class="mobile-nav-link py-2.5 px-3.5 rounded-2xl hover:bg-lila-soft hover:text-lila transition-colors flex items-center justify-between">
+          <span>📖 Nuestra Historia & Origen</span>
+          <span class="material-symbols-outlined text-[18px] text-ink-light">chevron_right</span>
+        </a>
+        <a href="#como-pedir" class="mobile-nav-link py-2.5 px-3.5 rounded-2xl hover:bg-lila-soft hover:text-lila transition-colors flex items-center justify-between">
+          <span>🚚 Cómo Comprar</span>
+          <span class="material-symbols-outlined text-[18px] text-ink-light">chevron_right</span>
+        </a>
+        <a href="#testimonios" class="mobile-nav-link py-2.5 px-3.5 rounded-2xl hover:bg-lila-soft hover:text-lila transition-colors flex items-center justify-between">
+          <span>⭐ Testimonios Verificados</span>
+          <span class="material-symbols-outlined text-[18px] text-ink-light">chevron_right</span>
+        </a>
+        <a href="#instagram-feed" class="mobile-nav-link py-2.5 px-3.5 rounded-2xl hover:bg-lila-soft hover:text-lila transition-colors flex items-center justify-between">
+          <span>📸 Galería</span>
+          <span class="material-symbols-outlined text-[18px] text-ink-light">chevron_right</span>
+        </a>
+        <a href="#faq" class="mobile-nav-link py-2.5 px-3.5 rounded-2xl hover:bg-lila-soft hover:text-lila transition-colors flex items-center justify-between">
+          <span>💬 Preguntas Frecuentes</span>
+          <span class="material-symbols-outlined text-[18px] text-ink-light">chevron_right</span>
+        </a>
+      </div>
+      <div class="pt-3 border-t border-surface-border">
+        <a href="https://www.instagram.com/marmatstudio.cr/" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 py-3 rounded-2xl bg-lila-soft text-lila-dark font-semibold text-xs">
+          <span class="material-symbols-outlined text-[18px]">photo_camera</span>
+          <span>Visitar Instagram @marmatstudio.cr</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="relative overflow-hidden pt-10 pb-16 lg:pt-18 lg:pb-24">
+      
+      <!-- Orbes atmosféricos con degradado sutil -->
+      <div class="absolute -top-24 -left-20 w-[460px] h-[460px] rounded-full bg-lila-soft/80 blur-3xl pointer-events-none -z-10"></div>
+      <div class="absolute top-20 -right-24 w-[460px] h-[460px] rounded-full bg-mint-soft/75 blur-3xl pointer-events-none -z-10"></div>
+      <div class="absolute bottom-10 left-1/3 w-[360px] h-[360px] rounded-full bg-lila-subtle/70 blur-3xl pointer-events-none -z-10"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          
+          <!-- COLUMNA TEXTO HERO -->
+          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+            
+
+            <!-- Título Principal Editorial -->
+            <h1 class="font-editorial text-4xl sm:text-5xl lg:text-[62px] text-ink font-normal tracking-tight leading-[1.12]">
+              Detalles que transforman <br class="hidden sm:inline" />
+              <span class="italic font-normal text-lila relative">
+                instantes
+                <svg class="absolute -bottom-1 left-0 w-full h-3 text-mint-light/70" viewBox="0 0 100 12" preserveAspectRatio="none">
+                  <path d="M0,7 Q25,0 50,7 T100,7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+              </span> 
+              en memorias eternas.
+            </h1>
+
+            <!-- Descripción Subtítulo -->
+            <p class="text-ink-muted text-base sm:text-lg lg:text-xl max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
+              Regalos <strong class="text-lila-dark font-semibold">personalizados</strong>, flores y papelería creativa para toda ocasión. <strong class="text-mint-dark font-semibold">Cada creación nace con alma, elegancia y atención personalizada </strong>.  
+            </p>
+
+            <!-- Acciones CTA -->
+            <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 pt-2">
+              <a href="#catalogo" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-full bg-lila hover:bg-lila-hover text-white font-semibold text-sm sm:text-base shadow-lila-soft shadow-lila-hover transition-all">
+                <span>Ver Catálogo con Precios</span>
+                <span class="material-symbols-outlined text-[19px]">arrow_downward</span>
+              </a>
+              <a href="#cotizador-medida" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-mint-subtle text-mint-dark hover:bg-mint-soft font-semibold text-sm sm:text-base border border-mint-light/50 transition-all shadow-sm">
+                <span class="material-symbols-outlined text-[19px] text-mint">palette</span>
+                <span>Diseñar Arreglo a Medida</span>
+              </a>
+            </div>
+
+            <!-- 3 Badges de Garantía -->
+            <div class="pt-6 grid grid-cols-1 sm:grid-cols-3 gap-3 text-left">
+              <div class="flex items-center gap-3 p-3.5 rounded-2xl bg-white border border-surface-border shadow-sm">
+                <div class="w-9 h-9 rounded-xl bg-lila-soft text-lila-dark flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-[20px]">local_florist</span>
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold text-ink leading-tight">Flores Frescas</h4>
+                  <p class="text-[11px] text-ink-muted">Productor Local</p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3 p-3.5 rounded-2xl bg-white border border-surface-border shadow-sm">
+                <div class="w-9 h-9 rounded-xl bg-mint-soft text-mint flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-[20px]">eco</span>
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold text-ink leading-tight">Látex 100% Bio</h4>
+                  <p class="text-[11px] text-ink-muted">Biodegradable & orgánico</p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3 p-3.5 rounded-2xl bg-white border border-surface-border shadow-sm">
+                <div class="w-9 h-9 rounded-xl bg-lila-soft text-lila flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-[20px]">directions_car</span>
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold text-ink leading-tight">Envíos a todo CR</h4>
+                  <p class="text-[11px] text-ink-muted">Entregas en todo el país</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- COLUMNA VISUAL HERO -->
+          <div class="lg:col-span-5 relative">
+            <div class="relative w-full h-[470px] sm:h-[530px] mx-auto max-w-[480px]">
+              
+              <!-- Imagen Principal (Arreglo Insignia Marmat) -->
+              <div class="absolute top-0 right-0 w-[86%] h-[410px] rounded-3xl overflow-hidden shadow-card-luxury border-4 border-white bg-surface-border group">
+                <img src="assets/gallery/arreglo5.png" 
+                     alt="Arreglo Floral y Globos Marmat Studio" 
+                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <div class="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent"></div>
+                <div class="absolute bottom-4 left-4 right-4 text-white">
+                  <span class="text-[10px] uppercase font-bold tracking-widest px-2.5 py-0.5 rounded-full bg-lila/85 backdrop-blur-sm">Edición Firma</span>
+                </div>
+              </div>
+
+              <!-- Imagen Secundaria Flotante -->
+              <div class="absolute bottom-2 left-0 w-[64%] h-[260px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white p-1.5 animate-float-gentle">
+                <div class="relative w-full h-full rounded-2xl overflow-hidden">
+                  <img src="assets/gallery/choc1.png" 
+                       alt="Chocolates Personalizados Marmat" 
+                       class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+                  
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE CATÁLOGO INTERACTIVO CON FILTROS Y COTIZADOR WHATSAPP -->
+    <section class="py-16 sm:py-20 bg-white border-y border-surface-border" id="catalogo">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+        
+        <!-- ENCABEZADO Y BUSCADOR -->
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-6 border-b border-surface-border">
+          <div>
+            <div class="inline-flex items-center gap-1.5 text-lila text-xs font-bold uppercase tracking-widest mb-1.5">
+              <span class="w-2 h-2 rounded-full bg-lila"></span>
+              <span>Colección & Precios</span>
+            </div>
+            <h2 class="font-editorial text-3xl sm:text-4xl text-ink font-normal">
+              Catálogo de Marmat Studio
+            </h2>
+            <p class="text-ink-muted text-sm sm:text-base max-w-2xl mt-1 leading-relaxed">
+              Elige tu diseño favorito, define la fecha estimada y la frase para el globo. Con un solo clic se abrirá tu 
+              <strong class="text-lila font-semibold">WhatsApp</strong> con el mensaje listo para coordinar y cotizar.
+            </p>
+          </div>
+
+          <!-- Buscador y contador -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+            <div class="relative min-w-[260px]">
+              <input id="catalog-search" type="text" placeholder="Buscar ramo, caja, sombrerera, burbuja..." 
+                     class="w-full pl-10 pr-4 py-2.5 rounded-full bg-surface border border-surface-border text-sm text-ink placeholder-ink-light focus:outline-none focus:ring-2 focus:ring-lila shadow-sm" />
+              <span class="material-symbols-outlined text-[20px] text-ink-muted absolute left-3.5 top-2.5">search</span>
+            </div>
+            <div class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-lila-soft text-lila-dark text-xs font-bold shadow-sm">
+              <span class="w-2 h-2 rounded-full bg-lila"></span>
+              <span>50+ Opciones</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- FILTROS POR CATEGORÍA -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-2 custom-scrollbar" id="catalog-filters">
+          <button type="button" data-filter="all" class="filter-btn active-filter px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-lila text-white shadow-lila-soft whitespace-nowrap">
+            Favoritos
+          </button>
+          <button type="button" data-filter="burbujas" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white hover:bg-surface text-ink-muted border border-surface-border whitespace-nowrap">
+            Globos
+          </button>
+          <button type="button" data-filter="sombrereras" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white hover:bg-surface text-ink-muted border border-surface-border whitespace-nowrap">
+            Flores y Arreglos
+          </button>
+          <button type="button" data-filter="bouquets" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white hover:bg-surface text-ink-muted border border-surface-border whitespace-nowrap">
+            Camisetas Personalizadas
+          </button>
+          <button type="button" data-filter="eventos" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white hover:bg-surface text-ink-muted border border-surface-border whitespace-nowrap">
+            Chocolates Personalizados
+          </button>
+        </div>
+
+        <!-- GRILLA DE PRODUCTOS -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 sm:gap-8" id="products-grid">
+          
+          <!-- PRODUCTO 1 -->
+          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="burbujas">
+            <div>
+              <div class="relative w-full aspect-[4/3] overflow-hidden bg-lila-soft/30">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBx97ReGG8R_bPxl8NZrKX3IEFRbIMl2-ztAKqjhVWIWSC4j0A9I_SNO1l_AtCjcUY785F9RmjRGNSnJp1ORudXZh-yYesQhfndEGwKskCWFO7PFm383GaDxPEzqkZDS_NGHEupYvM6yNVTE07Pr6eD3Mxc89bwbg9nBiCJisL_HzTgAkhbgnhtuMCBHsTYTSACw33E-y8Q_elLgvGvF0hjXF0j9ERW8Akg8melF3DzsaN6MErbL3rC1g" 
+                     alt="Bouquet Jardín Lavanda & Menta Marmat" 
+                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <span class="absolute top-3 left-3 bg-lila text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                  Más Pedido
+                </span>
+                <div class="absolute top-3 right-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-ink shadow-sm">
+                  ₡38,000 <span class="text-ink-muted font-normal">/ $72 USD</span>
+                </div>
+              </div>
+              <div class="p-5 sm:p-6 space-y-3">
+                <h3 class="font-editorial text-2xl text-ink font-normal">
+                  Bouquet Jardín Lavanda & Menta
+                </h3>
+                <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">
+                  Pieza estelar sobre base cerámica artesanal con orquídeas frescas de Cartago, rosas crema selectas, follaje aromático de eucalipto y globo burbuja con confeti lila.
+                </p>
+                <div class="bg-lila-tint p-3 rounded-2xl border border-lila-light/40 space-y-1">
+                  <div class="flex items-center gap-1.5 text-xs font-semibold text-lila-dark">
+                    <span class="material-symbols-outlined text-[16px]">verified</span>
+                    <span>Incluye: Orquídeas + Globo Burbuja 20" + Base Artesanal</span>
+                  </div>
+                  <p class="text-[11px] text-ink-muted">Tarjeta con dedicatoria caligrafiada en sobre de algodón.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Inputs interactivos para personalizar cotización -->
+            <div class="p-5 sm:p-6 pt-0 space-y-3 border-t border-surface-border/60">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-left">
+                <div>
+                  <label class="block text-[11px] font-bold text-ink mb-1">Fecha de entrega</label>
+                  <input type="date" class="order-date w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-[11px] font-bold text-ink mb-1">Frase en el globo</label>
+                  <input type="text" placeholder="Ej: ¡Feliz Vuelta al Sol!" class="order-phrase w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
+                </div>
+              </div>
+              <button type="button" onclick="sendProductQuote('Bouquet Jardín Lavanda & Menta', '₡38,000 / $72 USD', this)" class="w-full flex items-center justify-center gap-2 py-3 rounded-full bg-lila hover:bg-lila-hover text-white text-sm font-semibold shadow-lila-soft shadow-lila-hover transition-all">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M20.52 3.48A11.85 11.85 0 0012.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.98L0 24l6.23-1.63a11.9 11.9 0 005.83 1.51h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.52-8.43zM12.07 21.87h-.01c-1.8 0-3.56-.48-5.1-1.39l-.37-.22-3.79.99 1.01-3.69-.24-.38a9.89 9.89 0 01-1.52-5.21c0-5.47 4.45-9.92 9.93-9.92 2.65 0 5.14 1.03 7.02 2.9 1.87 1.88 2.9 4.37 2.9 7.02 0 5.48-4.45 9.9-9.83 9.9zm5.45-7.44c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.88.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/>
+                </svg>
+                <span>Cotizar en WhatsApp</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- PRODUCTO 2 -->
+          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="burbujas">
+            <div>
+              <div class="relative w-full aspect-[4/3] overflow-hidden bg-mint-soft/30">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTNANSEjZynB2qYU3dh_TGD3EpXThLhhut7yDlN6aTFqldlvO2Zt3-yLW4llo_f_CbLHe_N-XKCDd4OJQoascQqcSoDzj_KE2IMNUhMF_N0F0xpYSRSpXoV0-3qMiNf22PZrEieGj1jYQPQaPWrB1wWsznr4l2nZx9zpNNUwa5hK6Og1yddk8C--xhh4ua0EKiD490ns-XQGjwfc8rUpzNOtR93MkcwWAM5ORnDjx0YhoP-TBwrVS7xg" 
+                     alt="Burbuja Orgánica Cristal Marmat" 
+                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <span class="absolute top-3 left-3 bg-mint text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                  Favorito Marmat
+                </span>
+                <div class="absolute top-3 right-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-ink shadow-sm">
+                  ₡26,500 <span class="text-ink-muted font-normal">/ $50 USD</span>
+                </div>
+              </div>
+              <div class="p-5 sm:p-6 space-y-3">
+                <h3 class="font-editorial text-2xl text-ink font-normal">
+                  Burbuja Orgánica Cristal Marmat
+                </h3>
+                <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">
+                  Globo burbuja de 24" inflado con helio de alta pureza, relleno con mini globos verde agua y lila perla, frase personalizada en vinil oro rosa y lazo de terciopelo.
+                </p>
+                <div class="bg-mint-subtle p-3 rounded-2xl border border-mint-light/40 space-y-1">
+                  <div class="flex items-center gap-1.5 text-xs font-semibold text-mint-dark">
+                    <span class="material-symbols-outlined text-[16px]">verified</span>
+                    <span>Incluye: Helio puro + 6 mini globos + Caligrafía vinil</span>
+                  </div>
+                  <p class="text-[11px] text-ink-muted">Duración garantizada de 7 a 14 días flotando en interiores.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Inputs interactivos -->
+            <div class="p-5 sm:p-6 pt-0 space-y-3 border-t border-surface-border/60">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-left">
+                <div>
+                  <label class="block text-[11px] font-bold text-ink mb-1">Fecha de entrega (GAM)</label>
+                  <input type="date" class="order-date w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-[11px] font-bold text-ink mb-1">Frase en el globo</label>
+                  <input type="text" placeholder="Ej: Te Amo Sofía • Aniv. 5" class="order-phrase w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
+                </div>
+              </div>
+              <button type="button" onclick="sendProductQuote('Burbuja Orgánica Cristal Marmat', '₡26,500 / $50 USD', this)" class="w-full flex items-center justify-center gap-2 py-3 rounded-full bg-lila hover:bg-lila-hover text-white text-sm font-semibold shadow-lila-soft shadow-lila-hover transition-all">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M20.52 3.48A11.85 11.85 0 0012.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.98L0 24l6.23-1.63a11.9 11.9 0 005.83 1.51h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.52-8.43zM12.07 21.87h-.01c-1.8 0-3.56-.48-5.1-1.39l-.37-.22-3.79.99 1.01-3.69-.24-.38a9.89 9.89 0 01-1.52-5.21c0-5.47 4.45-9.92 9.93-9.92 2.65 0 5.14 1.03 7.02 2.9 1.87 1.88 2.9 4.37 2.9 7.02 0 5.48-4.45 9.9-9.83 9.9zm5.45-7.44c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.88.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/>
+                </svg>
+                <span>Cotizar en WhatsApp</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- PRODUCTO 3 -->
+          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="sombrereras">
+            <div>
+              <div class="relative w-full aspect-[4/3] overflow-hidden bg-lila-soft/30">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvpBk7M_jYTVvX68WLYhXPDL0U_RUaL20Z9DKvPZmegBQML5yJ29jxpvmea17ccZmq2MWoYFyp1iso-1I9G_xEdf8g_tMeAB8CXq8PhsTWlaHgB_p_k5kPr8jMbby4E0wSkrknKaZVmR8xeFEHWhbBRoLzgHozMtqhv60k6nXTZAewhTnSyfZV8Zw3YYgcevcP9rAYWfDQyASXn89BgP7OnxYe-EsLg_Z6-ivsCpGUsnyc_xkzK0KLKw" 
+                     alt="Luxury Flower Box Ethereal Marmat" 
+                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <span class="absolute top-3 left-3 bg-lila-dark text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                  Colección Luxe
+                </span>
+                <div class="absolute top-3 right-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-ink shadow-sm">
+                  ₡45,000 <span class="text-ink-muted font-normal">/ $85 USD</span>
+                </div>
+              </div>
+              <div class="p-5 sm:p-6 space-y-3">
+                <h3 class="font-editorial text-2xl text-ink font-normal">
+                  Luxury Flower Box Ethereal
+                </h3>
+                <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">
+                  Sombrerera cilíndrica lila pastel con rosas preservadas de larga vida (hasta 1 año), mini arco orgánico de globos verde menta y tarjeta caligráfica con sello de cera.
+                </p>
+                <div class="bg-lila-tint p-3 rounded-2xl border border-lila-light/40 space-y-1">
+                  <div class="flex items-center gap-1.5 text-xs font-semibold text-lila-dark">
+                    <span class="material-symbols-outlined text-[16px]">verified</span>
+                    <span>Incluye: 12 Rosas preservadas + Sombrerera + Mini guirnalda</span>
+                  </div>
+                  <p class="text-[11px] text-ink-muted">Detalle perdurable que no requiere agua ni mantenimiento.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Inputs interactivos -->
+            <div class="p-5 sm:p-6 pt-0 space-y-3 border-t border-surface-border/60">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-left">
+                <div>
+                  <label class="block text-[11px] font-bold text-ink mb-1">Fecha de entrega (GAM)</label>
+                  <input type="date" class="order-date w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-[11px] font-bold text-ink mb-1">Frase o dedicatoria</label>
+                  <input type="text" placeholder="Ej: Para la mujer de mi vida" class="order-phrase w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
+                </div>
+              </div>
+              <button type="button" onclick="sendProductQuote('Luxury Flower Box Ethereal', '₡45,000 / $85 USD', this)" class="w-full flex items-center justify-center gap-2 py-3 rounded-full bg-lila hover:bg-lila-hover text-white text-sm font-semibold shadow-lila-soft shadow-lila-hover transition-all">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M20.52 3.48A11.85 11.85 0 0012.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.98L0 24l6.23-1.63a11.9 11.9 0 005.83 1.51h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.52-8.43zM12.07 21.87h-.01c-1.8 0-3.56-.48-5.1-1.39l-.37-.22-3.79.99 1.01-3.69-.24-.38a9.89 9.89 0 01-1.52-5.21c0-5.47 4.45-9.92 9.93-9.92 2.65 0 5.14 1.03 7.02 2.9 1.87 1.88 2.9 4.37 2.9 7.02 0 5.48-4.45 9.9-9.83 9.9zm5.45-7.44c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.88.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/>
+                </svg>
+                <span>Cotizar en WhatsApp</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- PRODUCTO 4 -->
+          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="bouquets">
+            <div>
+              <div class="relative w-full aspect-[4/3] overflow-hidden bg-mint-soft/30">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAd31rgET-xos9DeJzjyAcmoJ_wZ-CrTDtDAH9YgLr2xuIUl2aAPk-JvXVApIfavvMReSyOEdgzfCWGYQUxcqxK84sRIuMa9u2vD7Rsi-_G89Ge-kaWNTqcz2td1eF2xO273hmtB394ZR_sdA7hLb5ELXTCvXSv1pzgn7Stfd8hiAXH8AezgEDxZ-ZXRI0eeGz-k0OWaLULlsGFHPpRY9gnFC5EejFKja0op3_dhakoR70VQJm6AOCiww" 
+                     alt="Mini Bouquet Dulce Celebración Marmat" 
+                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <span class="absolute top-3 left-3 bg-mint text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                  Detalle Íntimo
+                </span>
+                <div class="absolute top-3 right-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-ink shadow-sm">
+                  ₡22,000 <span class="text-ink-muted font-normal">/ $42 USD</span>
+                </div>
+              </div>
+              <div class="p-5 sm:p-6 space-y-3">
+                <h3 class="font-editorial text-2xl text-ink font-normal">
+                  Mini Bouquet Dulce Celebración
+                </h3>
+                <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">
+                  Ideal para oficinas y sorpresas de escritorio. Globo corazón metalizado acabado mate lila + arreglo floral con hortensias frescas y toques de lisianthus.
+                </p>
+                <div class="bg-mint-subtle p-3 rounded-2xl border border-mint-light/40 space-y-1">
+                  <div class="flex items-center gap-1.5 text-xs font-semibold text-mint-dark">
+                    <span class="material-symbols-outlined text-[16px]">verified</span>
+                    <span>Incluye: Globo corazón 18" + Florero con hortensias</span>
+                  </div>
+                  <p class="text-[11px] text-ink-muted">Práctico, elegante y con fragancia floral natural.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Inputs interactivos -->
+            <div class="p-5 sm:p-6 pt-0 space-y-3 border-t border-surface-border/60">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-left">
+                <div>
+                  <label class="block text-[11px] font-bold text-ink mb-1">Fecha de entrega (GAM)</label>
+                  <input type="date" class="order-date w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-[11px] font-bold text-ink mb-1">Frase en el globo</label>
+                  <input type="text" placeholder="Ej: ¡Feliz Día Mamá!" class="order-phrase w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
+                </div>
+              </div>
+              <button type="button" onclick="sendProductQuote('Mini Bouquet Dulce Celebración', '₡22,000 / $42 USD', this)" class="w-full flex items-center justify-center gap-2 py-3 rounded-full bg-lila hover:bg-lila-hover text-white text-sm font-semibold shadow-lila-soft shadow-lila-hover transition-all">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M20.52 3.48A11.85 11.85 0 0012.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.98L0 24l6.23-1.63a11.9 11.9 0 005.83 1.51h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.52-8.43zM12.07 21.87h-.01c-1.8 0-3.56-.48-5.1-1.39l-.37-.22-3.79.99 1.01-3.69-.24-.38a9.89 9.89 0 01-1.52-5.21c0-5.47 4.45-9.92 9.93-9.92 2.65 0 5.14 1.03 7.02 2.9 1.87 1.88 2.9 4.37 2.9 7.02 0 5.48-4.45 9.9-9.83 9.9zm5.45-7.44c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.88.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/>
+                </svg>
+                <span>Cotizar en WhatsApp</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- PRODUCTO 5 -->
+          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="eventos">
+            <div>
+              <div class="relative w-full aspect-[4/3] overflow-hidden bg-lila-soft/30">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhBKBTtOHncPCnGxOTGyS3gOlo0UIMiqSUvUKkkmz0VTuR_HQOvgjOS-JZvy0G3Oi9FU3QLZvxdFLNZfz44PVu1pqW0aoNOb3N-SVlo880f3msdU9dQTX1_KN3ula26bvqGC6IdXfPpIQT1KJFRiQjifVAlIynw4sP2EuM7_qYWUqETBDs-PCP1WOGhHzbEEa4Ba4CJP0WH7CMw00TinZVp0aKR7BTgPSGz1srTIAFBMTgRUBkGalrfg" 
+                     alt="Torre Orgánica Pastel Dream Marmat" 
+                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <span class="absolute top-3 left-3 bg-lila text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                  Para Mesas & Fotos
+                </span>
+                <div class="absolute top-3 right-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-ink shadow-sm">
+                  ₡32,000 <span class="text-ink-muted font-normal">/ $60 USD</span>
+                </div>
+              </div>
+              <div class="p-5 sm:p-6 space-y-3">
+                <h3 class="font-editorial text-2xl text-ink font-normal">
+                  Torre Orgánica Pastel Dream
+                </h3>
+                <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">
+                  Mini arco y guirnalda de mesa para desayunos sorpresa, sesiones de primer añito o baby showers con más de 30 globos en gradientes suaves lila y menta.
+                </p>
+                <div class="bg-lila-tint p-3 rounded-2xl border border-lila-light/40 space-y-1">
+                  <div class="flex items-center gap-1.5 text-xs font-semibold text-lila-dark">
+                    <span class="material-symbols-outlined text-[16px]">verified</span>
+                    <span>Incluye: Estructura autónoma + Follaje preservado</span>
+                  </div>
+                  <p class="text-[11px] text-ink-muted">Fácil de ubicar en cualquier mesa de postres o set fotográfico.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Inputs interactivos -->
+            <div class="p-5 sm:p-6 pt-0 space-y-3 border-t border-surface-border/60">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-left">
+                <div>
+                  <label class="block text-[11px] font-bold text-ink mb-1">Fecha de entrega (GAM)</label>
+                  <input type="date" class="order-date w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-[11px] font-bold text-ink mb-1">Frase en el globo</label>
+                  <input type="text" placeholder="Ej: Welcome Baby Lucas" class="order-phrase w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
+                </div>
+              </div>
+              <button type="button" onclick="sendProductQuote('Torre Orgánica Pastel Dream', '₡32,000 / $60 USD', this)" class="w-full flex items-center justify-center gap-2 py-3 rounded-full bg-lila hover:bg-lila-hover text-white text-sm font-semibold shadow-lila-soft shadow-lila-hover transition-all">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M20.52 3.48A11.85 11.85 0 0012.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.98L0 24l6.23-1.63a11.9 11.9 0 005.83 1.51h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.52-8.43zM12.07 21.87h-.01c-1.8 0-3.56-.48-5.1-1.39l-.37-.22-3.79.99 1.01-3.69-.24-.38a9.89 9.89 0 01-1.52-5.21c0-5.47 4.45-9.92 9.93-9.92 2.65 0 5.14 1.03 7.02 2.9 1.87 1.88 2.9 4.37 2.9 7.02 0 5.48-4.45 9.9-9.83 9.9zm5.45-7.44c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.88.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/>
+                </svg>
+                <span>Cotizar en WhatsApp</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- PRODUCTO 6 -->
+          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="sombrereras">
+            <div>
+              <div class="relative w-full aspect-[4/3] overflow-hidden bg-mint-soft/30">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhUlzO_3DWE_CbdhFW01wEwcMrRttb_iU2qD08Yx_JZIxefa4ApDdiQw5mLiQ0SGRxIWZ2JhxZHpIODja7ES6aeDnoGSdfhcGt42Spb89wh5J3zfSvRgm6Evtr0s_ItzHinE4196EfQHFfUj-XHRRjTAUsuHZWjBD2oaG5fWxtt15T2fz77MoD07-g_hP3ihD3ojoNMHO2cC8KV2iEY_t_QniKj0aUxe-MUh0TUglxAAfe-KWe_LDXOA" 
+                     alt="Box Sorpresa con Dulces & Globo Marmat" 
+                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <span class="absolute top-3 left-3 bg-mint text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                  Gourmet & Flor
+                </span>
+                <div class="absolute top-3 right-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-ink shadow-sm">
+                  ₡29,500 <span class="text-ink-muted font-normal">/ $56 USD</span>
+                </div>
+              </div>
+              <div class="p-5 sm:p-6 space-y-3">
+                <h3 class="font-editorial text-2xl text-ink font-normal">
+                  Box Sorpresa Dulces & Globo
+                </h3>
+                <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">
+                  Caja con cajón deslizable para bombones artesanales costarricenses, mini rosas frescas y globo aerostático decorativo con mensaje en relieve y lazo sedoso.
+                </p>
+                <div class="bg-mint-subtle p-3 rounded-2xl border border-mint-light/40 space-y-1">
+                  <div class="flex items-center gap-1.5 text-xs font-semibold text-mint-dark">
+                    <span class="material-symbols-outlined text-[16px]">verified</span>
+                    <span>Incluye: Bombones finos + Mini rosas + Globo aerostático</span>
+                  </div>
+                  <p class="text-[11px] text-ink-muted">El obsequio ideal para felicitaciones y aniversarios sorpresa.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Inputs interactivos -->
+            <div class="p-5 sm:p-6 pt-0 space-y-3 border-t border-surface-border/60">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-left">
+                <div>
+                  <label class="block text-[11px] font-bold text-ink mb-1">Fecha de entrega (GAM)</label>
+                  <input type="date" class="order-date w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-[11px] font-bold text-ink mb-1">Frase en el globo</label>
+                  <input type="text" placeholder="Ej: ¡Muchos Éxitos en tu Nueva Etapa!" class="order-phrase w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
+                </div>
+              </div>
+              <button type="button" onclick="sendProductQuote('Box Sorpresa Dulces & Globo', '₡29,500 / $56 USD', this)" class="w-full flex items-center justify-center gap-2 py-3 rounded-full bg-lila hover:bg-lila-hover text-white text-sm font-semibold shadow-lila-soft shadow-lila-hover transition-all">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M20.52 3.48A11.85 11.85 0 0012.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.98L0 24l6.23-1.63a11.9 11.9 0 005.83 1.51h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.52-8.43zM12.07 21.87h-.01c-1.8 0-3.56-.48-5.1-1.39l-.37-.22-3.79.99 1.01-3.69-.24-.38a9.89 9.89 0 01-1.52-5.21c0-5.47 4.45-9.92 9.93-9.92 2.65 0 5.14 1.03 7.02 2.9 1.87 1.88 2.9 4.37 2.9 7.02 0 5.48-4.45 9.9-9.83 9.9zm5.45-7.44c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.88.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/>
+                </svg>
+                <span>Cotizar en WhatsApp</span>
+              </button>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- BANNER DE CATÁLOGO COMPLETO EXTENDIDO -->
+        <div class="mt-12 p-8 rounded-3xl bg-gradient-to-r from-lila-soft via-surface to-mint-soft border border-lila-light/40 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
+          <div class="space-y-2 text-center md:text-left">
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white text-lila-dark text-xs font-bold shadow-sm">
+              <span class="material-symbols-outlined text-[15px]">auto_awesome</span>
+              <span>¿Tienes una idea o foto de Pinterest en mente?</span>
+            </div>
+            <h3 class="font-editorial text-2xl sm:text-3xl text-ink font-normal">
+              Solicita el Catálogo Completo (50+ creaciones en PDF)
+            </h3>
+            <p class="text-ink-muted text-xs sm:text-sm max-w-xl">
+              Contamos con un archivo amplio de bouquets florales, globos y personalizaciones. Escríbenos o diseña con nosotros.
+            </p>
+          </div>
+          <div class="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
+            <a href="https://wa.me/50671653777?text=Hola%20Marmat%20Studio!%20Quisiera%20solicitar%20el%20Cat%C3%A1logo%20Completo%20en%20PDF%20con%20los%20dise%C3%B1os%20disponibles" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-lila hover:bg-lila-hover text-white text-sm font-semibold shadow-lila-soft transition-all">
+              <span class="material-symbols-outlined text-[18px]">download</span>
+              <span>Pedir Catálogo por WhatsApp</span>
+            </a>
+            <a href="#cotizador-medida" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white text-ink hover:text-lila text-sm font-semibold border border-surface-border shadow-sm transition-all">
+              <span class="material-symbols-outlined text-[18px] text-mint">tune</span>
+              <span>Personalizar en Vivo</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- HISTORIA, ORIGEN Y SIGNIFICADO DE MARMAT -->
+    <section class="py-16 sm:py-24 bg-surface" id="historia">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+          
+          <!-- COLUMNA VISUAL TALLER -->
+          <div class="lg:col-span-6 relative">
+            <div class="relative rounded-3xl overflow-hidden shadow-card-luxury bg-surface-border h-[450px] sm:h-[500px]">
+              <img src="assets/gallery/arreglo1.png" 
+                   alt="Marmat Studio Costa Rica" 
+                   class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              <div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/20 to-transparent"></div>
+              
+              <div class="absolute bottom-6 left-6 right-6 text-white space-y-1">
+                <span class="text-xs uppercase tracking-widest font-bold text-mint-light">Marmat Studio • CR</span>
+                <p class="font-editorial text-lg sm:text-xl italic font-normal text-lila-soft">
+                  "Cada pétalo y cada curva de globo tiene una razón de ser y un destino de felicidad."
+                </p>
+              </div>
+            </div>
+
+            <!-- Sello flotante de Hecho a Mano -->
+            <div class="absolute -bottom-5 -right-3 sm:-right-5 bg-white p-4 rounded-2xl shadow-xl border border-lila-soft flex items-center gap-3">
+              <div class="w-11 h-11 rounded-xl bg-lila-soft text-lila flex items-center justify-center font-bold">
+                <span class="material-symbols-outlined text-[24px]">favorite</span>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-ink">Hecho a Mano con Amor</p>
+                <p class="text-[11px] text-ink-muted">100% Talento Costarricense</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- COLUMNA HISTORIA & SIGNIFICADO -->
+          <div class="lg:col-span-6 space-y-6">
+            
+            <div>
+              <span class="text-xs font-bold uppercase tracking-widest text-lila block mb-1">
+                Nuestra Filosofía & Raíces
+              </span>
+              <h2 class="font-editorial text-3xl sm:text-4xl text-ink font-normal leading-tight">
+                El Alma y la Historia de Marmat Studio
+              </h2>
+            </div>
+
+            <div class="space-y-4 text-ink-muted text-sm sm:text-base leading-relaxed">
+              <p>
+                <strong class="text-ink font-semibold">¿Cómo nació Marmat?</strong> 
+                Comenzó con un anhelo honesto en la mesa de nuestra casa en Costa Rica: queríamos romper con los arreglos genéricos y repetitivos del mercado. Empezamos diseñando piezas botánicas con orquídeas y globos orgánicos para seres queridos. Ver las lágrimas de emoción, el asombro y la gratitud sincera de quienes recibían cada entrega encendió una vocación inquebrantable que hoy nos posiciona como un atelier de referencia en el Gran Área Metropolitana.
+              </p>
+              
+              <p>
+                <strong class="text-ink font-semibold">El Significado del Nombre:</strong> 
+                <span class="text-lila-dark font-bold">Marmat</span> entrelaza raíces familiares sagradas con el vaivén del <em>mar</em> y esa marea viva de emociones que despierta recibir un detalle verdaderamente pensado para ti. Cada arreglo es un puente entre dos personas que desean abrazarse aun en la distancia.
+              </p>
+
+              <p>
+                <strong class="text-ink font-semibold">Nuestra Promesa Sostenible y Local:</strong> 
+                Rechazamos el plástico tradicional de un solo uso. Empleamos látex natural 100% biodegradable de origen botánico que se reintegra al entorno, y compramos nuestras flores de cultivo directo a productores de Cartago y Heredia, promoviendo el comercio justo y una frescura inigualable.
+              </p>
+            </div>
+
+            <!-- Métricas de Impacto -->
+            <div class="pt-2 grid grid-cols-2 gap-4">
+              <div class="bg-white p-4 rounded-2xl border border-surface-border shadow-sm">
+                <span class="font-editorial text-3xl sm:text-4xl font-bold text-lila block leading-none">3,500+</span>
+                <span class="text-xs text-ink-muted font-medium mt-1.5 block">Sonrisas entregadas</span>
+              </div>
+              <div class="bg-white p-4 rounded-2xl border border-surface-border shadow-sm">
+                <span class="font-editorial text-3xl sm:text-4xl font-bold text-mint block leading-none">100%</span>
+                <span class="text-xs text-ink-muted font-medium mt-1.5 block">Hecho en CR</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- COTIZADOR INTERACTIVO A MEDIDA EN 3 PASOS -->
+    <section class="py-16 sm:py-20 bg-gradient-to-b from-surface via-lila-subtle/50 to-surface border-y border-surface-border" id="cotizador-medida">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center space-y-2 mb-10">
+          <span class="text-xs font-bold uppercase tracking-widest text-lila block">
+            Arreglo Personalizado
+          </span>
+          <h2 class="font-editorial text-3xl sm:text-4xl text-ink font-normal">
+            Diseña tu Arreglo a Medida en 3 Pasos
+          </h2>
+          <p class="text-ink-muted text-sm sm:text-base max-w-xl mx-auto">
+            Configura tus preferencias en segundos y te enviaremos una propuesta visual con cotización formal a tu WhatsApp sin compromiso.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-3xl p-6 sm:p-9 shadow-card-luxury border border-surface-border space-y-8">
+          
+          <!-- PASO 1: OCASIÓN -->
+          <div class="space-y-3">
+            <div class="flex items-center gap-2.5">
+              <span class="w-7 h-7 rounded-full bg-lila text-white text-xs font-bold flex items-center justify-center">1</span>
+              <h3 class="font-editorial text-lg sm:text-xl text-ink font-semibold">
+                Escoge la ocasión especial
+              </h3>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-5 gap-2.5" id="step-occasion">
+              <button type="button" data-val="Cumpleaños" class="step-btn active-step p-3 rounded-2xl text-center text-xs font-bold transition-all bg-lila-soft text-lila-dark border border-lila-light shadow-sm">
+                🎂 Cumpleaños
+              </button>
+              <button type="button" data-val="Aniversario" class="step-btn p-3 rounded-2xl text-center text-xs font-medium transition-all bg-white hover:bg-surface text-ink border border-surface-border shadow-sm">
+                💍 Aniversario
+              </button>
+              <button type="button" data-val="Baby Shower / Bebé" class="step-btn p-3 rounded-2xl text-center text-xs font-medium transition-all bg-white hover:bg-surface text-ink border border-surface-border shadow-sm">
+                🍼 Bebé / Shower
+              </button>
+              <button type="button" data-val="Graduación" class="step-btn p-3 rounded-2xl text-center text-xs font-medium transition-all bg-white hover:bg-surface text-ink border border-surface-border shadow-sm">
+                🎓 Graduación o Convivencia
+              </button>
+              <button type="button" data-val="Sorpresa Romántica" class="step-btn col-span-2 sm:col-span-1 p-3 rounded-2xl text-center text-xs font-medium transition-all bg-white hover:bg-surface text-ink border border-surface-border shadow-sm">
+                ✨ Sorpresa
+              </button>
+            </div>
+          </div>
+
+          <!-- PASO 2: PALETA DE COLOR -->
+          <div class="space-y-3">
+            <div class="flex items-center gap-2.5">
+              <span class="w-7 h-7 rounded-full bg-mint text-white text-xs font-bold flex items-center justify-center">2</span>
+              <h3 class="font-editorial text-lg sm:text-xl text-ink font-semibold">
+                Elige la paleta cromática
+              </h3>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3" id="step-palette">
+              <button type="button" data-val="Firma Lila & Verde Agua" class="palette-btn active-palette p-4 rounded-2xl text-left transition-all bg-lila-soft text-lila-dark font-semibold border border-lila-light shadow-sm flex items-center gap-3">
+                <div class="flex -space-x-2">
+                  <span class="w-6 h-6 rounded-full bg-lila shadow-sm border border-white"></span>
+                  <span class="w-6 h-6 rounded-full bg-mint shadow-sm border border-white"></span>
+                </div>
+                <span class="text-xs sm:text-sm font-bold">Firma Marmat (Lila Pastel & Menta)</span>
+              </button>
+              <button type="button" data-val="Pastel Dulce (Rosa & Melocotón)" class="palette-btn p-4 rounded-2xl text-left transition-all bg-white hover:bg-surface text-ink border border-surface-border shadow-sm flex items-center gap-3">
+                <div class="flex -space-x-2">
+                  <span class="w-6 h-6 rounded-full bg-pink-300 shadow-sm border border-white"></span>
+                  <span class="w-6 h-6 rounded-full bg-amber-200 shadow-sm border border-white"></span>
+                </div>
+                <span class="text-xs sm:text-sm">Pastel Dulce (Rosa & Melocotón)</span>
+              </button>
+              <button type="button" data-val="Neutros Elegantes & Oro" class="palette-btn p-4 rounded-2xl text-left transition-all bg-white hover:bg-surface text-ink border border-surface-border shadow-sm flex items-center gap-3">
+                <div class="flex -space-x-2">
+                  <span class="w-6 h-6 rounded-full bg-stone-300 shadow-sm border border-white"></span>
+                  <span class="w-6 h-6 rounded-full bg-gold shadow-sm border border-white"></span>
+                </div>
+                <span class="text-xs sm:text-sm">Neutros Sofisticados & Oro</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- PASO 3: PRESUPUESTO -->
+          <div class="space-y-3">
+            <div class="flex items-center gap-2.5">
+              <span class="w-7 h-7 rounded-full bg-gold text-white text-xs font-bold flex items-center justify-center">3</span>
+              <h3 class="font-editorial text-lg sm:text-xl text-ink font-semibold">
+                Presupuesto de referencia
+              </h3>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3" id="step-budget">
+              <button type="button" data-val="₡20,000 - ₡35,000 CRC" class="budget-btn p-3.5 rounded-2xl text-center text-xs font-semibold transition-all bg-white hover:bg-surface text-ink border border-surface-border shadow-sm">
+                ₡20,000 - ₡35,000
+              </button>
+              <button type="button" data-val="₡35,000 - ₡60,000 CRC" class="budget-btn active-budget p-3.5 rounded-2xl text-center text-xs font-bold transition-all bg-lila text-white shadow-lila-soft">
+                ₡35,000 - ₡60,000 (Más elegido)
+              </button>
+              <button type="button" data-val="₡60,000+ Experiencia VIP" class="budget-btn p-3.5 rounded-2xl text-center text-xs font-semibold transition-all bg-white hover:bg-surface text-ink border border-surface-border shadow-sm">
+                ₡60,000+ Experiencia VIP
+              </button>
+            </div>
+          </div>
+
+          <!-- NOTAS ADICIONALES -->
+          <div class="space-y-1.5 text-left">
+            <label class="block text-xs font-bold text-ink">Idea complementaria o requerimiento especial (Opcional)</label>
+            <textarea id="custom-notes" rows="2" placeholder="Ej: Deseo que lleve luces micro-LED cálidas y que sea entregado antes de las 11:00 AM en Santa Ana..." class="w-full px-4 py-3 rounded-2xl bg-surface border border-surface-border text-xs sm:text-sm text-ink placeholder-ink-light focus:outline-none focus:ring-2 focus:ring-lila"></textarea>
+          </div>
+
+          <!-- BOTÓN GENERADOR WHATSAPP -->
+          <div class="pt-2 text-center">
+            <button type="button" onclick="sendCustomWizardQuote()" class="w-full py-4 rounded-full bg-gradient-to-r from-lila via-lila-hover to-lila-dark text-white text-sm sm:text-base font-semibold shadow-lila-soft hover:scale-[1.01] transition-all flex items-center justify-center gap-3">
+              <span class="material-symbols-outlined text-[22px]">send</span>
+              <span>Generar cotización</span>
+            </button>
+            <p class="text-[11px] text-ink-muted mt-2">
+              Te responderemos con fotos de referencia y confirmación de disponibilidad para tu fecha en el GAM.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CÓMO PEDIR: 4 PASOS SIMPLES -->
+    <section class="py-16 sm:py-20 bg-white" id="como-pedir">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        
+        <div class="text-center space-y-2">
+          <span class="text-xs font-bold uppercase tracking-widest text-mint block">
+            Paso a Paso
+          </span>
+          <h2 class="font-editorial text-3xl sm:text-4xl text-ink font-normal">
+            ¿Cómo Comprar en Marmat Studio?
+          </h2>
+          <p class="text-ink-muted text-sm sm:text-base max-w-lg mx-auto">
+            Una experiencia de atención íntima, ágil y transparente desde San José hasta la puerta de tu ser querido.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- PASO 1 -->
+          <div class="bg-surface p-6 rounded-3xl border border-surface-border shadow-sm flex flex-col justify-between hover:shadow-card-luxury transition-all">
+            <div class="space-y-3">
+              <div class="w-12 h-12 rounded-2xl bg-lila-soft text-lila-dark flex items-center justify-center font-editorial text-xl font-bold">
+                01
+              </div>
+              <h4 class="font-editorial text-xl text-ink font-semibold">Explora & Elige</h4>
+              <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">
+                Selecciona tu arreglo favorito de nuestro catálogo o inspírate en nuestra galería de Instagram.
+              </p>
+            </div>
+            <div class="pt-4 flex items-center gap-1.5 text-lila text-xs font-bold">
+              <span class="material-symbols-outlined text-[16px]">touch_app</span>
+              <span>Vía web o catálogo digital</span>
+            </div>
+          </div>
+
+          <!-- PASO 2 -->
+          <div class="bg-surface p-6 rounded-3xl border border-surface-border shadow-sm flex flex-col justify-between hover:shadow-card-luxury transition-all">
+            <div class="space-y-3">
+              <div class="w-12 h-12 rounded-2xl bg-mint-soft text-mint-dark flex items-center justify-center font-editorial text-xl font-bold">
+                02
+              </div>
+              <h4 class="font-editorial text-xl text-ink font-semibold">Cotiza en Minutos</h4>
+              <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">
+                Presiona el botón de WhatsApp con tu dedicatoria, tamaño, colores exactos y horario de entrega deseado.
+              </p>
+            </div>
+            <div class="pt-4 flex items-center gap-1.5 text-mint text-xs font-bold">
+              <span class="material-symbols-outlined text-[16px]">forum</span>
+              <span>Asesoría directa en vivo</span>
+            </div>
+          </div>
+
+          <!-- PASO 3 -->
+          <div class="bg-surface p-6 rounded-3xl border border-surface-border shadow-sm flex flex-col justify-between hover:shadow-card-luxury transition-all">
+            <div class="space-y-3">
+              <div class="w-12 h-12 rounded-2xl bg-lila-soft text-lila-dark flex items-center justify-center font-editorial text-xl font-bold">
+                03
+              </div>
+              <h4 class="font-editorial text-xl text-ink font-semibold">Confirma con Sinpe</h4>
+              <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">
+                Reserva tu cupo en agenda mediante SINPE Móvil o transferencia bancaria (sugerimos 24 a 48h de anticipación).
+              </p>
+            </div>
+            <div class="pt-4 flex items-center gap-1.5 text-lila-dark text-xs font-bold">
+              <span class="material-symbols-outlined text-[16px]">payments</span>
+              <span>SINPE Móvil / Tarjeta / Efectivo</span>
+            </div>
+          </div>
+
+          <!-- PASO 4 -->
+          <div class="bg-surface p-6 rounded-3xl border border-surface-border shadow-sm flex flex-col justify-between hover:shadow-card-luxury transition-all">
+            <div class="space-y-3">
+              <div class="w-12 h-12 rounded-2xl bg-mint-subtle text-mint-dark flex items-center justify-center font-editorial text-xl font-bold">
+                04
+              </div>
+              <h4 class="font-editorial text-xl text-ink font-semibold">Entrega Sorpresa</h4>
+              <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">
+                Despachamos mediante chófer privado para garantizar que flores y globos lleguen intactos y deslumbrantes.
+              </p>
+            </div>
+            <div class="pt-4 flex items-center gap-1.5 text-mint text-xs font-bold">
+              <span class="material-symbols-outlined text-[16px]">celebration</span>
+              <span>Cuidado y puntualidad GAM</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section class="py-16 sm:py-24 bg-gradient-to-b from-surface via-lila-tint to-surface overflow-hidden" id="testimonios">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+        
+        <!-- Header con estadísticas y controles interactivos -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div>
+            <div class="inline-flex items-center gap-2 text-lila text-xs font-bold uppercase tracking-widest mb-1.5">
+              <span class="w-2 h-2 rounded-full bg-lila animate-pulse"></span>
+              <span>Reseñas de Clientas en Costa Rica</span>
+            </div>
+            <h2 class="font-editorial text-3xl sm:text-4xl text-ink font-normal">
+              Testimonios Verificados
+            </h2>
+            <p class="text-ink-muted text-sm sm:text-base mt-1">
+              Experiencias reales de entregas florales y globos.
+            </p>
+          </div>
+
+          <!-- Controles y badge de estado de auto-movimiento -->
+          <div class="flex flex-wrap items-center gap-3">
+            <div class="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-surface-border shadow-sm text-xs text-ink-muted">
+              <span id="testimonial-status-dot" class="w-2.5 h-2.5 rounded-full bg-mint animate-pulse"></span>
+              <span id="testimonial-status-text" class="font-semibold text-ink">En movimiento continuo</span>
+            </div>
+
+            <button id="testimonial-toggle-btn" type="button" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white hover:bg-lila-soft text-ink-muted hover:text-lila text-xs font-semibold border border-surface-border transition-colors shadow-sm" title="Pausar o reanudar auto-movimiento">
+              <span class="material-symbols-outlined text-[17px]">pause</span>
+              <span>Pausar</span>
+            </button>
+
+            <div class="flex items-center gap-1.5">
+              <button id="testimonial-prev-btn" type="button" aria-label="Testimonio anterior" class="w-9 h-9 rounded-full bg-white hover:bg-lila-soft text-ink hover:text-lila border border-surface-border flex items-center justify-center transition-colors shadow-sm">
+                <span class="material-symbols-outlined text-[20px]">arrow_back</span>
+              </button>
+              <button id="testimonial-next-btn" type="button" aria-label="Siguiente testimonio" class="w-9 h-9 rounded-full bg-white hover:bg-lila-soft text-ink hover:text-lila border border-surface-border flex items-center justify-center transition-colors shadow-sm">
+                <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Pista de Desplazamiento Continuo con Degradados de Difuminado en los Extremos -->
+      <div class="testimonials-marquee-wrapper relative w-full mt-6 overflow-hidden">
+        <!-- Máscaras degradadas a los lados para entrada y salida suave -->
+        <div class="pointer-events-none absolute left-0 top-0 bottom-0 w-8 sm:w-28 bg-gradient-to-r from-surface via-surface/80 to-transparent z-10"></div>
+        <div class="pointer-events-none absolute right-0 top-0 bottom-0 w-8 sm:w-28 bg-gradient-to-l from-surface via-surface/80 to-transparent z-10"></div>
+
+        <!-- Pista con animación CSS continua a 60 FPS en GPU -->
+        <div id="marquee-track" class="marquee-track flex py-4">
+
+          <!-- GRUPO 1: 6 TESTIMONIOS -->
+          <div class="marquee-group">
+
+            <!-- Testimonio 1 -->
+            <div class="testimonial-card">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <div class="flex text-gold">
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  </div>
+                  <span class="inline-flex items-center gap-1 text-[11px] font-bold text-mint bg-mint-soft px-2.5 py-0.5 rounded-full">
+                    <span class="material-symbols-outlined text-[13px]">verified</span>
+                    Verificada
+                  </span>
+                </div>
+                <p class="font-editorial text-base sm:text-lg text-ink italic leading-relaxed">
+                  "El arreglo superó todas mis expectativas. La burbuja con mini globos y orquídeas duró flotando más de 12 días impecable en Escazú. ¡La atención por WhatsApp es un 100 de 10!"
+                </p>
+              </div>
+              <div class="flex items-center gap-3 pt-5 mt-4 border-t border-surface-border">
+                <div class="w-11 h-11 rounded-full bg-lila-soft text-lila-dark font-bold flex items-center justify-center text-sm shrink-0">
+                  MF
+                </div>
+                <div>
+                  <h5 class="text-sm font-bold text-ink">Mariana Fonseca</h5>
+                  <p class="text-xs text-ink-muted">Escazú, San José • Cumpleaños</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonio 2 -->
+            <div class="testimonial-card">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <div class="flex text-gold">
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  </div>
+                  <span class="inline-flex items-center gap-1 text-[11px] font-bold text-mint bg-mint-soft px-2.5 py-0.5 rounded-full">
+                    <span class="material-symbols-outlined text-[13px]">verified</span>
+                    Verificado
+                  </span>
+                </div>
+                <p class="font-editorial text-base sm:text-lg text-ink italic leading-relaxed">
+                  "Pedí la Luxury Flower Box para el aniversario de mis papás en Heredia. La puntualidad del chófer y la delicadeza del aroma de las rosas dejó a mi mamá fascinada. Son puro arte."
+                </p>
+              </div>
+              <div class="flex items-center gap-3 pt-5 mt-4 border-t border-surface-border">
+                <div class="w-11 h-11 rounded-full bg-mint-soft text-mint-dark font-bold flex items-center justify-center text-sm shrink-0">
+                  EA
+                </div>
+                <div>
+                  <h5 class="text-sm font-bold text-ink">Esteban Araya</h5>
+                  <p class="text-xs text-ink-muted">Heredia Centro • Aniversario</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonio 3 -->
+            <div class="testimonial-card">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <div class="flex text-gold">
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  </div>
+                  <span class="inline-flex items-center gap-1 text-[11px] font-bold text-mint bg-mint-soft px-2.5 py-0.5 rounded-full">
+                    <span class="material-symbols-outlined text-[13px]">verified</span>
+                    Verificada
+                  </span>
+                </div>
+                <p class="font-editorial text-base sm:text-lg text-ink italic leading-relaxed">
+                  "La combinación de verde menta y lila pastel que crearon para el baby shower en Santa Ana se robó todas las miradas. Jamás había visto globos con una paleta tan moderna y elegante."
+                </p>
+              </div>
+              <div class="flex items-center gap-3 pt-5 mt-4 border-t border-surface-border">
+                <div class="w-11 h-11 rounded-full bg-lila-soft text-lila-dark font-bold flex items-center justify-center text-sm shrink-0">
+                  VR
+                </div>
+                <div>
+                  <h5 class="text-sm font-bold text-ink">Valeria Rojas</h5>
+                  <p class="text-xs text-ink-muted">Santa Ana, San José • Baby Shower</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonio 4 -->
+            <div class="testimonial-card">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <div class="flex text-gold">
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  </div>
+                  <span class="inline-flex items-center gap-1 text-[11px] font-bold text-mint bg-mint-soft px-2.5 py-0.5 rounded-full">
+                    <span class="material-symbols-outlined text-[13px]">verified</span>
+                    Verificada
+                  </span>
+                </div>
+                <p class="font-editorial text-base sm:text-lg text-ink italic leading-relaxed">
+                  "Increíble la calidad del helio y las flores frescas de Cartago. Llegó a Curridabat puntualísimo y la caligrafía a mano en oro rosa fue el toque que lo hizo inolvidable."
+                </p>
+              </div>
+              <div class="flex items-center gap-3 pt-5 mt-4 border-t border-surface-border">
+                <div class="w-11 h-11 rounded-full bg-mint-soft text-mint-dark font-bold flex items-center justify-center text-sm shrink-0">
+                  CM
+                </div>
+                <div>
+                  <h5 class="text-sm font-bold text-ink">Camila Morales</h5>
+                  <p class="text-xs text-ink-muted">Curridabat, San José • Sorpresa de Grado</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonio 5 -->
+            <div class="testimonial-card">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <div class="flex text-gold">
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  </div>
+                  <span class="inline-flex items-center gap-1 text-[11px] font-bold text-mint bg-mint-soft px-2.5 py-0.5 rounded-full">
+                    <span class="material-symbols-outlined text-[13px]">verified</span>
+                    Verificado
+                  </span>
+                </div>
+                <p class="font-editorial text-base sm:text-lg text-ink italic leading-relaxed">
+                  "Coordinamos un montaje sorpresa para mi novia en Alajuela. El equipo de Marmat entendió exactamente lo que quería y me asesoraron por WhatsApp en minutos. 1000% recomendados."
+                </p>
+              </div>
+              <div class="flex items-center gap-3 pt-5 mt-4 border-t border-surface-border">
+                <div class="w-11 h-11 rounded-full bg-lila-soft text-lila-dark font-bold flex items-center justify-center text-sm shrink-0">
+                  DC
+                </div>
+                <div>
+                  <h5 class="text-sm font-bold text-ink">Diego Chaves</h5>
+                  <p class="text-xs text-ink-muted">Alajuela Centro • Pedida de Mano</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonio 6 -->
+            <div class="testimonial-card">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <div class="flex text-gold">
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  </div>
+                  <span class="inline-flex items-center gap-1 text-[11px] font-bold text-mint bg-mint-soft px-2.5 py-0.5 rounded-full">
+                    <span class="material-symbols-outlined text-[13px]">verified</span>
+                    Verificada
+                  </span>
+                </div>
+                <p class="font-editorial text-base sm:text-lg text-ink italic leading-relaxed">
+                  "Buscaba un atelier botánico que no usara plásticos genéricos. El arco orgánico de globos biodegradables y rosas preservadas fue la sensación de la boda. ¡Gracias Marmat!"
+                </p>
+              </div>
+              <div class="flex items-center gap-3 pt-5 mt-4 border-t border-surface-border">
+                <div class="w-11 h-11 rounded-full bg-mint-soft text-mint-dark font-bold flex items-center justify-center text-sm shrink-0">
+                  SV
+                </div>
+                <div>
+                  <h5 class="text-sm font-bold text-ink">Sofía Jimena Vega</h5>
+                  <p class="text-xs text-ink-muted">Tres Ríos, Cartago • Boda Civil</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- GRUPO 2: CLON IDÉNTICO PARA BUCLE 100% INFINITO Y CONTINUO -->
+          <div class="marquee-group" aria-hidden="true">
+
+            <!-- Testimonio 1 (Duplicado) -->
+            <div class="testimonial-card" aria-hidden="true">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <div class="flex text-gold">
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  </div>
+                  <span class="inline-flex items-center gap-1 text-[11px] font-bold text-mint bg-mint-soft px-2.5 py-0.5 rounded-full">
+                    <span class="material-symbols-outlined text-[13px]">verified</span>
+                    Verificada
+                  </span>
+                </div>
+                <p class="font-editorial text-base sm:text-lg text-ink italic leading-relaxed">
+                  "El arreglo superó todas mis expectativas. La burbuja con mini globos y orquídeas duró flotando más de 12 días impecable en Escazú. ¡La atención por WhatsApp es un 100 de 10!"
+                </p>
+              </div>
+              <div class="flex items-center gap-3 pt-5 mt-4 border-t border-surface-border">
+                <div class="w-11 h-11 rounded-full bg-lila-soft text-lila-dark font-bold flex items-center justify-center text-sm shrink-0">
+                  MF
+                </div>
+                <div>
+                  <h5 class="text-sm font-bold text-ink">Mariana Fonseca</h5>
+                  <p class="text-xs text-ink-muted">Escazú, San José • Cumpleaños</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonio 2 (Duplicado) -->
+            <div class="testimonial-card" aria-hidden="true">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <div class="flex text-gold">
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  </div>
+                  <span class="inline-flex items-center gap-1 text-[11px] font-bold text-mint bg-mint-soft px-2.5 py-0.5 rounded-full">
+                    <span class="material-symbols-outlined text-[13px]">verified</span>
+                    Verificado
+                  </span>
+                </div>
+                <p class="font-editorial text-base sm:text-lg text-ink italic leading-relaxed">
+                  "Pedí la Luxury Flower Box para el aniversario de mis papás en Heredia. La puntualidad del chófer y la delicadeza del aroma de las rosas dejó a mi mamá fascinada. Son puro arte."
+                </p>
+              </div>
+              <div class="flex items-center gap-3 pt-5 mt-4 border-t border-surface-border">
+                <div class="w-11 h-11 rounded-full bg-mint-soft text-mint-dark font-bold flex items-center justify-center text-sm shrink-0">
+                  EA
+                </div>
+                <div>
+                  <h5 class="text-sm font-bold text-ink">Esteban Araya</h5>
+                  <p class="text-xs text-ink-muted">Heredia Centro • Aniversario</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonio 3 (Duplicado) -->
+            <div class="testimonial-card" aria-hidden="true">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <div class="flex text-gold">
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  </div>
+                  <span class="inline-flex items-center gap-1 text-[11px] font-bold text-mint bg-mint-soft px-2.5 py-0.5 rounded-full">
+                    <span class="material-symbols-outlined text-[13px]">verified</span>
+                    Verificada
+                  </span>
+                </div>
+                <p class="font-editorial text-base sm:text-lg text-ink italic leading-relaxed">
+                  "La combinación de verde menta y lila pastel que crearon para el baby shower en Santa Ana se robó todas las miradas. Jamás había visto globos con una paleta tan moderna y elegante."
+                </p>
+              </div>
+              <div class="flex items-center gap-3 pt-5 mt-4 border-t border-surface-border">
+                <div class="w-11 h-11 rounded-full bg-lila-soft text-lila-dark font-bold flex items-center justify-center text-sm shrink-0">
+                  VR
+                </div>
+                <div>
+                  <h5 class="text-sm font-bold text-ink">Valeria Rojas</h5>
+                  <p class="text-xs text-ink-muted">Santa Ana, San José • Baby Shower</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonio 4 (Duplicado) -->
+            <div class="testimonial-card" aria-hidden="true">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <div class="flex text-gold">
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  </div>
+                  <span class="inline-flex items-center gap-1 text-[11px] font-bold text-mint bg-mint-soft px-2.5 py-0.5 rounded-full">
+                    <span class="material-symbols-outlined text-[13px]">verified</span>
+                    Verificada
+                  </span>
+                </div>
+                <p class="font-editorial text-base sm:text-lg text-ink italic leading-relaxed">
+                  "Increíble la calidad del helio y las flores frescas de Cartago. Llegó a Curridabat puntualísimo y la caligrafía a mano en oro rosa fue el toque que lo hizo inolvidable."
+                </p>
+              </div>
+              <div class="flex items-center gap-3 pt-5 mt-4 border-t border-surface-border">
+                <div class="w-11 h-11 rounded-full bg-mint-soft text-mint-dark font-bold flex items-center justify-center text-sm shrink-0">
+                  CM
+                </div>
+                <div>
+                  <h5 class="text-sm font-bold text-ink">Camila Morales</h5>
+                  <p class="text-xs text-ink-muted">Curridabat, San José • Sorpresa de Grado</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonio 5 (Duplicado) -->
+            <div class="testimonial-card" aria-hidden="true">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <div class="flex text-gold">
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  </div>
+                  <span class="inline-flex items-center gap-1 text-[11px] font-bold text-mint bg-mint-soft px-2.5 py-0.5 rounded-full">
+                    <span class="material-symbols-outlined text-[13px]">verified</span>
+                    Verificado
+                  </span>
+                </div>
+                <p class="font-editorial text-base sm:text-lg text-ink italic leading-relaxed">
+                  "Coordinamos un montaje sorpresa para mi novia en Alajuela. El equipo de Marmat entendió exactamente lo que quería y me asesoraron por WhatsApp en minutos. 1000% recomendados."
+                </p>
+              </div>
+              <div class="flex items-center gap-3 pt-5 mt-4 border-t border-surface-border">
+                <div class="w-11 h-11 rounded-full bg-lila-soft text-lila-dark font-bold flex items-center justify-center text-sm shrink-0">
+                  DC
+                </div>
+                <div>
+                  <h5 class="text-sm font-bold text-ink">Diego Chaves</h5>
+                  <p class="text-xs text-ink-muted">Alajuela Centro • Pedida de Mano</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonio 6 (Duplicado) -->
+            <div class="testimonial-card" aria-hidden="true">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <div class="flex text-gold">
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  </div>
+                  <span class="inline-flex items-center gap-1 text-[11px] font-bold text-mint bg-mint-soft px-2.5 py-0.5 rounded-full">
+                    <span class="material-symbols-outlined text-[13px]">verified</span>
+                    Verificada
+                  </span>
+                </div>
+                <p class="font-editorial text-base sm:text-lg text-ink italic leading-relaxed">
+                  "Buscaba un atelier botánico que no usara plásticos genéricos. El arco orgánico de globos biodegradables y rosas preservadas fue la sensación de la boda. ¡Gracias Marmat!"
+                </p>
+              </div>
+              <div class="flex items-center gap-3 pt-5 mt-4 border-t border-surface-border">
+                <div class="w-11 h-11 rounded-full bg-mint-soft text-mint-dark font-bold flex items-center justify-center text-sm shrink-0">
+                  SV
+                </div>
+                <div>
+                  <h5 class="text-sm font-bold text-ink">Sofía Jimena Vega</h5>
+                  <p class="text-xs text-ink-muted">Tres Ríos, Cartago • Boda Civil</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERÍA DE PRODUCTOS EN MOVIMIENTO -->
+    <section class="py-16 sm:py-20 bg-white overflow-hidden" id="instagram-feed">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 text-center space-y-2">
+        <span class="text-xs font-bold uppercase tracking-widest text-lila block">Nuestros Diseños</span>
+        <h2 class="font-editorial text-3xl sm:text-4xl text-ink font-normal">Galería Marmat Studio</h2>
+        <p class="text-ink-muted text-sm sm:text-base">Cada pieza es única, hecha con amor y atención al detalle.</p>
+      </div>
+
+      <!-- FILA 1: izquierda → derecha -->
+      <div class="gallery-marquee-wrapper relative mb-4">
+        <div class="pointer-events-none absolute left-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-r from-white to-transparent z-10"></div>
+        <div class="pointer-events-none absolute right-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-l from-white to-transparent z-10"></div>
+        <div class="gallery-track gallery-track--fwd">
+          <!-- GRUPO A -->
+          <div class="gallery-group">
+            <div class="gallery-card group">
+              <img src="assets/gallery/globo1.png" alt="Globo Graduación" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <div class="gallery-card-overlay">
+                <span class="gallery-card-label">Arreglo Personalizable con Globo y Snacks</span>
+                <a href="https://wa.me/50671653777?text=Hola%20Marmat%20Studio!%20Me%20interesa%20cotizar%20un%20Arreglo%20Personalizable%20con%20Globo%20y Snacks." target="_blank" class="gallery-card-btn">Cotizar →</a>
+              </div>
+            </div>
+            <div class="gallery-card group">
+              <img src="assets/gallery/globo2.png" alt="Globo Burbuja" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <div class="gallery-card-overlay">
+                <span class="gallery-card-label">Globo Burbuja</span>
+                <a href="https://wa.me/50671653777?text=Hola%20Marmat%20Studio!%20Me%20interesa%20cotizar%20un%20Globo%20Burbuja." target="_blank" class="gallery-card-btn">Cotizar →</a>
+              </div>
+            </div>
+            <div class="gallery-card group">
+              <img src="assets/gallery/arreglo1.png" alt="Arreglo Floral" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <div class="gallery-card-overlay">
+                <span class="gallery-card-label">Arreglo Floral</span>
+                <a href="https://wa.me/50671653777?text=Hola%20Marmat%20Studio!%20Me%20interesa%20cotizar%20un%20Ramo%20Tem%C3%Floral." target="_blank" class="gallery-card-btn">Cotizar →</a>
+              </div>
+            </div>
+            <div class="gallery-card group">
+              <img src="assets/gallery/arreglo2.png" alt="Arreglo Para Agradecer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <div class="gallery-card-overlay">
+                <span class="gallery-card-label">Arreglo Para Agradecer</span>
+                <a href="https://wa.me/50671653777?text=Hola%20Marmat%20Studio!%20Me%20interesa%20cotizar%20un%20Arreglo%20Floral." target="_blank" class="gallery-card-btn">Cotizar →</a>
+              </div>
+            </div>
+            <div class="gallery-card group">
+              <img src= "assets/gallery/arreglo3.png" alt="Rayito de Alegría" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <div class="gallery-card-overlay">
+                <span class="gallery-card-label">Arreglo Rayito de Alegría</span>
+                <a href="https://wa.me/50671653777?text=Hola%20Marmat%20Studio!%20Me%20interesa%20cotizar%20un%20Rayito de%20Alegría." target="_blank" class="gallery-card-btn">Cotizar →</a>
+              </div>
+            </div>
+            <div class="gallery-card group">
+              <img src="assets/gallery/globo3.png" alt="Arreglo Celebra a Tu Manera" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <div class="gallery-card-overlay">
+                <span class="gallery-card-label">Arreglo Celebra a Tu Manera</span>
+                <a href="https://wa.me/50671653777?text=Hola%20Marmat%20Studio!%20Me%20interesa%20cotizar%20celebra%203D%20a%20tu%C3%ADManera." target="_blank" class="gallery-card-btn">Cotizar →</a>
+              </div>
+            </div>
+          </div>
+          <!-- GRUPO A duplicado para loop infinito -->
+          <div class="gallery-group" aria-hidden="true">
+           <div class="gallery-card group">
+              <img src="assets/gallery/globo1.png" alt="Globo Graduación" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <div class="gallery-card-overlay">
+                <span class="gallery-card-label">Arreglo Personalizable con Globo y Snacks</span>
+                <a href="https://wa.me/50671653777?text=Hola%20Marmat%20Studio!%20Me%20interesa%20cotizar%20un%20Arreglo%20Personalizable%20con%20Globo%20y Snacks." target="_blank" class="gallery-card-btn">Cotizar →</a>
+              </div>
+            </div>
+            <div class="gallery-card group">
+              <img src="assets/gallery/globo2.png" alt="Globo Burbuja" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <div class="gallery-card-overlay">
+                <span class="gallery-card-label">Globo Burbuja</span>
+                <a href="https://wa.me/50671653777?text=Hola%20Marmat%20Studio!%20Me%20interesa%20cotizar%20un%20Globo%20Burbuja." target="_blank" class="gallery-card-btn">Cotizar →</a>
+              </div>
+            </div>
+            <div class="gallery-card group">
+              <img src="assets/gallery/arreglo1.png" alt="Arreglo Floral" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <div class="gallery-card-overlay">
+                <span class="gallery-card-label">Arreglo Floral</span>
+                <a href="https://wa.me/50671653777?text=Hola%20Marmat%20Studio!%20Me%20interesa%20cotizar%20un%20Ramo%20Tem%C3%Floral." target="_blank" class="gallery-card-btn">Cotizar →</a>
+              </div>
+            </div>
+            <div class="gallery-card group">
+              <img src="assets/gallery/arreglo2.png" alt="Arreglo Para Agradecer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <div class="gallery-card-overlay">
+                <span class="gallery-card-label">Arreglo Para Agradecer</span>
+                <a href="https://wa.me/50671653777?text=Hola%20Marmat%20Studio!%20Me%20interesa%20cotizar%20un%20Arreglo%20Floral." target="_blank" class="gallery-card-btn">Cotizar →</a>
+              </div>
+            </div>
+            <div class="gallery-card group">
+              <img src= "assets/gallery/arreglo3.png" alt="Rayito de Alegría" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <div class="gallery-card-overlay">
+                <span class="gallery-card-label">Arreglo Rayito de Alegría</span>
+                <a href="https://wa.me/50671653777?text=Hola%20Marmat%20Studio!%20Me%20interesa%20cotizar%20un%20Rayito de%20Alegría." target="_blank" class="gallery-card-btn">Cotizar →</a>
+              </div>
+            </div>
+            <div class="gallery-card group">
+              <img src="assets/gallery/globo3.png" alt="Arreglo Celebra a Tu Manera" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <div class="gallery-card-overlay">
+                <span class="gallery-card-label">Arreglo Celebra a Tu Manera</span>
+                <a href="https://wa.me/50671653777?text=Hola%20Marmat%20Studio!%20Me%20interesa%20cotizar%20celebra%203D%20a%20tu%C3%ADManera." target="_blank" class="gallery-card-btn">Cotizar →</a>
+              </div>
+            </div>
+        </div>
+      </div>
+      </div>
+
+      <!-- FILA 2: derecha → izquierda (reversa) -->
+      <div class="gallery-marquee-wrapper relative">
+        <div class="pointer-events-none absolute left-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-r from-white to-transparent z-10"></div>
+        <div class="pointer-events-none absolute right-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-l from-white to-transparent z-10"></div>
+        <div class="gallery-track gallery-track--rev">
+          <!-- GRUPO B -->
+           <div class="gallery-group">
+            <div class="gallery-card group">
+              <img src="assets/gallery/globo1.png" alt="Globo Graduación" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <div class="gallery-card-overlay">
+                <span class="gallery-card-label">Arreglo Personalizable con Globo y Snacks</span>
+                <a href="https://wa.me/50671653777?text=Hola%20Marmat%20Studio!%20Me%20interesa%20cotizar%20un%20Arreglo%20Personalizable%20con%20Globo%20y Snacks." target="_blank" class="gallery-card-btn">Cotizar →</a>
+              </div>
+            </div>
+            <div class="gallery-card group">
+              <img src="assets/gallery/globo2.png" alt="Globo Burbuja" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <div class="gallery-card-overlay">
+                <span class="gallery-card-label">Globo Burbuja</span>
+                <a href="https://wa.me/50671653777?text=Hola%20Marmat%20Studio!%20Me%20interesa%20cotizar%20un%20Globo%20Burbuja." target="_blank" class="gallery-card-btn">Cotizar →</a>
+              </div>
+            </div>
+            <div class="gallery-card group">
+              <img src="assets/gallery/arreglo1.png" alt="Arreglo Floral" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <div class="gallery-card-overlay">
+                <span class="gallery-card-label">Arreglo Floral</span>
+                <a href="https://wa.me/50671653777?text=Hola%20Marmat%20Studio!%20Me%20interesa%20cotizar%20un%20Ramo%20Tem%C3%Floral." target="_blank" class="gallery-card-btn">Cotizar →</a>
+              </div>
+            </div>
+            <div class="gallery-card group">
+              <img src="assets/gallery/arreglo2.png" alt="Arreglo Para Agradecer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <div class="gallery-card-overlay">
+                <span class="gallery-card-label">Arreglo Para Agradecer</span>
+                <a href="https://wa.me/50671653777?text=Hola%20Marmat%20Studio!%20Me%20interesa%20cotizar%20un%20Arreglo%20Floral." target="_blank" class="gallery-card-btn">Cotizar →</a>
+              </div>
+            </div>
+            <div class="gallery-card group">
+              <img src= "assets/gallery/arreglo3.png" alt="Rayito de Alegría" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <div class="gallery-card-overlay">
+                <span class="gallery-card-label">Arreglo Rayito de Alegría</span>
+                <a href="https://wa.me/50671653777?text=Hola%20Marmat%20Studio!%20Me%20interesa%20cotizar%20un%20Rayito de%20Alegría." target="_blank" class="gallery-card-btn">Cotizar →</a>
+              </div>
+            </div>
+            <div class="gallery-card group">
+              <img src="assets/gallery/globo3.png" alt="Arreglo Celebra a Tu Manera" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <div class="gallery-card-overlay">
+                <span class="gallery-card-label">Arreglo Celebra a Tu Manera</span>
+                <a href="https://wa.me/50671653777?text=Hola%20Marmat%20Studio!%20Me%20interesa%20cotizar%20celebra%203D%20a%20tu%C3%ADManera." target="_blank" class="gallery-card-btn">Cotizar →</a>
+              </div>
+            </div>
+          </div>
+          <!-- GRUPO A duplicado para loop infinito -->
+          <div class="gallery-group" aria-hidden="true">
+           <div class="gallery-card group">
+              <img src="assets/gallery/globo1.png" alt="Globo Graduación" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <div class="gallery-card-overlay">
+                <span class="gallery-card-label">Arreglo Personalizable con Globo y Snacks</span>
+                <a href="https://wa.me/50671653777?text=Hola%20Marmat%20Studio!%20Me%20interesa%20cotizar%20un%20Arreglo%20Personalizable%20con%20Globo%20y Snacks." target="_blank" class="gallery-card-btn">Cotizar →</a>
+              </div>
+            </div>
+            <div class="gallery-card group">
+              <img src="assets/gallery/globo2.png" alt="Globo Burbuja" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <div class="gallery-card-overlay">
+                <span class="gallery-card-label">Globo Burbuja</span>
+                <a href="https://wa.me/50671653777?text=Hola%20Marmat%20Studio!%20Me%20interesa%20cotizar%20un%20Globo%20Burbuja." target="_blank" class="gallery-card-btn">Cotizar →</a>
+              </div>
+            </div>
+            <div class="gallery-card group">
+              <img src="assets/gallery/arreglo1.png" alt="Arreglo Floral" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <div class="gallery-card-overlay">
+                <span class="gallery-card-label">Arreglo Floral</span>
+                <a href="https://wa.me/50671653777?text=Hola%20Marmat%20Studio!%20Me%20interesa%20cotizar%20un%20Ramo%20Tem%C3%Floral." target="_blank" class="gallery-card-btn">Cotizar →</a>
+              </div>
+            </div>
+            <div class="gallery-card group">
+              <img src="assets/gallery/arreglo2.png" alt="Arreglo Para Agradecer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <div class="gallery-card-overlay">
+                <span class="gallery-card-label">Arreglo Para Agradecer</span>
+                <a href="https://wa.me/50671653777?text=Hola%20Marmat%20Studio!%20Me%20interesa%20cotizar%20un%20Arreglo%20Floral." target="_blank" class="gallery-card-btn">Cotizar →</a>
+              </div>
+            </div>
+            <div class="gallery-card group">
+              <img src= "assets/gallery/arreglo3.png" alt="Rayito de Alegría" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <div class="gallery-card-overlay">
+                <span class="gallery-card-label">Arreglo Rayito de Alegría</span>
+                <a href="https://wa.me/50671653777?text=Hola%20Marmat%20Studio!%20Me%20interesa%20cotizar%20un%20Rayito de%20Alegría." target="_blank" class="gallery-card-btn">Cotizar →</a>
+              </div>
+            </div>
+            <div class="gallery-card group">
+              <img src="assets/gallery/globo3.png" alt="Arreglo Celebra a Tu Manera" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <div class="gallery-card-overlay">
+                <span class="gallery-card-label">Arreglo Celebra a Tu Manera</span>
+                <a href="https://wa.me/50671653777?text=Hola%20Marmat%20Studio!%20Me%20interesa%20cotizar%20celebra%203D%20a%20tu%C3%ADManera." target="_blank" class="gallery-card-btn">Cotizar →</a>
+              </div>
+            </div>
+        </div>
+      </div>
+      </div>
+
+      <!-- CTA Instagram -->
+      <div class="text-center mt-10">
+        <a href="https://www.instagram.com/marmatstudio.cr/" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-gradient-to-r from-lila via-lila-hover to-mint text-white text-sm font-bold shadow-lila-soft hover:opacity-95 hover:scale-105 transition-all">
+          <span class="material-symbols-outlined text-[18px]">photo_camera</span>
+          Ver más en Instagram @marmatstudio.cr
+        </a>
+      </div>
+
+    </section>
+
+    <!-- PREGUNTAS FRECUENTES -->
+    <section class="py-16 sm:py-20 bg-white" id="faq">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+        
+        <div class="text-center space-y-2">
+          <span class="text-xs font-bold uppercase tracking-widest text-lila block">
+            Dudas Comunes
+          </span>
+          <h2 class="font-editorial text-3xl sm:text-4xl text-ink font-normal">
+            Preguntas Frecuentes
+          </h2>
+          <p class="text-ink-muted text-sm sm:text-base">
+            Todo lo que necesitas saber antes de coordinar tu encargo con Marmat Studio.
+          </p>
+        </div>
+
+        <div class="space-y-3" id="faq-accordion">
+          
+          <!-- Pregunta 1 -->
+          <div class="faq-item rounded-2xl bg-surface border border-surface-border overflow-hidden transition-colors">
+            <button type="button" class="faq-toggle w-full p-5 text-left flex items-center justify-between gap-4 font-editorial text-lg text-ink">
+              <span>¿Con cuánto tiempo de antelación debo pedir mi arreglo?</span>
+              <span class="material-symbols-outlined faq-icon text-lila transition-transform duration-300">expand_more</span>
+            </button>
+            <div class="faq-content px-5 pb-5 text-xs sm:text-sm text-ink-muted leading-relaxed hidden">
+              Recomendamos agendar con <strong>24 a 48 horas de anticipación</strong> para pedidos de catálogo estándar, y con al menos 4 a 7 días para montajes de eventos o bouquets con flores especiales de temporada. ¿Tienes una urgencia del mismo día? Escríbenos por WhatsApp para verificar si tenemos cupo express inmediato en el taller.
+            </div>
+          </div>
+
+          <!-- Pregunta 2 -->
+          <div class="faq-item rounded-2xl bg-surface border border-surface-border overflow-hidden transition-colors">
+            <button type="button" class="faq-toggle w-full p-5 text-left flex items-center justify-between gap-4 font-editorial text-lg text-ink">
+              <span>¿Cuánto tiempo duran los globos con helio y las flores?</span>
+              <span class="material-symbols-outlined faq-icon text-lila transition-transform duration-300">expand_more</span>
+            </button>
+            <div class="faq-content px-5 pb-5 text-xs sm:text-sm text-ink-muted leading-relaxed hidden">
+              Nuestras <strong>Burbujas de Cristal</strong> duran flotando entre <strong>7 y 14 días</strong> (en condiciones óptimas de interior, lejos del sol directo o aire acondicionado fuerte). Los globos de látex tratados con gel Ultra Hi-Float flotan de 24 a 48 horas. Las flores frescas duran en promedio de 5 a 8 días y las sombrereras con rosas preservadas duran más de 1 año sin requerir riego.
+            </div>
+          </div>
+
+          <!-- Pregunta 3 -->
+          <div class="faq-item rounded-2xl bg-surface border border-surface-border overflow-hidden transition-colors">
+            <button type="button" class="faq-toggle w-full p-5 text-left flex items-center justify-between gap-4 font-editorial text-lg text-ink">
+              <span>¿Cuáles zonas cubren para entrega a domicilio en Costa Rica?</span>
+              <span class="material-symbols-outlined faq-icon text-lila transition-transform duration-300">expand_more</span>
+            </button>
+            <div class="faq-content px-5 pb-5 text-xs sm:text-sm text-ink-muted leading-relaxed hidden">
+              Realizamos entregas programadas en todo el <strong>Gran Área Metropolitana (GAM)</strong>: San José Centro, Curridabat, San Pedro, Montes de Oca, Escazú, Santa Ana, Guachipelín, Heredia (Belén, Barva, San Francisco), Alajuela y Cartago (Tres Ríos, Paraíso, Centro). La tarifa de mensajería privada se calcula según el punto exacto de GPS.
+            </div>
+          </div>
+
+          <!-- Pregunta 4 -->
+          <div class="faq-item rounded-2xl bg-surface border border-surface-border overflow-hidden transition-colors">
+            <button type="button" class="faq-toggle w-full p-5 text-left flex items-center justify-between gap-4 font-editorial text-lg text-ink">
+              <span>¿Cuáles métodos de pago aceptan?</span>
+              <span class="material-symbols-outlined faq-icon text-lila transition-transform duration-300">expand_more</span>
+            </button>
+            <div class="faq-content px-5 pb-5 text-xs sm:text-sm text-ink-muted leading-relaxed hidden">
+              Aceptamos <strong>SINPE Móvil inmediato</strong> para pagos en Costa Rica, transferencias electrónicas directas a cuentas BAC Credomatic y Banco de Costa Rica (BCR), y enlaces de pago seguro para tarjetas de crédito/débito nacionales e internacionales (ideal para familiares que ordenan desde Estados Unidos o Europa).
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BANNER FINAL -->
+    <section class="py-16 sm:py-24 text-white relative overflow-hidden" style="background: linear-gradient(90deg, #7644B2 0%, #A378D8 48%, #1C7D70 100%);">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 relative z-10">
+        <span class="text-xs font-bold uppercase tracking-widest text-lila-soft block">
+          Celebra Sin Límites
+        </span>
+        <h2 class="font-editorial text-3xl sm:text-5xl font-normal leading-tight">
+          Hagamos realidad ese detalle que robará todas las miradas.
+        </h2>
+        <p class="text-lila-soft text-sm sm:text-lg max-w-xl mx-auto leading-relaxed">
+          Nuestro equipo de diseño floral y balloon artists está en línea para ayudarte a escoger cada detalle con calidez, distinción y puntualidad.
+        </p>
+        <div class="pt-2">
+          <a href="https://wa.me/50671653777?text=Hola%20Marmat%20Studio!%20Quisiera%20asesor%C3%ADa%20personalizada%20para%20crear%20un%20arreglo%20exclusivo" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white text-lila-dark hover:bg-surface text-sm sm:text-base font-bold shadow-2xl hover:scale-105 transition-all">
+            <span class="material-symbols-outlined text-[22px] text-mint">chat</span>
+            <span>Conversar con Marmat Concierge en WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER EDITORIAL DE LUJO -->
+  <footer class="bg-ink text-white pt-16 pb-12 border-t-2 border-lila-light/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+        
+        <!-- Columna 1: Marca -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-lila to-mint flex items-center justify-center text-white font-editorial text-xl font-bold">
+              M
+            </div>
+            <span class="font-editorial text-2xl font-medium tracking-tight">Marmat Studio</span>
+          </div>
+          <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
+            Marmat Studio es un taller creativo de diseño floral y balloon art, especializado en arreglos temáticos, bouquets, globos con helio y detalles personalizados para toda ocasión.
+          </p>
+          <div class="flex items-center gap-2 text-xs text-mint-light">
+            <span class="w-2 h-2 rounded-full bg-mint-light"></span>
+            <span>Arreglos & Tienda • CC Casa Vieja, Local #8, Santo Domingo de Heredia, CR</span>
+          </div>
+        </div>
+
+        <!-- Columna 2: Navegación -->
+        <div class="space-y-3">
+          <h4 class="font-editorial text-lg text-white font-semibold">Navegación</h4>
+          <ul class="space-y-2 text-xs sm:text-sm text-gray-300">
+            <li><a href="#catalogo" class="hover:text-mint-light transition-colors">Catálogo</a></li>
+            <li><a href="#cotizador-medida" class="hover:text-mint-light transition-colors">Diseño Personalizado</a></li>
+            <li><a href="#historia" class="hover:text-mint-light transition-colors">Nuestra Historia & Filosofía</a></li>
+            <li><a href="#como-pedir" class="hover:text-mint-light transition-colors">Guía de Compra & Entregas</a></li>
+            <li><a href="#faq" class="hover:text-mint-light transition-colors">Preguntas Frecuentes</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Horarios & Cobertura -->
+        <div class="space-y-3">
+          <h4 class="font-editorial text-lg text-white font-semibold">Zona & Entregas</h4>
+          <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
+            Cobertura garantizada en todo el país. Envíos programados a cada rincón de Costa Rica.
+          </p>
+          <div class="bg-white/5 rounded-2xl p-3 text-xs text-gray-300 space-y-1 border border-white/10">
+            <span class="text-mint-light font-bold block">Horario de Tienda & Entregas:</span>
+            <span>Lunes a Domingo: 8:00 AM - 6:00 PM</span><br/>
+            <span>Atención por WhatsApp: +506 7165-3777</span>
+          </div>
+        </div>
+
+        <!-- Columna 4: Pagos & Contacto -->
+        <div class="space-y-3">
+          <h4 class="font-editorial text-lg text-white font-semibold">Métodos de Pago</h4>
+          <p class="text-xs text-gray-300">
+            Confirmación inmediata y transacciones protegidas:
+          </p>
+          <div class="grid grid-cols-2 gap-2 text-xs font-semibold text-gray-200">
+            <div class="bg-white/10 rounded-xl py-2 px-2.5 text-center">SINPE Móvil</div>
+            <div class="bg-white/10 rounded-xl py-2 px-2.5 text-center">Tarjetas CR/INT</div>
+            <div class="bg-white/10 rounded-xl py-2 px-2.5 text-center">Efectivo</div>
+          </div>
+          <div class="pt-2">
+            <a href="mailto:hola@marmatstudio.cr" class="text-xs text-mint-light hover:underline flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-[15px]">mail</span>
+              <span>hola@marmatstudio.cr</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright y redes -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
+        <p>© 2026 Marmat Studio Costa Rica. Todos los derechos reservados.</p>
+        <div class="flex items-center gap-6">
+          <a href="https://www.instagram.com/marmatstudio.cr/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors flex items-center gap-1">
+            <span>Instagram Oficial (@marmatstudio.cr)</span>
+          </a>
+          <a href="#faq" class="hover:text-white transition-colors">Términos & Políticas</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- BOTÓN FLOTANTE DE WHATSAPP CON BADGE -->
+  <aside class="fixed bottom-6 right-6 z-40">
+    <a href="https://wa.me/50671653777?text=Hola%20Marmat%20Studio!%20Me%20encantar%C3%ADa%20cotizar%20un%20arreglo" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-2.5 p-3.5 sm:px-4 sm:py-3.5 rounded-full bg-lila hover:bg-lila-hover text-white shadow-2xl transition-all duration-300 hover:scale-105" aria-label="Cotizar por WhatsApp">
+      <span class="relative flex h-3 w-3">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-mint-light opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-3 w-3 bg-mint"></span>
+      </span>
+      <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+        <path d="M20.52 3.48A11.85 11.85 0 0012.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.98L0 24l6.23-1.63a11.9 11.9 0 005.83 1.51h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.52-8.43zM12.07 21.87h-.01c-1.8 0-3.56-.48-5.1-1.39l-.37-.22-3.79.99 1.01-3.69-.24-.38a9.89 9.89 0 01-1.52-5.21c0-5.47 4.45-9.92 9.93-9.92 2.65 0 5.14 1.03 7.02 2.9 1.87 1.88 2.9 4.37 2.9 7.02 0 5.48-4.45 9.9-9.83 9.9zm5.45-7.44c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.88.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/>
+      </svg>
+      <span class="hidden sm:inline font-semibold text-xs tracking-wide">¿Cotizamos tu detalle?</span>
+    </a>
+  </aside>
+
+</body>
+</html>
