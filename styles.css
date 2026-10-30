@@ -29,6 +29,22 @@
   --color-gold: #C59A3F;
 }
 
+@font-face {
+  font-family: 'Frick03';
+  src: url('assets/fonts/frick03-regular.otf') format('opentype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Frick03 Condensed';
+  src: url('assets/fonts/frick03-condensed.otf') format('opentype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
@@ -36,7 +52,7 @@ html {
 }
 
 body {
-  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  font-family: 'Poppins', system-ui, -apple-system, sans-serif;
   background-color: var(--color-bg-body);
   color: var(--color-ink-primary);
   overflow-x: hidden;
@@ -49,7 +65,7 @@ body {
 
 /* Tipografía Editorial */
 .font-editorial {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Frick03 Condensed', 'Frick03', Georgia, serif;
 }
 
 /* Glassmorphism de la Barra de Navegación */

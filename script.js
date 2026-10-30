@@ -5,6 +5,13 @@
 
 const MARMAT_WHATSAPP = '50671653777';
 
+function openWhatsAppMessage(message) {
+  const url = new URL('https://api.whatsapp.com/send');
+  url.searchParams.set('phone', MARMAT_WHATSAPP);
+  url.searchParams.set('text', message);
+  window.open(url.toString(), '_blank');
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 
   // ==========================================
@@ -90,14 +97,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const message = 
       `Hola Marmat Studio! Deseo cotizar el siguiente producto del catálogo:\n\n` +
-      `🌸 *Producto:* ${productName}\n` +
-      `💰 *Precio de referencia:* ${price}\n` +
-      `📅 *Fecha estimada entrega GAM:* ${dateVal}\n` +
-      `✍️ *Frase en el globo / dedicatoria:* "${phraseVal}"\n\n` +
+      `🌸 Producto: ${productName}\n` +
+      `💰 Precio de referencia: ${price}\n` +
+      `📅 Fecha estimada de entrega GAM: ${dateVal}\n` +
+      `📝 Frase en el globo / dedicatoria: "${phraseVal}"\n\n` +
       `¿Me podrían confirmar disponibilidad de agenda y zona de entrega? ¡Gracias!`;
 
-    const encoded = encodeURIComponent(message);
-    window.open(`https://wa.me/${MARMAT_WHATSAPP}?text=${encoded}`, '_blank');
+    openWhatsAppMessage(message);
   };
 
   // ==========================================
@@ -152,14 +158,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const message = 
       `Hola Marmat Studio! Acabo de diseñar mi arreglo personalizado en el cotizador de la web:\n\n` +
-      `✨ *Ocasión Especial:* ${customOccasion}\n` +
-      `🎨 *Paleta de Color:* ${customPalette}\n` +
-      `💰 *Presupuesto Estimado:* ${customBudget}\n` +
-      `📝 *Ideas / Notas adicionales:* ${extraNotes}\n\n` +
+      `✨ Ocasión especial: ${customOccasion}\n` +
+      `🎨 Paleta de color: ${customPalette}\n` +
+      `💰 Presupuesto estimado: ${customBudget}\n` +
+      `📝 Ideas / notas adicionales: ${extraNotes}\n\n` +
       `¿Me podrían brindar asesoría y fotos de referencia para entrega en el GAM?`;
 
-    const encoded = encodeURIComponent(message);
-    window.open(`https://wa.me/${MARMAT_WHATSAPP}?text=${encoded}`, '_blank');
+    openWhatsAppMessage(message);
   };
 
   // ==========================================================================
