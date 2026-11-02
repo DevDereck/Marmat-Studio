@@ -74,25 +74,23 @@
 
   <!-- NAVEGACIÓN PRINCIPAL -->
   <header class="sticky top-0 z-50 glass-nav transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-3">
       
       <!-- LOGO & BRANDING MARMAT -->
-      <a href="#" class="flex items-center gap-3.5 group">
-        <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-lila via-lila-light to-mint-light flex items-center justify-center text-white shadow-lila-soft group-hover:scale-105 transition-transform duration-300">
-          <span class="font-editorial text-2xl font-bold tracking-tighter">M</span>
-        </div>
-        <div class="flex flex-col">
-          <span class="font-editorial text-2xl sm:text-[25px] font-semibold text-ink tracking-tight leading-none group-hover:text-lila transition-colors">
-            Marmat <span class="italic font-normal text-mint font-editorial">Studio</span>
+      <a href="#" class="flex min-w-0 items-center gap-2 sm:gap-3.5 group">
+        <img src="assets/gallery/logo.jpeg" alt="Logo de Marmat Studio" class="w-12 h-12 sm:w-14 sm:h-14 shrink-0 rounded-xl bg-white object-contain group-hover:scale-105 transition-transform duration-300" />
+        <div class="flex min-w-0 flex-col">
+          <span class="whitespace-nowrap font-sans text-lg sm:text-2xl md:text-[25px] font-semibold text-ink tracking-tight leading-none group-hover:text-lila transition-colors">
+            Marmat <span class="italic font-normal text-mint font-sans">Studio</span>
           </span>
-          <span class="text-[10px] sm:text-[11px] uppercase tracking-widest text-ink-muted font-semibold mt-1">
+          <span class="hidden sm:block text-[10px] md:text-[11px] uppercase tracking-widest text-ink-muted font-semibold mt-1">
             Regalos Personalizados, Sublimación y Papelería
           </span>
         </div>
       </a>
 
       <!-- ENLACES DE NAVEGACIÓN DESKTOP CON ESPACIADO ELEGANTE -->
-      <nav class="hidden lg:flex items-center gap-8 text-[14px] font-medium text-ink-muted">
+      <nav class="hidden xl:flex items-center gap-4 2xl:gap-6 text-[14px] font-medium text-ink-muted">
         <a href="#catalogo" class="nav-link py-1">Catálogo</a>
         <a href="#cotizador-medida" class="nav-link py-1">Personalizados</a>
         <a href="#historia" class="nav-link py-1">Nuestra Historia</a>
@@ -107,7 +105,7 @@
     
 
         <!-- Botón Menú Móvil -->
-        <button id="mobile-menu-btn" type="button" aria-label="Abrir menú" class="lg:hidden p-2 rounded-2xl text-ink-muted hover:text-lila hover:bg-lila-soft transition-colors">
+        <button id="mobile-menu-btn" type="button" aria-label="Abrir menú" class="xl:hidden p-2 rounded-2xl text-ink-muted hover:text-lila hover:bg-lila-soft transition-colors">
           <span class="material-symbols-outlined text-[28px]">menu</span>
         </button>
       </div>
@@ -115,7 +113,7 @@
     </div>
 
     <!-- MENÚ DESPLEGABLE MÓVIL -->
-    <div id="mobile-menu" class="hidden lg:hidden border-b border-surface-border bg-white/95 backdrop-blur-xl px-6 py-6 space-y-4 shadow-xl">
+    <div id="mobile-menu" class="hidden xl:hidden border-b border-surface-border bg-white/95 backdrop-blur-xl px-6 py-6 space-y-4 shadow-xl">
       <div class="flex flex-col space-y-3 font-medium text-ink">
         <a href="#catalogo" class="mobile-nav-link py-2.5 px-3.5 rounded-2xl hover:bg-lila-soft hover:text-lila transition-colors flex items-center justify-between">
           <span>🌸 Catálogo de Arreglos</span>
@@ -246,8 +244,8 @@
               <!-- Imagen Principal (Arreglo Insignia Marmat) -->
               <div class="absolute top-0 right-0 w-[86%] h-[410px] rounded-3xl overflow-hidden shadow-card-luxury border-4 border-white bg-surface-border group">
                 <img src="assets/gallery/arreglo5.png" 
-                     alt="Arreglo Floral y Globos Marmat Studio" 
-                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    alt="Arreglo Floral y Globos Marmat Studio" 
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                 <div class="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent"></div>
                 <div class="absolute bottom-4 left-4 right-4 text-white">
                   <span class="text-[10px] uppercase font-bold tracking-widest px-2.5 py-0.5 rounded-full bg-lila/85 backdrop-blur-sm">Edición Firma</span>
@@ -258,8 +256,8 @@
               <div class="absolute bottom-2 left-0 w-[64%] h-[260px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white p-1.5 animate-float-gentle">
                 <div class="relative w-full h-full rounded-2xl overflow-hidden">
                   <img src="assets/gallery/choc1.png" 
-                       alt="Chocolates Personalizados Marmat" 
-                       class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+                      alt="Chocolates Personalizados Marmat" 
+                      class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
                   
                 </div>
               </div>
@@ -295,7 +293,7 @@
           <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
             <div class="relative min-w-[260px]">
               <input id="catalog-search" type="text" placeholder="Buscar arreglo, globo, taza, camisa..." 
-                     class="w-full pl-10 pr-4 py-2.5 rounded-full bg-surface border border-surface-border text-sm text-ink placeholder-ink-light focus:outline-none focus:ring-2 focus:ring-lila shadow-sm" />
+                    class="w-full pl-10 pr-4 py-2.5 rounded-full bg-surface border border-surface-border text-sm text-ink placeholder-ink-light focus:outline-none focus:ring-2 focus:ring-lila shadow-sm" />
               <span class="material-symbols-outlined text-[20px] text-ink-muted absolute left-3.5 top-2.5">search</span>
             </div>
             <div class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-lila-soft text-lila-dark text-xs font-bold shadow-sm">
@@ -310,53 +308,59 @@
           <button type="button" data-filter="all" class="filter-btn active-filter px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-lila text-white shadow-lila-soft whitespace-nowrap">
             Favoritos
           </button>
-          <button type="button" data-filter="burbujas" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white hover:bg-surface text-ink-muted border border-surface-border whitespace-nowrap">
+          <button type="button" data-filter="globos" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white hover:bg-surface text-ink-muted border border-surface-border whitespace-nowrap">
             Globos
           </button>
-          <button type="button" data-filter="sombrereras" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white hover:bg-surface text-ink-muted border border-surface-border whitespace-nowrap">
+          <button type="button" data-filter="flores" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white hover:bg-surface text-ink-muted border border-surface-border whitespace-nowrap">
             Flores y Arreglos
           </button>
-          <button type="button" data-filter="bouquets" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white hover:bg-surface text-ink-muted border border-surface-border whitespace-nowrap">
+          <button type="button" data-filter="camisas" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white hover:bg-surface text-ink-muted border border-surface-border whitespace-nowrap">
             Camisetas Personalizadas
           </button>
-          <button type="button" data-filter="eventos" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white hover:bg-surface text-ink-muted border border-surface-border whitespace-nowrap">
+          <button type="button" data-filter="chocolates" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white hover:bg-surface text-ink-muted border border-surface-border whitespace-nowrap">
             Chocolates Personalizados
           </button>
-          <button type="button" data-filter="eventos" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white hover:bg-surface text-ink-muted border border-surface-border whitespace-nowrap">
+          <button type="button" data-filter="tazas" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white hover:bg-surface text-ink-muted border border-surface-border whitespace-nowrap">
             Tazas Personalizadas
           </button>
         </div>
 
         <!-- GRILLA DE PRODUCTOS -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 sm:gap-8" id="products-grid">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start gap-7 sm:gap-8" id="products-grid">
           
           <!-- PRODUCTO 1 -->
-          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="burbujas">
+          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col group" data-category="flores">
             <div>
               <div class="relative w-full aspect-[4/3] overflow-hidden bg-lila-soft/30">
-                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBx97ReGG8R_bPxl8NZrKX3IEFRbIMl2-ztAKqjhVWIWSC4j0A9I_SNO1l_AtCjcUY785F9RmjRGNSnJp1ORudXZh-yYesQhfndEGwKskCWFO7PFm383GaDxPEzqkZDS_NGHEupYvM6yNVTE07Pr6eD3Mxc89bwbg9nBiCJisL_HzTgAkhbgnhtuMCBHsTYTSACw33E-y8Q_elLgvGvF0hjXF0j9ERW8Akg8melF3DzsaN6MErbL3rC1g" 
-                     alt="Bouquet Jardín Lavanda & Menta Marmat" 
-                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src="assets/gallery/arreglo5.png" 
+                    alt="Arreglo “Meta Alcanzada”" 
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 <span class="absolute top-3 left-3 bg-lila text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
                   Más Pedido
                 </span>
                 <div class="absolute top-3 right-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-ink shadow-sm">
-                  ₡38,000 <span class="text-ink-muted font-normal">/ $72 USD</span>
+                  ₡14,500 <span class="text-ink-muted font-normal"></span>
                 </div>
               </div>
               <div class="p-5 sm:p-6 space-y-3">
                 <h3 class="font-editorial text-2xl text-ink font-normal">
-                  Bouquet Jardín Lavanda & Menta
+                  Arreglo “Meta Alcanzada”
                 </h3>
                 <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">
-                  Pieza estelar sobre base cerámica artesanal con orquídeas frescas de Cartago, rosas crema selectas, follaje aromático de eucalipto y globo burbuja con confeti lila.
+                  Un detalle elegante y significativo para sorprender a quien hoy celebra un logro académico.
                 </p>
-                <div class="bg-lila-tint p-3 rounded-2xl border border-lila-light/40 space-y-1">
-                  <div class="flex items-center gap-1.5 text-xs font-semibold text-lila-dark">
-                    <span class="material-symbols-outlined text-[16px]">verified</span>
-                    <span>Incluye: Orquídeas + Globo Burbuja 20" + Base Artesanal</span>
+                <div class="rounded-2xl border border-lila-light/40 bg-lila-tint p-4">
+                  <div class="mb-3 flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-lila-dark">
+                    <span class="material-symbols-outlined text-[17px]" aria-hidden="true">inventory_2</span>
+                    <span>Este arreglo incluye</span>
                   </div>
-                  <p class="text-[11px] text-ink-muted">Tarjeta con dedicatoria caligrafiada en sobre de algodón.</p>
+                  <ul class="space-y-2 text-xs leading-relaxed text-ink">
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Globo burbuja personalizado con mini globos internos.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Lazo acorde a la temática y decoración con papel en tonos combinados.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Chip Bag con nombre y snacks o dulces, más golosinas y chocolates variados.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Tarjetita de felicitación y base decorativa en tonos elegantes (según disponibilidad).</span></li>
+                  </ul>
+                  <p class="mt-3 border-t border-lila-light/40 pt-3 text-[11px] leading-relaxed text-ink-muted">Personalizamos colores, tema, mensaje y nombre para crear un regalo único.</p>
                 </div>
               </div>
             </div>
@@ -370,10 +374,10 @@
                 </div>
                 <div>
                   <label class="block text-[11px] font-bold text-ink mb-1">Frase en el globo</label>
-                  <input type="text" placeholder="Ej: ¡Feliz Vuelta al Sol!" class="order-phrase w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
+                  <input type="text" placeholder="Ej: Felicidades Adrián" class="order-phrase w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
                 </div>
               </div>
-              <button type="button" onclick="sendProductQuote('Bouquet Jardín Lavanda & Menta', '₡38,000 / $72 USD', this)" class="w-full flex items-center justify-center gap-2 py-3 rounded-full bg-lila hover:bg-lila-hover text-white text-sm font-semibold shadow-lila-soft shadow-lila-hover transition-all">
+              <button type="button" onclick="sendProductQuote('Arreglo Meta Alcanzada ', '₡30,000', this)" class="w-full flex items-center justify-center gap-2 py-3 rounded-full bg-lila hover:bg-lila-hover text-white text-sm font-semibold shadow-lila-soft shadow-lila-hover transition-all">
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
                   <path d="M20.52 3.48A11.85 11.85 0 0012.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.98L0 24l6.23-1.63a11.9 11.9 0 005.83 1.51h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.52-8.43zM12.07 21.87h-.01c-1.8 0-3.56-.48-5.1-1.39l-.37-.22-3.79.99 1.01-3.69-.24-.38a9.89 9.89 0 01-1.52-5.21c0-5.47 4.45-9.92 9.93-9.92 2.65 0 5.14 1.03 7.02 2.9 1.87 1.88 2.9 4.37 2.9 7.02 0 5.48-4.45 9.9-9.83 9.9zm5.45-7.44c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.88.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/>
                 </svg>
@@ -383,32 +387,38 @@
           </article>
 
           <!-- PRODUCTO 2 -->
-          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="burbujas">
+          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col group" data-category="flores">
             <div>
               <div class="relative w-full aspect-[4/3] overflow-hidden bg-mint-soft/30">
-                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTNANSEjZynB2qYU3dh_TGD3EpXThLhhut7yDlN6aTFqldlvO2Zt3-yLW4llo_f_CbLHe_N-XKCDd4OJQoascQqcSoDzj_KE2IMNUhMF_N0F0xpYSRSpXoV0-3qMiNf22PZrEieGj1jYQPQaPWrB1wWsznr4l2nZx9zpNNUwa5hK6Og1yddk8C--xhh4ua0EKiD490ns-XQGjwfc8rUpzNOtR93MkcwWAM5ORnDjx0YhoP-TBwrVS7xg" 
-                     alt="Burbuja Orgánica Cristal Marmat" 
-                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src="assets/gallery/arreglo3.png" 
+                    alt="Rayito de Alegría" 
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 <span class="absolute top-3 left-3 bg-mint text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
                   Favorito Marmat
                 </span>
                 <div class="absolute top-3 right-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-ink shadow-sm">
-                  ₡26,500 <span class="text-ink-muted font-normal">/ $50 USD</span>
+                  ₡14,500 <span class="text-ink-muted font-normal"></span>
                 </div>
               </div>
               <div class="p-5 sm:p-6 space-y-3">
                 <h3 class="font-editorial text-2xl text-ink font-normal">
-                  Burbuja Orgánica Cristal Marmat
+                  Rayito de Alegría
                 </h3>
                 <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">
-                  Globo burbuja de 24" inflado con helio de alta pureza, relleno con mini globos verde agua y lila perla, frase personalizada en vinil oro rosa y lazo de terciopelo.
+                  Un detalle lleno de luz y energía positiva, ideal para celebrar un logro, agradecer, felicitar o simplemente alegrar el día de alguien especial.
                 </p>
-                <div class="bg-mint-subtle p-3 rounded-2xl border border-mint-light/40 space-y-1">
-                  <div class="flex items-center gap-1.5 text-xs font-semibold text-mint-dark">
-                    <span class="material-symbols-outlined text-[16px]">verified</span>
-                    <span>Incluye: Helio puro + 6 mini globos + Caligrafía vinil</span>
+                <div class="rounded-2xl border border-mint-light/40 bg-mint-subtle p-4">
+                  <div class="mb-3 flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-mint-dark">
+                    <span class="material-symbols-outlined text-[17px]" aria-hidden="true">inventory_2</span>
+                    <span>Este arreglo incluye</span>
                   </div>
-                  <p class="text-[11px] text-ink-muted">Duración garantizada de 7 a 14 días flotando en interiores.</p>
+                  <ul class="space-y-2 text-xs leading-relaxed text-ink">
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-mint"></span><span>6 girasoles y globo metálico personalizado con nombre (según disponibilidad).</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-mint"></span><span>Tarjetita con mensaje especial y detalles decorativos en tonos delicados.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-mint"></span><span>Base “Especialmente para ti” (según disponibilidad).</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-mint"></span><span>Empaque con papel y lazos combinados.</span></li>
+                  </ul>
+                  <p class="mt-3 border-t border-mint-light/40 pt-3 text-[11px] leading-relaxed text-ink-muted">Personalizamos colores, tema, mensaje y nombre para crear un regalo único.</p>
                 </div>
               </div>
             </div>
@@ -425,7 +435,7 @@
                   <input type="text" placeholder="Ej: Te Amo Sofía • Aniv. 5" class="order-phrase w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
                 </div>
               </div>
-              <button type="button" onclick="sendProductQuote('Burbuja Orgánica Cristal Marmat', '₡26,500 / $50 USD', this)" class="w-full flex items-center justify-center gap-2 py-3 rounded-full bg-lila hover:bg-lila-hover text-white text-sm font-semibold shadow-lila-soft shadow-lila-hover transition-all">
+              <button type="button" onclick="sendProductQuote('Rayito de Alegría', '₡14,500', this)" class="w-full flex items-center justify-center gap-2 py-3 rounded-full bg-lila hover:bg-lila-hover text-white text-sm font-semibold shadow-lila-soft shadow-lila-hover transition-all">
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
                   <path d="M20.52 3.48A11.85 11.85 0 0012.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.98L0 24l6.23-1.63a11.9 11.9 0 005.83 1.51h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.52-8.43zM12.07 21.87h-.01c-1.8 0-3.56-.48-5.1-1.39l-.37-.22-3.79.99 1.01-3.69-.24-.38a9.89 9.89 0 01-1.52-5.21c0-5.47 4.45-9.92 9.93-9.92 2.65 0 5.14 1.03 7.02 2.9 1.87 1.88 2.9 4.37 2.9 7.02 0 5.48-4.45 9.9-9.83 9.9zm5.45-7.44c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.88.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/>
                 </svg>
@@ -435,32 +445,36 @@
           </article>
 
           <!-- PRODUCTO 3 -->
-          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="sombrereras">
+          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col group" data-category="globos">
             <div>
               <div class="relative w-full aspect-[4/3] overflow-hidden bg-lila-soft/30">
-                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvpBk7M_jYTVvX68WLYhXPDL0U_RUaL20Z9DKvPZmegBQML5yJ29jxpvmea17ccZmq2MWoYFyp1iso-1I9G_xEdf8g_tMeAB8CXq8PhsTWlaHgB_p_k5kPr8jMbby4E0wSkrknKaZVmR8xeFEHWhbBRoLzgHozMtqhv60k6nXTZAewhTnSyfZV8Zw3YYgcevcP9rAYWfDQyASXn89BgP7OnxYe-EsLg_Z6-ivsCpGUsnyc_xkzK0KLKw" 
-                     alt="Luxury Flower Box Ethereal Marmat" 
-                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src="assets/gallery/globo2.png" 
+                    alt="Globo Burbuja de Momentos" 
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 <span class="absolute top-3 left-3 bg-lila-dark text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
-                  Colección Luxe
+                  Globo
                 </span>
                 <div class="absolute top-3 right-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-ink shadow-sm">
-                  ₡45,000 <span class="text-ink-muted font-normal">/ $85 USD</span>
+                  ₡5,000 <span class="text-ink-muted font-normal"></span>
                 </div>
               </div>
               <div class="p-5 sm:p-6 space-y-3">
                 <h3 class="font-editorial text-2xl text-ink font-normal">
-                  Luxury Flower Box Ethereal
+                  Globo Burbuja de Momentos
                 </h3>
                 <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">
-                  Sombrerera cilíndrica lila pastel con rosas preservadas de larga vida (hasta 1 año), mini arco orgánico de globos verde menta y tarjeta caligráfica con sello de cera.
+                  Un detalle para celebrar a tu manera                
                 </p>
-                <div class="bg-lila-tint p-3 rounded-2xl border border-lila-light/40 space-y-1">
-                  <div class="flex items-center gap-1.5 text-xs font-semibold text-lila-dark">
-                    <span class="material-symbols-outlined text-[16px]">verified</span>
-                    <span>Incluye: 12 Rosas preservadas + Sombrerera + Mini guirnalda</span>
+                <div class="rounded-2xl border border-lila-light/40 bg-lila-tint p-4">
+                  <div class="mb-3 flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-lila-dark">
+                    <span class="material-symbols-outlined text-[17px]" aria-hidden="true">inventory_2</span>
+                    <span>Incluye</span>
                   </div>
-                  <p class="text-[11px] text-ink-muted">Detalle perdurable que no requiere agua ni mantenimiento.</p>
+                  <ul class="space-y-2 text-xs leading-relaxed text-ink">
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Globo burbuja con cuatro globitos en su interior.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Lazo decorativo.</span></li>
+                  </ul>
+                  <p class="mt-3 border-t border-lila-light/40 pt-3 text-[11px] leading-relaxed text-ink-muted">Personalizamos la temática, los colores y el texto.</p>
                 </div>
               </div>
             </div>
@@ -477,7 +491,7 @@
                   <input type="text" placeholder="Ej: Para la mujer de mi vida" class="order-phrase w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
                 </div>
               </div>
-              <button type="button" onclick="sendProductQuote('Luxury Flower Box Ethereal', '₡45,000 / $85 USD', this)" class="w-full flex items-center justify-center gap-2 py-3 rounded-full bg-lila hover:bg-lila-hover text-white text-sm font-semibold shadow-lila-soft shadow-lila-hover transition-all">
+              <button type="button" onclick="sendProductQuote('Globo Burbuja de Momentos', '₡5,000', this)" class="w-full flex items-center justify-center gap-2 py-3 rounded-full bg-lila hover:bg-lila-hover text-white text-sm font-semibold shadow-lila-soft shadow-lila-hover transition-all">
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
                   <path d="M20.52 3.48A11.85 11.85 0 0012.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.98L0 24l6.23-1.63a11.9 11.9 0 005.83 1.51h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.52-8.43zM12.07 21.87h-.01c-1.8 0-3.56-.48-5.1-1.39l-.37-.22-3.79.99 1.01-3.69-.24-.38a9.89 9.89 0 01-1.52-5.21c0-5.47 4.45-9.92 9.93-9.92 2.65 0 5.14 1.03 7.02 2.9 1.87 1.88 2.9 4.37 2.9 7.02 0 5.48-4.45 9.9-9.83 9.9zm5.45-7.44c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.88.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/>
                 </svg>
@@ -487,32 +501,36 @@
           </article>
 
           <!-- PRODUCTO 4 -->
-          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="bouquets">
+          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col group" data-category="camisas">
             <div>
               <div class="relative w-full aspect-[4/3] overflow-hidden bg-mint-soft/30">
-                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAd31rgET-xos9DeJzjyAcmoJ_wZ-CrTDtDAH9YgLr2xuIUl2aAPk-JvXVApIfavvMReSyOEdgzfCWGYQUxcqxK84sRIuMa9u2vD7Rsi-_G89Ge-kaWNTqcz2td1eF2xO273hmtB394ZR_sdA7hLb5ELXTCvXSv1pzgn7Stfd8hiAXH8AezgEDxZ-ZXRI0eeGz-k0OWaLULlsGFHPpRY9gnFC5EejFKja0op3_dhakoR70VQJm6AOCiww" 
-                     alt="Mini Bouquet Dulce Celebración Marmat" 
-                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src="assets/gallery/camisa1.png" 
+                    alt="Camisa Personalizada" 
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 <span class="absolute top-3 left-3 bg-mint text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
-                  Detalle Íntimo
+                  Personalizada
                 </span>
                 <div class="absolute top-3 right-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-ink shadow-sm">
-                  ₡22,000 <span class="text-ink-muted font-normal">/ $42 USD</span>
+                  ₡10,000 <span class="text-ink-muted font-normal"></span>
                 </div>
               </div>
               <div class="p-5 sm:p-6 space-y-3">
                 <h3 class="font-editorial text-2xl text-ink font-normal">
-                  Mini Bouquet Dulce Celebración
+                  Camisas Personalizadas
                 </h3>
                 <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">
-                  Ideal para oficinas y sorpresas de escritorio. Globo corazón metalizado acabado mate lila + arreglo floral con hortensias frescas y toques de lisianthus.
+                  Diseños únicos y personalizados para expresar tu estilo, mensaje o marca. Perfectas para regalos, eventos o promociones.
                 </p>
-                <div class="bg-mint-subtle p-3 rounded-2xl border border-mint-light/40 space-y-1">
-                  <div class="flex items-center gap-1.5 text-xs font-semibold text-mint-dark">
-                    <span class="material-symbols-outlined text-[16px]">verified</span>
-                    <span>Incluye: Globo corazón 18" + Florero con hortensias</span>
+                <div class="rounded-2xl border border-mint-light/40 bg-mint-subtle p-4">
+                  <div class="mb-3 flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-mint-dark">
+                    <span class="material-symbols-outlined text-[17px]" aria-hidden="true">inventory_2</span>
+                    <span>Incluye</span>
                   </div>
-                  <p class="text-[11px] text-ink-muted">Práctico, elegante y con fragancia floral natural.</p>
+                  <ul class="space-y-2 text-xs leading-relaxed text-ink">
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-mint"></span><span>Camisa 100% algodón.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-mint"></span><span>Diseño personalizado.</span></li>
+                  </ul>
+                  <p class="mt-3 border-t border-mint-light/40 pt-3 text-[11px] leading-relaxed text-ink-muted">Práctica, cómoda y con diseño único.</p>
                 </div>
               </div>
             </div>
@@ -525,11 +543,11 @@
                   <input type="date" class="order-date w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
                 </div>
                 <div>
-                  <label class="block text-[11px] font-bold text-ink mb-1">Frase en el globo</label>
+                  <label class="block text-[11px] font-bold text-ink mb-1">Frase en la camisa</label>
                   <input type="text" placeholder="Ej: ¡Feliz Día Mamá!" class="order-phrase w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
                 </div>
               </div>
-              <button type="button" onclick="sendProductQuote('Mini Bouquet Dulce Celebración', '₡22,000 / $42 USD', this)" class="w-full flex items-center justify-center gap-2 py-3 rounded-full bg-lila hover:bg-lila-hover text-white text-sm font-semibold shadow-lila-soft shadow-lila-hover transition-all">
+              <button type="button" onclick="sendProductQuote('Camisas Personalizadas', '₡10,000', this)" class="w-full flex items-center justify-center gap-2 py-3 rounded-full bg-lila hover:bg-lila-hover text-white text-sm font-semibold shadow-lila-soft shadow-lila-hover transition-all">
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
                   <path d="M20.52 3.48A11.85 11.85 0 0012.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.98L0 24l6.23-1.63a11.9 11.9 0 005.83 1.51h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.52-8.43zM12.07 21.87h-.01c-1.8 0-3.56-.48-5.1-1.39l-.37-.22-3.79.99 1.01-3.69-.24-.38a9.89 9.89 0 01-1.52-5.21c0-5.47 4.45-9.92 9.93-9.92 2.65 0 5.14 1.03 7.02 2.9 1.87 1.88 2.9 4.37 2.9 7.02 0 5.48-4.45 9.9-9.83 9.9zm5.45-7.44c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.88.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/>
                 </svg>
@@ -539,32 +557,36 @@
           </article>
 
           <!-- PRODUCTO 5 -->
-          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="eventos">
+          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col group" data-category="chocolates">
             <div>
               <div class="relative w-full aspect-[4/3] overflow-hidden bg-lila-soft/30">
-                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhBKBTtOHncPCnGxOTGyS3gOlo0UIMiqSUvUKkkmz0VTuR_HQOvgjOS-JZvy0G3Oi9FU3QLZvxdFLNZfz44PVu1pqW0aoNOb3N-SVlo880f3msdU9dQTX1_KN3ula26bvqGC6IdXfPpIQT1KJFRiQjifVAlIynw4sP2EuM7_qYWUqETBDs-PCP1WOGhHzbEEa4Ba4CJP0WH7CMw00TinZVp0aKR7BTgPSGz1srTIAFBMTgRUBkGalrfg" 
-                     alt="Torre Orgánica Pastel Dream Marmat" 
-                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src="assets/gallery/chocolate1.png" 
+                    alt="Chocolates Personalizados" 
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 <span class="absolute top-3 left-3 bg-lila text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
-                  Para Mesas & Fotos
+                  Chocolates
                 </span>
                 <div class="absolute top-3 right-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-ink shadow-sm">
-                  ₡32,000 <span class="text-ink-muted font-normal">/ $60 USD</span>
+                  ₡6,000 <span class="text-ink-muted font-normal"></span>
                 </div>
               </div>
               <div class="p-5 sm:p-6 space-y-3">
                 <h3 class="font-editorial text-2xl text-ink font-normal">
-                  Torre Orgánica Pastel Dream
+                  Chocolates Personalizados
                 </h3>
                 <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">
-                  Mini arco y guirnalda de mesa para desayunos sorpresa, sesiones de primer añito o baby showers con más de 30 globos en gradientes suaves lila y menta.
+                  Chocolates personalizados para toda ocasión
                 </p>
-                <div class="bg-lila-tint p-3 rounded-2xl border border-lila-light/40 space-y-1">
-                  <div class="flex items-center gap-1.5 text-xs font-semibold text-lila-dark">
-                    <span class="material-symbols-outlined text-[16px]">verified</span>
-                    <span>Incluye: Estructura autónoma + Follaje preservado</span>
+                <div class="rounded-2xl border border-lila-light/40 bg-lila-tint p-4">
+                  <div class="mb-3 flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-lila-dark">
+                    <span class="material-symbols-outlined text-[17px]" aria-hidden="true">inventory_2</span>
+                    <span>Incluye</span>
                   </div>
-                  <p class="text-[11px] text-ink-muted">Fácil de ubicar en cualquier mesa de postres o set fotográfico.</p>
+                  <ul class="space-y-2 text-xs leading-relaxed text-ink">
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Docena de chocolates.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Personalización a tu gusto.</span></li>
+                  </ul>
+                  <p class="mt-3 border-t border-lila-light/40 pt-3 text-[11px] leading-relaxed text-ink-muted">Cada chocolate es único y se adapta a tu estilo.</p>
                 </div>
               </div>
             </div>
@@ -577,11 +599,11 @@
                   <input type="date" class="order-date w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
                 </div>
                 <div>
-                  <label class="block text-[11px] font-bold text-ink mb-1">Frase en el globo</label>
+                  <label class="block text-[11px] font-bold text-ink mb-1">Frase en el chocolate</label>
                   <input type="text" placeholder="Ej: Welcome Baby Lucas" class="order-phrase w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
                 </div>
               </div>
-              <button type="button" onclick="sendProductQuote('Torre Orgánica Pastel Dream', '₡32,000 / $60 USD', this)" class="w-full flex items-center justify-center gap-2 py-3 rounded-full bg-lila hover:bg-lila-hover text-white text-sm font-semibold shadow-lila-soft shadow-lila-hover transition-all">
+              <button type="button" onclick="sendProductQuote('Chocolates Personalizados', '₡6,000', this)" class="w-full flex items-center justify-center gap-2 py-3 rounded-full bg-lila hover:bg-lila-hover text-white text-sm font-semibold shadow-lila-soft shadow-lila-hover transition-all">
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
                   <path d="M20.52 3.48A11.85 11.85 0 0012.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.98L0 24l6.23-1.63a11.9 11.9 0 005.83 1.51h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.52-8.43zM12.07 21.87h-.01c-1.8 0-3.56-.48-5.1-1.39l-.37-.22-3.79.99 1.01-3.69-.24-.38a9.89 9.89 0 01-1.52-5.21c0-5.47 4.45-9.92 9.93-9.92 2.65 0 5.14 1.03 7.02 2.9 1.87 1.88 2.9 4.37 2.9 7.02 0 5.48-4.45 9.9-9.83 9.9zm5.45-7.44c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.88.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/>
                 </svg>
@@ -591,32 +613,36 @@
           </article>
 
           <!-- PRODUCTO 6 -->
-          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="sombrereras">
+          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col group" data-category="tazas">
             <div>
               <div class="relative w-full aspect-[4/3] overflow-hidden bg-mint-soft/30">
-                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhUlzO_3DWE_CbdhFW01wEwcMrRttb_iU2qD08Yx_JZIxefa4ApDdiQw5mLiQ0SGRxIWZ2JhxZHpIODja7ES6aeDnoGSdfhcGt42Spb89wh5J3zfSvRgm6Evtr0s_ItzHinE4196EfQHFfUj-XHRRjTAUsuHZWjBD2oaG5fWxtt15T2fz77MoD07-g_hP3ihD3ojoNMHO2cC8KV2iEY_t_QniKj0aUxe-MUh0TUglxAAfe-KWe_LDXOA" 
-                     alt="Box Sorpresa con Dulces & Globo Marmat" 
-                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src="assets/gallery/taza1.png" 
+                    alt="Tazas Personalizadas" 
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 <span class="absolute top-3 left-3 bg-mint text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
-                  Gourmet & Flor
+                  Taza Personalizada
                 </span>
                 <div class="absolute top-3 right-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-ink shadow-sm">
-                  ₡29,500 <span class="text-ink-muted font-normal">/ $56 USD</span>
+                  ₡5,500 <span class="text-ink-muted font-normal"></span>
                 </div>
               </div>
               <div class="p-5 sm:p-6 space-y-3">
                 <h3 class="font-editorial text-2xl text-ink font-normal">
-                  Box Sorpresa Dulces & Globo
+                  Taza Personalizada
                 </h3>
                 <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">
-                  Caja con cajón deslizable para bombones artesanales costarricenses, mini rosas frescas y globo aerostático decorativo con mensaje en relieve y lazo sedoso.
+                  Una taza única y especial para disfrutar de tus bebidas favoritas con un toque personal. Perfecta para regalos, eventos o recuerdos.
                 </p>
-                <div class="bg-mint-subtle p-3 rounded-2xl border border-mint-light/40 space-y-1">
-                  <div class="flex items-center gap-1.5 text-xs font-semibold text-mint-dark">
-                    <span class="material-symbols-outlined text-[16px]">verified</span>
-                    <span>Incluye: Bombones finos + Mini rosas + Globo aerostático</span>
+                <div class="rounded-2xl border border-mint-light/40 bg-mint-subtle p-4">
+                  <div class="mb-3 flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-mint-dark">
+                    <span class="material-symbols-outlined text-[17px]" aria-hidden="true">inventory_2</span>
+                    <span>Incluye</span>
                   </div>
-                  <p class="text-[11px] text-ink-muted">El obsequio ideal para felicitaciones y aniversarios sorpresa.</p>
+                  <ul class="space-y-2 text-xs leading-relaxed text-ink">
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-mint"></span><span>Taza personalizada.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-mint"></span><span>Cuchara.</span></li>
+                  </ul>
+                  <p class="mt-3 border-t border-mint-light/40 pt-3 text-[11px] leading-relaxed text-ink-muted">Perfecta para regalos, eventos o recuerdos.</p>
                 </div>
               </div>
             </div>
@@ -629,11 +655,11 @@
                   <input type="date" class="order-date w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
                 </div>
                 <div>
-                  <label class="block text-[11px] font-bold text-ink mb-1">Frase en el globo</label>
+                  <label class="block text-[11px] font-bold text-ink mb-1">Frase en la taza</label>
                   <input type="text" placeholder="Ej: ¡Muchos Éxitos en tu Nueva Etapa!" class="order-phrase w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
                 </div>
               </div>
-              <button type="button" onclick="sendProductQuote('Box Sorpresa Dulces & Globo', '₡29,500 / $56 USD', this)" class="w-full flex items-center justify-center gap-2 py-3 rounded-full bg-lila hover:bg-lila-hover text-white text-sm font-semibold shadow-lila-soft shadow-lila-hover transition-all">
+              <button type="button" onclick="sendProductQuote('Taza Personalizada', '₡5,500', this)" class="w-full flex items-center justify-center gap-2 py-3 rounded-full bg-lila hover:bg-lila-hover text-white text-sm font-semibold shadow-lila-soft shadow-lila-hover transition-all">
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
                   <path d="M20.52 3.48A11.85 11.85 0 0012.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.98L0 24l6.23-1.63a11.9 11.9 0 005.83 1.51h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.52-8.43zM12.07 21.87h-.01c-1.8 0-3.56-.48-5.1-1.39l-.37-.22-3.79.99 1.01-3.69-.24-.38a9.89 9.89 0 01-1.52-5.21c0-5.47 4.45-9.92 9.93-9.92 2.65 0 5.14 1.03 7.02 2.9 1.87 1.88 2.9 4.37 2.9 7.02 0 5.48-4.45 9.9-9.83 9.9zm5.45-7.44c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.88.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/>
                 </svg>
@@ -678,12 +704,12 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           
-          <!-- COLUMNA VISUAL TALLER -->
+          <!-- COLUMNA VISUAL  -->
           <div class="lg:col-span-6 relative">
             <div class="relative rounded-3xl overflow-hidden shadow-card-luxury bg-surface-border h-[450px] sm:h-[500px]">
               <img src="assets/gallery/arreglo1.png" 
-                   alt="Marmat Studio Costa Rica" 
-                   class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                  alt="Marmat Studio Costa Rica" 
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
               <div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/20 to-transparent"></div>
               
               <div class="absolute bottom-6 left-6 right-6 text-white space-y-1">
@@ -1753,10 +1779,8 @@ Gracias por visitarnos, confiar en nuestro trabajo y rodear este sueño de perso
         <!-- Columna 1: Marca -->
         <div class="space-y-4">
           <div class="flex items-center gap-3">
-            <div class="w-11 h-11 shrink-0 rounded-full bg-gradient-to-tr from-lila to-mint flex items-center justify-center text-white font-editorial text-xl font-bold shadow-lila-soft">
-              M
-            </div>
-            <span class="font-editorial text-2xl sm:text-[26px] font-medium tracking-tight">Marmat Studio</span>
+            <img src="assets/gallery/logo.jpeg" alt="Logo de Marmat Studio" class="w-14 h-14 shrink-0 rounded-full object-cover shadow-lila-soft" />
+            <span class="font-sans text-2xl sm:text-[26px] font-semibold tracking-tight">Marmat Studio</span>
           </div>
           <p class="text-sm text-gray-300 leading-relaxed">
             Marmat Studio es un taller creativo de diseño floral y balloon art, especializado en arreglos temáticos, bouquets, globos con helio y detalles personalizados para toda ocasión.
