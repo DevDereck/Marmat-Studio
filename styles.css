@@ -58,6 +58,97 @@ body {
   overflow-x: hidden;
 }
 
+.filter-btn {
+  border: 1px solid var(--color-border);
+  background-color: #fff;
+  color: var(--color-ink-muted);
+}
+
+.filter-btn:hover:not(.active-filter) {
+  border-color: var(--color-lila-light);
+  background-color: var(--color-lila-tint);
+  color: var(--color-lila-dark);
+}
+
+.filter-btn.active-filter,
+.filter-btn.active-filter:hover {
+  background-color: var(--color-lila-primary);
+  border-color: var(--color-lila-primary);
+  color: #fff;
+  box-shadow: 0 8px 20px -8px rgba(163, 120, 216, 0.65);
+}
+
+.filter-btn:focus-visible {
+  outline: 2px solid var(--color-lila-primary);
+  outline-offset: 3px;
+}
+
+.product-card img[role="button"] {
+  cursor: zoom-in;
+}
+
+.product-card img[role="button"]:focus-visible {
+  outline: 3px solid var(--color-lila-primary);
+  outline-offset: -3px;
+}
+
+.product-image-dialog {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: fit-content;
+  max-width: min(94vw, 1100px);
+  max-height: 92vh;
+  padding: 1rem;
+  border: 0;
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 24px 80px rgba(35, 27, 45, 0.3);
+}
+
+.product-image-dialog::backdrop {
+  background: rgba(25, 18, 33, 0.82);
+}
+
+.product-image-dialog-image {
+  display: block;
+  max-width: calc(94vw - 2rem);
+  max-height: calc(84vh - 2rem);
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  object-fit: contain;
+}
+
+.product-image-dialog-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 1;
+  display: grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  place-items: center;
+  border: 0;
+  border-radius: 9999px;
+  background: rgba(35, 27, 45, 0.82);
+  color: #fff;
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.product-image-dialog-close:focus-visible {
+  outline: 2px solid var(--color-lila-primary);
+  outline-offset: 3px;
+}
+
+.product-image-dialog-caption {
+  margin: 0.75rem 2rem 0;
+  color: var(--color-ink-muted);
+  font-size: 0.875rem;
+  text-align: center;
+}
+
 ::selection {
   background-color: #E2D3F9;
   color: #55278D;

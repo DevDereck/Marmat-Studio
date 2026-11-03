@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function filterCatalog() {
     const activeFilterBtn = document.querySelector('#catalog-filters .active-filter');
-    const activeCategory = activeFilterBtn ? activeFilterBtn.getAttribute('data-filter') : 'all';
+    const activeCategory = activeFilterBtn ? activeFilterBtn.getAttribute('data-filter') : 'featured';
     const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
 
     productCards.forEach(card => {
@@ -55,7 +55,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const title = card.querySelector('h3')?.textContent.toLowerCase() || '';
       const desc = card.querySelector('p')?.textContent.toLowerCase() || '';
 
-      const matchCategory = (activeCategory === 'all' || category === activeCategory);
+      const matchCategory = activeCategory === 'featured'
+        ? card.getAttribute('data-featured') === 'true'
+        : category === activeCategory;
       const matchQuery = (query === '' || title.includes(query) || desc.includes(query));
 
       if (matchCategory && matchQuery) {
@@ -70,11 +72,11 @@ document.addEventListener('DOMContentLoaded', () => {
     catalogFilters.forEach(btn => {
       btn.addEventListener('click', () => {
         catalogFilters.forEach(b => {
-          b.classList.remove('active-filter', 'bg-lila', 'text-white', 'shadow-lila-soft');
-          b.classList.add('bg-white', 'text-ink-muted');
+          b.classList.remove('active-filter');
+          b.setAttribute('aria-pressed', 'false');
         });
-        btn.classList.add('active-filter', 'bg-lila', 'text-white', 'shadow-lila-soft');
-        btn.classList.remove('bg-white', 'text-ink-muted');
+        btn.classList.add('active-filter');
+        btn.setAttribute('aria-pressed', 'true');
         filterCatalog();
       });
     });
@@ -84,8 +86,74 @@ document.addEventListener('DOMContentLoaded', () => {
     searchInput.addEventListener('input', filterCatalog);
   }
 
+  filterCatalog();
+
   // ==========================================
-  // 3. COTIZACIÓN DIRECTA POR WHATSAPP (PRODUCTO)
+  // 3. VISTA AMPLIADA DE FOTOS DEL CATÁLOGO
+  // ==========================================
+  const productsGrid = document.getElementById('products-grid');
+
+  if (productsGrid) {
+    const imageDialog = document.createElement('dialog');
+    imageDialog.className = 'product-image-dialog';
+    imageDialog.setAttribute('aria-label', 'Vista ampliada del producto');
+
+    const closeButton = document.createElement('button');
+    closeButton.type = 'button';
+    closeButton.className = 'product-image-dialog-close';
+    closeButton.setAttribute('aria-label', 'Cerrar imagen');
+    closeButton.textContent = '×';
+
+    const enlargedImage = document.createElement('img');
+    enlargedImage.className = 'product-image-dialog-image';
+
+    const imageCaption = document.createElement('p');
+    imageCaption.className = 'product-image-dialog-caption';
+
+    imageDialog.append(closeButton, enlargedImage, imageCaption);
+    document.body.append(imageDialog);
+
+    productsGrid.querySelectorAll('.product-card img').forEach(image => {
+      image.setAttribute('role', 'button');
+      image.setAttribute('tabindex', '0');
+      image.setAttribute('aria-label', `Ampliar foto: ${image.alt || 'producto'}`);
+    });
+
+    function openProductImage(image) {
+      const scrollX = window.scrollX;
+      const scrollY = window.scrollY;
+      enlargedImage.src = image.currentSrc || image.src;
+      enlargedImage.alt = image.alt;
+      imageCaption.textContent = image.alt;
+      imageDialog.showModal();
+      closeButton.focus({ preventScroll: true });
+      window.scrollTo({ left: scrollX, top: scrollY, behavior: 'instant' });
+    }
+
+    productsGrid.addEventListener('click', event => {
+      const image = event.target.closest('.product-card img');
+      if (image) openProductImage(image);
+    });
+
+    productsGrid.addEventListener('keydown', event => {
+      const image = event.target.closest('.product-card img');
+      if (image && (event.key === 'Enter' || event.key === ' ')) {
+        event.preventDefault();
+        openProductImage(image);
+      }
+    });
+
+    closeButton.addEventListener('click', () => imageDialog.close());
+    imageDialog.addEventListener('keydown', event => {
+      if (event.key === 'Escape') imageDialog.close();
+    });
+    imageDialog.addEventListener('click', event => {
+      if (event.target === imageDialog) imageDialog.close();
+    });
+  }
+
+  // ==========================================
+  // 4. COTIZACIÓN DIRECTA POR WHATSAPP (PRODUCTO)
   // ==========================================
   window.sendProductQuote = function (productName, price, btn) {
     const card = btn.closest('.product-card');
@@ -107,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // ==========================================
-  // 4. COTIZADOR INTERACTIVO A MEDIDA EN 3 PASOS
+  // 5. COTIZADOR INTERACTIVO A MEDIDA EN 3 PASOS
   // ==========================================
   let customOccasion = "Cumpleaños";
   let customPalette = "Firma Marmat (Lila Pastel & Verde Agua)";
@@ -168,7 +236,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // ==========================================================================
-  // 5. TESTIMONIOS: CONTROLES DE AUTO-MOVIMIENTO MARQUEE
+  // 6. TESTIMONIOS: CONTROLES DE AUTO-MOVIMIENTO MARQUEE
   // ==========================================================================
   const marqueeTrack = document.getElementById('marquee-track');
   const toggleBtn = document.getElementById('testimonial-toggle-btn');
