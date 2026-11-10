@@ -1,0 +1,23 @@
+{
+  "name": "Marmat Studio",
+  "short_name": "Marmat",
+  "description": "Regalos personalizados, arreglos florales y detalles para cada ocasión.",
+  "start_url": "../",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#A378D8",
+  "icons": [
+    {
+      "src": "android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

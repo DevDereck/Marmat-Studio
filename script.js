@@ -41,44 +41,111 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
   // 2. FILTRADO Y BÚSQUEDA DEL CATÁLOGO EN VIVO
   // ==========================================
-  const catalogFilters = document.querySelectorAll('#catalog-filters .filter-btn');
+  const categoryButtons = document.querySelectorAll('#catalog-categories .catalog-category-card');
+  const categoryPicker = document.getElementById('catalog-categories');
+  const productsView = document.getElementById('catalog-products-view');
+  const backToCategoriesButton = document.getElementById('catalog-back-button');
+  const activeCategoryTitle = document.getElementById('catalog-active-title');
+  const activeCategoryDescription = document.getElementById('catalog-active-description');
+  const resultsCount = document.getElementById('catalog-results-count');
+  const emptyState = document.getElementById('catalog-empty-state');
+  const emptyStateTitle = document.getElementById('catalog-empty-title');
+  const emptyStateMessage = document.getElementById('catalog-empty-message');
+  const emptyStateLink = emptyState ? emptyState.querySelector('a') : null;
   const productCards = document.querySelectorAll('#products-grid .product-card');
+  const productsGrid = document.getElementById('products-grid');
   const searchInput = document.getElementById('catalog-search');
+  let activeCategory = null;
+
+  function scrollToCatalogView(element) {
+    const stickyHeader = document.querySelector('header');
+    const headerHeight = stickyHeader ? stickyHeader.getBoundingClientRect().height : 0;
+    const top = element.getBoundingClientRect().top + window.scrollY - headerHeight - 16;
+    window.scrollTo({ top, behavior: 'instant' });
+  }
 
   function filterCatalog() {
-    const activeFilterBtn = document.querySelector('#catalog-filters .active-filter');
-    const activeCategory = activeFilterBtn ? activeFilterBtn.getAttribute('data-filter') : 'featured';
     const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
+    let categoryProductCount = 0;
+    let visibleProductCount = 0;
 
     productCards.forEach(card => {
-      const category = card.getAttribute('data-category');
+      const categories = (card.getAttribute('data-categories') || card.getAttribute('data-category') || '')
+        .split(/\s+/);
       const title = card.querySelector('h3')?.textContent.toLowerCase() || '';
       const desc = card.querySelector('p')?.textContent.toLowerCase() || '';
 
-      const matchCategory = activeCategory === 'featured'
-        ? card.getAttribute('data-featured') === 'true'
-        : category === activeCategory;
-      const matchQuery = (query === '' || title.includes(query) || desc.includes(query));
+      const matchCategory = activeCategory !== null && categories.includes(activeCategory);
+      const matchQuery = query === '' || title.includes(query) || desc.includes(query);
+      const isVisible = matchCategory && matchQuery;
 
-      if (matchCategory && matchQuery) {
+      if (matchCategory) categoryProductCount += 1;
+      if (isVisible) {
+        visibleProductCount += 1;
         card.classList.remove('hidden');
       } else {
         card.classList.add('hidden');
       }
     });
+
+    if (productsGrid) {
+      productsGrid.classList.toggle('hidden', activeCategory === null || visibleProductCount === 0);
+    }
+
+    if (resultsCount) {
+      resultsCount.textContent = `${visibleProductCount} ${visibleProductCount === 1 ? 'opción' : 'opciones'}`;
+    }
+
+    if (emptyState) {
+      const showEmptyState = activeCategory !== null && visibleProductCount === 0;
+      emptyState.classList.toggle('hidden', !showEmptyState);
+
+      if (showEmptyState) {
+        const categoryHasProducts = categoryProductCount > 0;
+        emptyStateTitle.textContent = categoryHasProducts
+          ? 'No encontramos resultados'
+          : 'Estamos preparando esta categoría';
+        emptyStateMessage.textContent = categoryHasProducts
+          ? 'Prueba con otros términos de búsqueda.'
+          : 'Consulta por WhatsApp las opciones disponibles para esta categoría.';
+        if (emptyStateLink) emptyStateLink.classList.toggle('hidden', categoryHasProducts);
+      }
+    }
   }
 
-  if (catalogFilters.length > 0) {
-    catalogFilters.forEach(btn => {
-      btn.addEventListener('click', () => {
-        catalogFilters.forEach(b => {
-          b.classList.remove('active-filter');
-          b.setAttribute('aria-pressed', 'false');
-        });
-        btn.classList.add('active-filter');
-        btn.setAttribute('aria-pressed', 'true');
+  if (categoryButtons.length > 0) {
+    categoryButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        activeCategory = button.getAttribute('data-category');
+        if (activeCategoryTitle) {
+          activeCategoryTitle.textContent = button.querySelector('.catalog-category-title')?.textContent || '';
+        }
+        if (activeCategoryDescription) {
+          activeCategoryDescription.textContent = button.querySelector('.catalog-category-description')?.textContent || '';
+        }
+        if (emptyStateLink) {
+          const categoryName = activeCategoryTitle ? activeCategoryTitle.textContent : 'esta categoría';
+          const message = `Hola Marmat Studio, quisiera consultar por opciones de ${categoryName}.`;
+          emptyStateLink.href = `https://wa.me/${MARMAT_WHATSAPP}?text=${encodeURIComponent(message)}`;
+        }
+        if (searchInput) searchInput.value = '';
+        button.blur();
+        categoryPicker.classList.add('hidden');
+        productsView.classList.remove('hidden');
         filterCatalog();
+        scrollToCatalogView(productsView);
       });
+    });
+  }
+
+  if (backToCategoriesButton) {
+    backToCategoriesButton.addEventListener('click', () => {
+      activeCategory = null;
+      productsView.classList.add('hidden');
+      categoryPicker.classList.remove('hidden');
+      if (searchInput) searchInput.value = '';
+      filterCatalog();
+      scrollToCatalogView(categoryPicker);
     });
   }
 
@@ -91,8 +158,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
   // 3. VISTA AMPLIADA DE FOTOS DEL CATÁLOGO
   // ==========================================
-  const productsGrid = document.getElementById('products-grid');
-
   if (productsGrid) {
     const imageDialog = document.createElement('dialog');
     imageDialog.className = 'product-image-dialog';

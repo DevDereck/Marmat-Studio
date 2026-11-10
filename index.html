@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Marmat Studio</title>
   <meta name="description" content="Marmat Studio es una tienda de regalos y un estudio creativo donde diseñamos detalles personalizados, arreglos con globos y flores, empaques especiales y creaciones para distintas ocasiones. " />
+  <meta name="theme-color" content="#A378D8" />
+  <link rel="icon" href="assets/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/android-chrome-192x192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/android-chrome-512x512.png" />
+  <link rel="manifest" href="assets/site.webmanifest" />
   
   <!-- Tipografías de Marmat -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -269,70 +277,135 @@
       </div>
     </section>
 
-    <!-- SECCIÓN DE CATÁLOGO INTERACTIVO CON FILTROS Y COTIZADOR WHATSAPP -->
+    <!-- CATÁLOGO POR CATEGORÍAS CON COTIZACIÓN POR WHATSAPP -->
     <section class="py-16 sm:py-20 bg-white border-y border-surface-border" id="catalogo">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         
-        <!-- ENCABEZADO Y BUSCADOR -->
+        <!-- ENCABEZADO DEL CATÁLOGO -->
         <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-6 border-b border-surface-border">
           <div>
             <div class="inline-flex items-center gap-1.5 text-lila text-xs font-bold uppercase tracking-widest mb-1.5">
               <span class="w-2 h-2 rounded-full bg-lila"></span>
               <span>Colección & Precios</span>
             </div>
-            <h2 class="font-editorial text-3xl sm:text-4xl text-ink font-normal">
-              Catálogo de Marmat Studio
+            <h2 class="font-sans text-3xl sm:text-4xl text-ink font-bold">
+              Explora nuestras categorías
             </h2>
             <p class="text-ink-muted text-sm sm:text-base max-w-2xl mt-1 leading-relaxed">
-              Elige tu diseño favorito, define la fecha estimada y la frase para el globo. Con un solo clic se abrirá tu 
-              <strong class="text-lila font-semibold">WhatsApp</strong> con el mensaje listo para coordinar y cotizar.
+              Encuentra ese detalle especial para cada ocasión.
             </p>
           </div>
+        </div>
 
-          <!-- Buscador y contador -->
-          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-            <div class="relative min-w-[260px]">
-              <input id="catalog-search" type="text" placeholder="Buscar arreglo, globo, taza, camisa..." 
-                    class="w-full pl-10 pr-4 py-2.5 rounded-full bg-surface border border-surface-border text-sm text-ink placeholder-ink-light focus:outline-none focus:ring-2 focus:ring-lila shadow-sm" />
-              <span class="material-symbols-outlined text-[20px] text-ink-muted absolute left-3.5 top-2.5">search</span>
+        <!-- EXPLORA NUESTRAS CATEGORÍAS -->
+        <div id="catalog-categories" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
+          <button type="button" data-category="cumpleanos" class="catalog-category-card group text-left">
+            <img src="assets/gallery/arreglo7.png" alt="" class="catalog-category-image" />
+            <span class="catalog-category-copy">
+              <span class="catalog-category-title">Cumpleaños</span>
+              <span class="catalog-category-description">Detalles para celebrar</span>
+            </span>
+          </button>
+          <button type="button" data-category="convivencias" class="catalog-category-card group text-left">
+            <img src="assets/gallery/arreglo9.png" alt="" class="catalog-category-image" />
+            <span class="catalog-category-copy">
+              <span class="catalog-category-title">Convivencias</span>
+              <span class="catalog-category-description">Momentos para compartir</span>
+            </span>
+          </button>
+          <button type="button" data-category="graduacion" class="catalog-category-card group text-left">
+            <img src="assets/gallery/arreglo12.png" alt="" class="catalog-category-image" />
+            <span class="catalog-category-copy">
+              <span class="catalog-category-title">Graduación</span>
+              <span class="catalog-category-description">Celebra cada logro</span>
+            </span>
+          </button>
+          <button type="button" data-category="flores" class="catalog-category-card group text-left">
+            <img src="assets/gallery/arreglo3.png" alt="" class="catalog-category-image" />
+            <span class="catalog-category-copy">
+              <span class="catalog-category-title">Flores</span>
+              <span class="catalog-category-description">Arreglos florales para regalar</span>
+            </span>
+          </button>
+          <button type="button" data-category="sublimacion-dtf" class="catalog-category-card group text-left">
+            <img src="assets/gallery/camisa1.png" alt="" class="catalog-category-image" />
+            <span class="catalog-category-copy">
+              <span class="catalog-category-title">Sublimación y DTF</span>
+              <span class="catalog-category-description">Diseños personalizados</span>
+            </span>
+          </button>
+          <button type="button" data-category="temporadas" class="catalog-category-card group text-left">
+            <img src="assets/gallery/globo3.png" alt="" class="catalog-category-image" />
+            <span class="catalog-category-copy">
+              <span class="catalog-category-title">Temporadas especiales</span>
+              <span class="catalog-category-description">Detalles para fechas especiales</span>
+            </span>
+          </button>
+          <button type="button" data-category="papeleria" class="catalog-category-card group text-left">
+            <img src="assets/gallery/arreglo9.png" alt="" class="catalog-category-image" />
+            <span class="catalog-category-copy">
+              <span class="catalog-category-title">Papelería Creativa</span>
+              <span class="catalog-category-description">Ideas y detalles hechos a tu medida</span>
+            </span>
+          </button>
+          <button type="button" data-category="envoltura" class="catalog-category-card group text-left">
+            <img src="assets/gallery/arreglo10.png" alt="" class="catalog-category-image" />
+            <span class="catalog-category-copy">
+              <span class="catalog-category-title">Envoltura de regalos</span>
+              <span class="catalog-category-description">Presentaciones especiales para tus regalos</span>
+            </span>
+          </button>
+          <button type="button" data-category="stock" class="catalog-category-card group text-left">
+            <img src="assets/gallery/taza1.png" alt="" class="catalog-category-image" />
+            <span class="catalog-category-copy">
+              <span class="catalog-category-title">Productos en stock</span>
+              <span class="catalog-category-description">Artículos listos para entrega</span>
+            </span>
+          </button>
+        </div>
+
+        <div id="catalog-products-view" class="hidden space-y-6">
+          <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-5">
+            <div class="space-y-3">
+              <button id="catalog-back-button" type="button" class="inline-flex items-center gap-1.5 text-sm font-semibold text-lila-dark hover:text-lila transition-colors">
+                <span class="material-symbols-outlined text-[19px]" aria-hidden="true">arrow_back</span>
+                Todas las categorías
+              </button>
+              <div>
+                <h3 id="catalog-active-title" class="font-editorial text-3xl sm:text-4xl text-ink font-normal"></h3>
+                <p id="catalog-active-description" class="text-ink-muted text-sm sm:text-base mt-1"></p>
+              </div>
             </div>
-            <div class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-lila-soft text-lila-dark text-xs font-bold shadow-sm">
-              <span class="w-2 h-2 rounded-full bg-lila"></span>
-              <span>50+ Opciones</span>
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+              <div class="relative min-w-[260px]">
+                <input id="catalog-search" type="text" placeholder="Buscar en esta categoría..."
+                      class="w-full pl-10 pr-4 py-2.5 rounded-full bg-surface border border-surface-border text-sm text-ink placeholder-ink-light focus:outline-none focus:ring-2 focus:ring-lila shadow-sm" />
+                <span class="material-symbols-outlined text-[20px] text-ink-muted absolute left-3.5 top-2.5">search</span>
+              </div>
+              <div class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-lila-soft text-lila-dark text-xs font-bold shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-lila"></span>
+                <span id="catalog-results-count">0 opciones</span>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- FILTROS POR CATEGORÍA -->
-        <div class="flex items-center gap-2 overflow-x-auto pb-2 custom-scrollbar" id="catalog-filters">
-          <button type="button" data-filter="featured" aria-pressed="true" class="filter-btn active-filter px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all whitespace-nowrap">
-            Favoritos
-          </button>
-          <button type="button" data-filter="globos" aria-pressed="false" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all whitespace-nowrap">
-            Globos y Arreglos
-          </button>
-          <button type="button" data-filter="flores" aria-pressed="false" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all whitespace-nowrap">
-            Arreglos Florales
-          </button>
-          <button type="button" data-filter="camisas" aria-pressed="false" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all whitespace-nowrap">
-            Camisetas Personalizadas
-          </button>
-          <button type="button" data-filter="chocolates" aria-pressed="false" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all whitespace-nowrap">
-            Chocolates Personalizados
-          </button>
-          <button type="button" data-filter="tazas" aria-pressed="false" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all whitespace-nowrap">
-            Tazas Personalizadas
-          </button>
-          <button type="button" data-filter="tazas" aria-pressed="false" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all whitespace-nowrap">
-            Otros
-          </button>
-        </div>
+          <div id="catalog-empty-state" class="hidden rounded-3xl border border-surface-border bg-surface px-6 py-12 text-center">
+            <span class="material-symbols-outlined text-4xl text-lila" aria-hidden="true">auto_awesome</span>
+            <h4 id="catalog-empty-title" class="mt-3 font-semibold text-lg text-ink"></h4>
+            <p id="catalog-empty-message" class="mt-2 text-sm text-ink-muted"></p>
+            <a href="https://wa.me/50671653777?text=Hola%20Marmat%20Studio%2C%20quisiera%20consultar%20por%20opciones%20de%20esta%20categor%C3%ADa"
+              target="_blank" rel="noopener noreferrer"
+              class="mt-5 inline-flex items-center gap-2 rounded-full bg-lila px-6 py-3 text-sm font-semibold text-white shadow-lila-soft transition-colors hover:bg-lila-hover">
+              <span class="material-symbols-outlined text-[18px]" aria-hidden="true">chat</span>
+              Consultar por WhatsApp
+            </a>
+          </div>
 
         <!-- GRILLA DE PRODUCTOS -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-stretch gap-7 sm:gap-8" id="products-grid">
+        <div class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-stretch gap-7 sm:gap-8" id="products-grid">
           
           <!-- PRODUCTO 1 -->
-          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="globos" data-featured="true">
+          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="globos" data-categories="graduacion temporadas" data-featured="true">
             <div>
               <div class="relative w-full aspect-[4/3] overflow-hidden bg-lila-soft/30">
                 <img src="assets/gallery/arreglo5.png" 
@@ -390,7 +463,7 @@
           </article>
 
           <!-- PRODUCTO 2 -->
-          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="flores" data-featured="true">
+          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="flores" data-categories="flores cumpleanos temporadas" data-featured="true">
             <div>
               <div class="relative w-full aspect-[4/3] overflow-hidden bg-mint-soft/30">
                 <img src="assets/gallery/arreglo3.png" 
@@ -448,7 +521,7 @@
           </article>
 
           <!-- PRODUCTO 3 -->
-          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="globos">
+          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="globos" data-categories="cumpleanos convivencias temporadas">
             <div>
               <div class="relative w-full aspect-[4/3] overflow-hidden bg-lila-soft/30">
                 <img src="assets/gallery/globo2.png" 
@@ -504,7 +577,7 @@
           </article>
 
           <!-- PRODUCTO 4 -->
-          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="camisas">
+          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="camisas" data-categories="sublimacion-dtf convivencias temporadas">
             <div>
               <div class="relative w-full aspect-[4/3] overflow-hidden bg-mint-soft/30">
                 <img src="assets/gallery/camisa1.png" 
@@ -560,7 +633,7 @@
           </article>
 
           <!-- PRODUCTO 5 -->
-          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="chocolates">
+          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="chocolates" data-categories="cumpleanos convivencias temporadas">
             <div>
               <div class="relative w-full aspect-[4/3] overflow-hidden bg-lila-soft/30">
                 <img src="assets/gallery/chocolate1.png" 
@@ -616,7 +689,7 @@
           </article>
 
           <!-- PRODUCTO 6 -->
-          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="tazas">
+          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="tazas" data-categories="sublimacion-dtf cumpleanos convivencias temporadas">
             <div>
               <div class="relative w-full aspect-[4/3] overflow-hidden bg-mint-soft/30">
                 <img src="assets/gallery/taza1.png" 
@@ -672,7 +745,7 @@
           </article>
 
 
-          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="globos">
+          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="globos" data-categories="cumpleanos convivencias temporadas">
             <div>
               <div class="relative w-full aspect-[4/3] overflow-hidden bg-lila-soft/30">
                 <img src="assets/gallery/arreglo10.png" 
@@ -730,7 +803,7 @@
           </article>
 
 
-          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="globos">
+          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="globos" data-categories="graduacion">
             <div>
               <div class="relative w-full aspect-[4/3] overflow-hidden bg-lila-soft/30">
                 <img src="assets/gallery/arreglo12.png" 
@@ -787,7 +860,7 @@
             </div>
           </article>
 
-          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="globos">
+          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="globos" data-categories="cumpleanos convivencias graduacion temporadas">
             <div>
               <div class="relative w-full aspect-[4/3] overflow-hidden bg-lila-soft/30">
                 <img src="assets/gallery/arreglo7.png" 
@@ -846,7 +919,7 @@
           </article>
 
 
-          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="globos" data-featured="true">
+          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="globos" data-categories="flores cumpleanos temporadas" data-featured="true">
             <div>
               <div class="relative w-full aspect-[4/3] overflow-hidden bg-lila-soft/30">
                 <img src="assets/gallery/arreglo11.png" 
@@ -904,7 +977,7 @@
             </div>
           </article>
 
-          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="globos">
+          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="globos" data-categories="graduacion convivencias">
             <div>
               <div class="relative w-full aspect-[4/3] overflow-hidden bg-lila-soft/30">
                 <img src="assets/gallery/arreglo8.png" 
@@ -961,7 +1034,7 @@
             </div>
           </article>
 
-          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="globos">
+          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="globos" data-categories="cumpleanos convivencias temporadas">
             <div>
               <div class="relative w-full aspect-[4/3] overflow-hidden bg-lila-soft/30">
                 <img src="assets/gallery/arreglo9.png" 
@@ -1020,31 +1093,6 @@
           </article>
 
         </div>
-
-        <!-- BANNER DE CATÁLOGO COMPLETO EXTENDIDO -->
-        <div class="mt-12 p-8 rounded-3xl bg-gradient-to-r from-lila-soft via-surface to-mint-soft border border-lila-light/40 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
-          <div class="space-y-2 text-center md:text-left">
-            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white text-lila-dark text-xs font-bold shadow-sm">
-              <span class="material-symbols-outlined text-[15px]">auto_awesome</span>
-              <span>¿Tienes una idea o foto de Pinterest en mente?</span>
-            </div>
-            <h3 class="font-editorial text-2xl sm:text-3xl text-ink font-normal">
-              Solicita el Catálogo Completo (50+ creaciones en PDF)
-            </h3>
-            <p class="text-ink-muted text-xs sm:text-sm max-w-xl">
-              Contamos con un archivo amplio de bouquets florales, globos y personalizaciones. Escríbenos o diseña con nosotros.
-            </p>
-          </div>
-          <div class="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
-            <a href="https://wa.me/50671653777?text=Hola%20Marmat%20Studio!%20Quisiera%20solicitar%20el%20Cat%C3%A1logo%20Completo%20en%20PDF%20con%20los%20dise%C3%B1os%20disponibles" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-lila hover:bg-lila-hover text-white text-sm font-semibold shadow-lila-soft transition-all">
-              <span class="material-symbols-outlined text-[18px]">download</span>
-              <span>Pedir Catálogo por WhatsApp</span>
-            </a>
-            <a href="#cotizador-medida" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white text-ink hover:text-lila text-sm font-semibold border border-surface-border shadow-sm transition-all">
-              <span class="material-symbols-outlined text-[18px] text-mint">tune</span>
-              <span>Personalizar en Vivo</span>
-            </a>
-          </div>
         </div>
 
       </div>
