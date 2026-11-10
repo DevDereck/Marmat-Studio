@@ -245,6 +245,9 @@ document.addEventListener('DOMContentLoaded', () => {
   let customOccasion = "Cumpleaños";
   let customPalette = "Firma Marmat (Lila Pastel & Verde Agua)";
   let customBudget = "₡35,000 - ₡60,000 CRC";
+  const customPaletteControls = document.getElementById('custom-palette-controls');
+  const customColorOne = document.getElementById('custom-color-one');
+  const customColorTwo = document.getElementById('custom-color-two');
 
   // Paso 1: Ocasión
   document.querySelectorAll('#step-occasion .step-btn').forEach(btn => {
@@ -268,7 +271,23 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       btn.classList.remove('bg-white', 'text-ink', 'border-surface-border');
       btn.classList.add('active-palette', 'bg-lila-soft', 'text-lila-dark', 'font-bold', 'border-lila-light');
-      customPalette = btn.getAttribute('data-val');
+      const selectedPalette = btn.getAttribute('data-val');
+      if (customPaletteControls) {
+        customPaletteControls.classList.toggle('hidden', selectedPalette !== 'Personalizado');
+      }
+      customPalette = selectedPalette === 'Personalizado'
+        ? `Personalizado (${customColorOne.value.toUpperCase()} y ${customColorTwo.value.toUpperCase()})`
+        : selectedPalette;
+    });
+  });
+
+  [customColorOne, customColorTwo].forEach(input => {
+    if (!input) return;
+    input.addEventListener('input', () => {
+      const customPaletteButton = document.querySelector('#step-palette .palette-btn[data-val="Personalizado"]');
+      if (customPaletteButton?.classList.contains('active-palette')) {
+        customPalette = `Personalizado (${customColorOne.value.toUpperCase()} y ${customColorTwo.value.toUpperCase()})`;
+      }
     });
   });
 
