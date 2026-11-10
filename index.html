@@ -163,119 +163,74 @@
 
   <main>
     <!-- HERO SECTION -->
-    <section class="relative overflow-hidden pt-10 pb-16 lg:pt-18 lg:pb-24">
-      
-      <!-- Orbes atmosféricos con degradado sutil -->
-      <div class="absolute -top-24 -left-20 w-[460px] h-[460px] rounded-full bg-lila-soft/80 blur-3xl pointer-events-none -z-10"></div>
-      <div class="absolute top-20 -right-24 w-[460px] h-[460px] rounded-full bg-mint-soft/75 blur-3xl pointer-events-none -z-10"></div>
-      <div class="absolute bottom-10 left-1/3 w-[360px] h-[360px] rounded-full bg-lila-subtle/70 blur-3xl pointer-events-none -z-10"></div>
-
+    <section class="relative overflow-hidden bg-lila-subtle py-10 sm:py-14 lg:py-6">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col gap-6 lg:grid lg:grid-cols-12 lg:gap-14 items-center">
-          
-          <!-- COLUMNA TEXTO HERO -->
-          <div class="contents lg:block lg:col-span-7 space-y-0 lg:space-y-6 text-center lg:text-left">
-            
-
-            <!-- Título Principal Editorial -->
-            <p class="order-0 text-[11px] sm:text-xs font-semibold tracking-[0.16em] uppercase text-mint-dark">
-              Regalos personalizados · Costa Rica
-            </p>
-            <h1 class="order-1 font-editorial text-[clamp(2.4rem,9vw,3rem)] sm:text-5xl lg:text-[62px] text-ink font-normal tracking-tight leading-[1.05] sm:leading-[1.12] max-w-[19ch] mx-auto lg:mx-0 lg:max-w-none">
-              ¿Buscás un regalo<br class="hidden sm:inline" />
-              <span class="italic font-normal text-lila relative">
+        <div class="grid grid-cols-1 lg:grid-cols-12 items-center gap-8 lg:gap-10">
+          <div class="contents lg:block lg:col-span-7 space-y-0 lg:space-y-5 text-left">
+            <h1 class="order-0 mx-auto text-center font-sans text-[clamp(2.25rem,8vw,3rem)] sm:text-5xl lg:mx-0 lg:text-left lg:text-[46px] xl:text-[52px] text-ink font-bold tracking-tight leading-[1.08] max-w-[16ch] lg:max-w-none">
+              Regalos que hacen<br class="hidden md:block" />
+              <span class="relative inline-block text-lila">
                 especial
-                <svg class="absolute -bottom-1 left-0 w-full h-3 text-mint-light/70" viewBox="0 0 100 12" preserveAspectRatio="none">
+                <svg class="absolute -bottom-1 left-0 h-3 w-full text-mint" viewBox="0 0 100 12" preserveAspectRatio="none" aria-hidden="true">
                   <path d="M0,7 Q25,0 50,7 T100,7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
                 </svg>
-              </span> 
-              y listo para entregar?
+              </span>
+              <span class="text-ink"> cada</span>
+              <span class="text-lila"> momento.</span>
             </h1>
 
-            <!-- Descripción Subtítulo -->
-            <p class="order-2 text-ink-muted text-[15px] sm:text-lg lg:text-xl max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
-              Regalos personalizados con globos, flores, peluches y más. Visitá nuestro local en Casa Vieja, local #8, o hacé tu pedido directamente desde la página.
+            <p class="order-1 max-w-2xl text-sm sm:text-base lg:text-lg leading-relaxed text-ink-muted">
+              Creamos regalos personalizados, arreglos con flores y globos, y envolturas especiales para celebrar, agradecer y sorprender.
             </p>
 
-            <!-- Acciones CTA -->
-            <div class="order-3 grid grid-cols-2 sm:flex items-center justify-center lg:justify-start gap-3 pt-1 sm:pt-2">
-              <a href="#catalogo" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-1 sm:px-8 py-3 sm:py-3.5 rounded-full bg-lila hover:bg-lila-hover text-white font-semibold text-sm sm:text-base shadow-lila-soft shadow-lila-hover transition-all">
-                <span>Ver Catálogo</span>
-                <span class="material-symbols-outlined text-[19px]">arrow_downward</span>
+            <a href="#ubicacion" class="order-2 inline-flex items-start gap-2 text-sm sm:text-base font-semibold leading-relaxed text-mint-dark transition-colors hover:text-mint">
+              <span class="material-symbols-outlined mt-0.5 text-[20px]" aria-hidden="true">location_on</span>
+              <span>Visitá nuestra tienda en Casa Vieja, local #8, Santo Domingo de Heredia.</span>
+            </a>
+
+            <div class="order-3 grid grid-cols-2 gap-3 pt-1 lg:flex">
+              <a href="#catalogo" class="inline-flex min-h-11 items-center justify-center gap-1.5 rounded-full bg-lila px-2 sm:px-7 py-3 text-xs sm:text-base font-semibold text-white shadow-lila-soft transition-all hover:bg-lila-hover hover:-translate-y-0.5">
+                <span>Ver regalos</span>
+                <span class="material-symbols-outlined text-[19px]" aria-hidden="true">arrow_downward</span>
               </a>
-              <a href="#cotizador-medida" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-1 sm:px-7 py-3 sm:py-3.5 rounded-full bg-mint-subtle text-mint-dark hover:bg-mint-soft font-semibold text-sm sm:text-base border border-mint-light/50 transition-all shadow-sm">
-                <span class="material-symbols-outlined text-[19px] text-mint">palette</span>
-                <span>Hacer Pedido</span>
-              </a>
-              <a href="#ubicacion" class="hero-location-link col-span-2 w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-2 sm:py-3.5 text-mint-dark font-semibold text-sm sm:text-base transition-colors">
-                <span class="material-symbols-outlined text-[19px] text-mint">location_on</span>
-                <span>Ubicación</span>
+              <a href="#ubicacion" class="inline-flex min-h-11 items-center justify-center gap-1.5 rounded-full border border-mint-light/60 bg-mint-soft px-2 sm:px-7 py-3 text-xs sm:text-base font-semibold text-mint-dark transition-all hover:bg-white">
+                <span class="material-symbols-outlined text-[19px]" aria-hidden="true">near_me</span>
+                <span>Cómo llegar</span>
               </a>
             </div>
 
-            <!-- 3 Badges de Garantía -->
-            <div class="order-5 pt-2 sm:pt-6 grid grid-cols-3 gap-2 sm:gap-3 text-left">
-              <div class="flex flex-col items-center text-center gap-1 sm:flex-row sm:text-left sm:gap-3 p-2 sm:p-3.5 rounded-2xl bg-white border border-surface-border shadow-sm">
-                <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-lila-soft text-lila-dark flex items-center justify-center shrink-0">
-                  <span class="material-symbols-outlined text-[20px]">local_florist</span>
-                </div>
+            <div class="order-5 grid grid-cols-3 divide-x divide-lila-light/70 pt-4">
+              <div class="flex flex-col gap-1.5 px-2 sm:flex-row sm:items-start sm:gap-2.5 sm:px-3">
+                <span class="material-symbols-outlined text-xl text-lila sm:text-2xl" aria-hidden="true">redeem</span>
                 <div>
-                  <h4 class="text-[10px] sm:text-xs font-bold text-ink leading-tight">Flores Frescas</h4>
-                  <p class="text-[9px] sm:text-[11px] text-ink-muted leading-tight mt-1">Productor Local</p>
+                  <h2 class="text-[10px] sm:text-xs font-bold leading-tight text-ink">Detalles personalizados</h2>
+                  <p class="mt-1 text-[9px] sm:text-[11px] leading-tight text-ink-muted">A tu gusto y para tu ocasión</p>
                 </div>
               </div>
-
-              <div class="flex flex-col items-center text-center gap-1 sm:flex-row sm:text-left sm:gap-3 p-2 sm:p-3.5 rounded-2xl bg-white border border-surface-border shadow-sm">
-                <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-mint-soft text-mint flex items-center justify-center shrink-0">
-                  <span class="material-symbols-outlined text-[20px]">eco</span>
-                </div>
+              <a href="https://wa.me/50671653777" target="_blank" rel="noopener noreferrer" class="flex flex-col gap-1.5 px-2 sm:flex-row sm:items-start sm:gap-2.5 sm:px-3">
+                <span class="material-symbols-outlined text-xl text-lila sm:text-2xl" aria-hidden="true">chat</span>
                 <div>
-                  <h4 class="text-[10px] sm:text-xs font-bold text-ink leading-tight">Látex 100% Bio</h4>
-                  <p class="text-[9px] sm:text-[11px] text-ink-muted leading-tight mt-1">Biodegradable & orgánico</p>
+                  <h2 class="text-[10px] sm:text-xs font-bold leading-tight text-ink">Te ayudamos a elegir</h2>
+                  <p class="mt-1 text-[9px] sm:text-[11px] leading-tight text-ink-muted">Atención cercana por WhatsApp</p>
                 </div>
-              </div>
-
-              <div class="flex flex-col items-center text-center gap-1 sm:flex-row sm:text-left sm:gap-3 p-2 sm:p-3.5 rounded-2xl bg-white border border-surface-border shadow-sm">
-                <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-lila-soft text-lila flex items-center justify-center shrink-0">
-                  <span class="material-symbols-outlined text-[20px]">directions_car</span>
-                </div>
+              </a>
+              <div class="flex flex-col gap-1.5 px-2 sm:flex-row sm:items-start sm:gap-2.5 sm:px-3">
+                <span class="material-symbols-outlined text-xl text-lila sm:text-2xl" aria-hidden="true">storefront</span>
                 <div>
-                  <h4 class="text-[10px] sm:text-xs font-bold text-ink leading-tight">Envíos a todo CR</h4>
-                  <p class="text-[9px] sm:text-[11px] text-ink-muted leading-tight mt-1">Entregas en todo el país</p>
+                  <h2 class="text-[10px] sm:text-xs font-bold leading-tight text-ink">Tienda física</h2>
+                  <p class="mt-1 text-[9px] sm:text-[11px] leading-tight text-ink-muted">Casa Vieja · Local #8</p>
                 </div>
               </div>
-            </div>
-
-          </div>
-
-          <!-- COLUMNA VISUAL HERO -->
-          <div class="order-4 lg:order-none lg:col-span-5 relative w-full">
-            <div class="relative w-full h-[320px] sm:h-[530px] mx-auto max-w-[480px]">
-              
-              <!-- Imagen Principal (Arreglo Insignia Marmat) -->
-              <div class="absolute top-0 right-0 w-[88%] h-[270px] sm:h-[410px] rounded-3xl overflow-hidden shadow-card-luxury border-4 border-white bg-surface-border group">
-                <img src="assets/gallery/arreglo5.png" 
-                    alt="Arreglo Floral y Globos Marmat Studio" 
-                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                <div class="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent"></div>
-                <div class="absolute bottom-4 left-4 right-4 text-white">
-                  <span class="text-[10px] uppercase font-bold tracking-widest px-2.5 py-0.5 rounded-full bg-lila/85 backdrop-blur-sm">Edición Firma</span>
-                </div>
-              </div>
-
-              <!-- Imagen Secundaria Flotante -->
-              <div class="absolute bottom-0 left-0 w-[52%] h-[165px] sm:bottom-2 sm:w-[64%] sm:h-[260px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white p-1.5 animate-float-gentle">
-                <div class="relative w-full h-full rounded-2xl overflow-hidden">
-                  <img src="assets/gallery/choc1.png" 
-                      alt="Chocolates Personalizados Marmat" 
-                      class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
-                  
-                </div>
-              </div>
-
             </div>
           </div>
 
+          <div class="order-4 lg:order-none lg:col-span-5">
+            <div class="mx-auto aspect-[4/3] w-full max-w-[420px] overflow-hidden rounded-[1.75rem] border-4 border-white bg-white shadow-card-luxury sm:aspect-square">
+              <img src="assets/gallery/arreglo5.png"
+                  alt="Arreglo personalizado con globos y golosinas para una convivencia"
+                  class="h-full w-full object-cover object-[center_45%] transition-transform duration-700 hover:scale-[1.03]" />
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -287,11 +242,11 @@
         <!-- ENCABEZADO DEL CATÁLOGO -->
         <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-6 border-b border-surface-border">
           <div>
-            <div class="inline-flex items-center gap-1.5 text-lila text-xs font-bold uppercase tracking-widest mb-1.5">
-              <span class="w-2 h-2 rounded-full bg-lila"></span>
+            <div class="inline-flex items-center gap-1.5 text-mint-dark text-xs font-bold uppercase tracking-widest mb-1.5">
+              <span class="w-2 h-2 rounded-full bg-mint"></span>
               <span>Colección & Precios</span>
             </div>
-            <h2 class="font-sans text-3xl sm:text-4xl text-ink font-bold">
+            <h2 class="font-sans text-3xl sm:text-4xl text-lila font-bold">
               Explora nuestras categorías
             </h2>
             <p class="text-ink-muted text-sm sm:text-base max-w-2xl mt-1 leading-relaxed">
@@ -370,12 +325,12 @@
         <div id="catalog-products-view" class="hidden space-y-6">
           <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-5">
             <div class="space-y-3">
-              <button id="catalog-back-button" type="button" class="inline-flex items-center gap-1.5 text-sm font-semibold text-lila-dark hover:text-lila transition-colors">
+              <button id="catalog-back-button" type="button" class="inline-flex items-center gap-1.5 text-sm font-semibold text-mint-dark hover:text-mint transition-colors">
                 <span class="material-symbols-outlined text-[19px]" aria-hidden="true">arrow_back</span>
                 Todas las categorías
               </button>
               <div>
-                <h3 id="catalog-active-title" class="font-editorial text-3xl sm:text-4xl text-ink font-normal"></h3>
+                <h3 id="catalog-active-title" class="font-sans text-3xl sm:text-4xl text-lila font-bold"></h3>
                 <p id="catalog-active-description" class="text-ink-muted text-sm sm:text-base mt-1"></p>
               </div>
             </div>
@@ -422,7 +377,7 @@
                 </div>
               </div>
               <div class="p-5 sm:p-6 space-y-3">
-                <h3 class="font-editorial text-2xl text-ink font-normal">
+                <h3 class="font-sans text-2xl text-lila font-bold">
                   Arreglo “Meta Alcanzada”
                 </h3>
                 <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">
@@ -480,7 +435,7 @@
                 </div>
               </div>
               <div class="p-5 sm:p-6 space-y-3">
-                <h3 class="font-editorial text-2xl text-ink font-normal">
+                <h3 class="font-sans text-2xl text-lila font-bold">
                   Rayito de Alegría
                 </h3>
                 <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">
@@ -538,7 +493,7 @@
                 </div>
               </div>
               <div class="p-5 sm:p-6 space-y-3">
-                <h3 class="font-editorial text-2xl text-ink font-normal">
+                <h3 class="font-sans text-2xl text-lila font-bold">
                   Globo Burbuja de Momentos
                 </h3>
                 <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">
@@ -594,7 +549,7 @@
                 </div>
               </div>
               <div class="p-5 sm:p-6 space-y-3">
-                <h3 class="font-editorial text-2xl text-ink font-normal">
+                <h3 class="font-sans text-2xl text-lila font-bold">
                   Camisas Personalizadas
                 </h3>
                 <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">
@@ -650,7 +605,7 @@
                 </div>
               </div>
               <div class="p-5 sm:p-6 space-y-3">
-                <h3 class="font-editorial text-2xl text-ink font-normal">
+                <h3 class="font-sans text-2xl text-lila font-bold">
                   Chocolates Personalizados
                 </h3>
                 <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">
@@ -706,7 +661,7 @@
                 </div>
               </div>
               <div class="p-5 sm:p-6 space-y-3">
-                <h3 class="font-editorial text-2xl text-ink font-normal">
+                <h3 class="font-sans text-2xl text-lila font-bold">
                   Taza Personalizada
                 </h3>
                 <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">
@@ -762,7 +717,7 @@
                 </div>
               </div>
               <div class="p-5 sm:p-6 space-y-3">
-                <h3 class="font-editorial text-2xl text-ink font-normal">
+                <h3 class="font-sans text-2xl text-lila font-bold">
                   Arreglo Bienvenida Encantada
                 </h3>
                 <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">
@@ -820,7 +775,7 @@
                 </div>
               </div>
               <div class="p-5 sm:p-6 space-y-3">
-                <h3 class="font-editorial text-2xl text-ink font-normal">
+                <h3 class="font-sans text-2xl text-lila font-bold">
                   Arreglo de Graduación
                 </h3>
                 <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">
@@ -877,7 +832,7 @@
                 </div>
               </div>
               <div class="p-5 sm:p-6 space-y-3">
-                <h3 class="font-editorial text-2xl text-ink font-normal">
+                <h3 class="font-sans text-2xl text-lila font-bold">
                   Arreglo Celebra a Tu Manera
                 </h3>
                 <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">
@@ -936,7 +891,7 @@
                 </div>
               </div>
               <div class="p-5 sm:p-6 space-y-3">
-                <h3 class="font-editorial text-2xl text-ink font-normal">
+                <h3 class="font-sans text-2xl text-lila font-bold">
                   Arreglo Girasoles de Alegría
                 </h3>
                 <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">
@@ -994,7 +949,7 @@
                 </div>
               </div>
               <div class="p-5 sm:p-6 space-y-3">
-                <h3 class="font-editorial text-2xl text-ink font-normal">
+                <h3 class="font-sans text-2xl text-lila font-bold">
                   Arreglo Meta Alcanzada
                 </h3>
                 <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">
@@ -1051,7 +1006,7 @@
                 </div>
               </div>
               <div class="p-5 sm:p-6 space-y-3">
-                <h3 class="font-editorial text-2xl text-ink font-normal">
+                <h3 class="font-sans text-2xl text-lila font-bold">
                   Arreglo Personalizable
                 </h3>
                 <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">
@@ -1138,10 +1093,10 @@
           <div class="lg:col-span-6 space-y-6">
             
             <div>
-              <span class="text-xs font-bold uppercase tracking-widest text-lila block mb-1">
+              <span class="text-xs font-bold uppercase tracking-widest text-mint-dark block mb-1">
                 Nuestra Filosofía & Raíces
               </span>
-              <h2 class="font-editorial text-3xl sm:text-4xl text-ink font-normal leading-tight">
+              <h2 class="font-sans text-3xl sm:text-4xl text-lila font-bold leading-tight">
                 El Alma y la Historia de Marmat
               </h2>
             </div>
@@ -1190,10 +1145,10 @@ Gracias por visitarnos, confiar en nuestro trabajo y rodear este sueño de perso
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center space-y-2 mb-10">
-          <span class="text-xs font-bold uppercase tracking-widest text-lila block">
+          <span class="text-xs font-bold uppercase tracking-widest text-mint-dark block">
             Arreglo Personalizado
           </span>
-          <h2 class="font-editorial text-3xl sm:text-4xl text-ink font-normal">
+          <h2 class="font-sans text-3xl sm:text-4xl text-lila font-bold">
             Diseña tu Arreglo a Medida en 3 Pasos
           </h2>
           <p class="text-ink-muted text-sm sm:text-base max-w-xl mx-auto">
@@ -1207,7 +1162,7 @@ Gracias por visitarnos, confiar en nuestro trabajo y rodear este sueño de perso
           <div class="space-y-3">
             <div class="flex items-center gap-2.5">
               <span class="w-7 h-7 rounded-full bg-lila text-white text-xs font-bold flex items-center justify-center">1</span>
-              <h3 class="font-editorial text-lg sm:text-xl text-ink font-semibold">
+              <h3 class="font-sans text-lg sm:text-xl text-lila font-bold">
                 Escoge la ocasión especial
               </h3>
             </div>
@@ -1234,7 +1189,7 @@ Gracias por visitarnos, confiar en nuestro trabajo y rodear este sueño de perso
           <div class="space-y-3">
             <div class="flex items-center gap-2.5">
               <span class="w-7 h-7 rounded-full bg-mint text-white text-xs font-bold flex items-center justify-center">2</span>
-              <h3 class="font-editorial text-lg sm:text-xl text-ink font-semibold">
+              <h3 class="font-sans text-lg sm:text-xl text-lila font-bold">
                 Elige la paleta cromática
               </h3>
             </div>
@@ -1279,7 +1234,7 @@ Gracias por visitarnos, confiar en nuestro trabajo y rodear este sueño de perso
           <div class="space-y-3">
             <div class="flex items-center gap-2.5">
               <span class="w-7 h-7 rounded-full bg-gold text-white text-xs font-bold flex items-center justify-center">3</span>
-              <h3 class="font-editorial text-lg sm:text-xl text-ink font-semibold">
+              <h3 class="font-sans text-lg sm:text-xl text-lila font-bold">
                 Presupuesto de referencia
               </h3>
             </div>
@@ -1323,10 +1278,10 @@ Gracias por visitarnos, confiar en nuestro trabajo y rodear este sueño de perso
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         <div class="text-center space-y-2">
-          <span class="text-xs font-bold uppercase tracking-widest text-mint block">
+          <span class="text-xs font-bold uppercase tracking-widest text-mint-dark block">
             Paso a Paso
           </span>
-          <h2 class="font-editorial text-3xl sm:text-4xl text-ink font-normal">
+          <h2 class="font-sans text-3xl sm:text-4xl text-lila font-bold">
             ¿Cómo Comprar en Marmat Studio?
           </h2>
           <p class="text-ink-muted text-sm sm:text-base max-w-lg mx-auto">
@@ -1342,7 +1297,7 @@ Gracias por visitarnos, confiar en nuestro trabajo y rodear este sueño de perso
               <div class="w-12 h-12 rounded-2xl bg-lila-soft text-lila-dark flex items-center justify-center font-editorial text-xl font-bold">
                 01
               </div>
-              <h4 class="font-editorial text-xl text-ink font-semibold">Explora & Elige</h4>
+              <h4 class="font-sans text-xl text-lila font-bold">Explora & Elige</h4>
               <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">
                 Selecciona tu arreglo favorito de nuestro catálogo o inspírate en nuestra galería de Instagram.
               </p>
@@ -1359,7 +1314,7 @@ Gracias por visitarnos, confiar en nuestro trabajo y rodear este sueño de perso
               <div class="w-12 h-12 rounded-2xl bg-mint-soft text-mint-dark flex items-center justify-center font-editorial text-xl font-bold">
                 02
               </div>
-              <h4 class="font-editorial text-xl text-ink font-semibold">Cotiza en Minutos</h4>
+              <h4 class="font-sans text-xl text-lila font-bold">Cotiza en Minutos</h4>
               <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">
                 Presiona el botón de WhatsApp con tu dedicatoria, tamaño, colores exactos y horario de entrega deseado.
               </p>
@@ -1376,7 +1331,7 @@ Gracias por visitarnos, confiar en nuestro trabajo y rodear este sueño de perso
               <div class="w-12 h-12 rounded-2xl bg-lila-soft text-lila-dark flex items-center justify-center font-editorial text-xl font-bold">
                 03
               </div>
-              <h4 class="font-editorial text-xl text-ink font-semibold">Confirma con Sinpe</h4>
+              <h4 class="font-sans text-xl text-lila font-bold">Confirma con Sinpe</h4>
               <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">
                 Reserva tu cupo en agenda mediante SINPE Móvil o transferencia bancaria (sugerimos 24 a 48h de anticipación).
               </p>
@@ -1393,7 +1348,7 @@ Gracias por visitarnos, confiar en nuestro trabajo y rodear este sueño de perso
               <div class="w-12 h-12 rounded-2xl bg-mint-subtle text-mint-dark flex items-center justify-center font-editorial text-xl font-bold">
                 04
               </div>
-              <h4 class="font-editorial text-xl text-ink font-semibold">Entrega Sorpresa</h4>
+              <h4 class="font-sans text-xl text-lila font-bold">Entrega Sorpresa</h4>
               <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">
                 Despachamos mediante chófer privado para garantizar que flores y globos lleguen intactos y deslumbrantes.
               </p>
@@ -1418,7 +1373,7 @@ Gracias por visitarnos, confiar en nuestro trabajo y rodear este sueño de perso
               <span class="material-symbols-outlined text-[18px]" aria-hidden="true">location_on</span>
               Estamos para ayudarte
             </span>
-            <h2 class="font-editorial text-3xl sm:text-4xl text-ink font-normal">
+            <h2 class="font-sans text-3xl sm:text-4xl text-lila font-bold">
               Encontrá Marmat Studio
             </h2>
             <p class="max-w-xl text-sm sm:text-base leading-relaxed text-ink-muted">
@@ -1450,11 +1405,11 @@ Gracias por visitarnos, confiar en nuestro trabajo y rodear este sueño de perso
         <!-- Header con estadísticas y controles interactivos -->
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div>
-            <div class="inline-flex items-center gap-2 text-lila text-xs font-bold uppercase tracking-widest mb-1.5">
-              <span class="w-2 h-2 rounded-full bg-lila animate-pulse"></span>
+            <div class="inline-flex items-center gap-2 text-mint-dark text-xs font-bold uppercase tracking-widest mb-1.5">
+              <span class="w-2 h-2 rounded-full bg-mint animate-pulse"></span>
               <span>Reseñas de Clientas en Costa Rica</span>
             </div>
-            <h2 class="font-editorial text-3xl sm:text-4xl text-ink font-normal">
+            <h2 class="font-sans text-3xl sm:text-4xl text-lila font-bold">
               Testimonios Verificados
             </h2>
             <p class="text-ink-muted text-sm sm:text-base mt-1">
@@ -1883,8 +1838,8 @@ Gracias por visitarnos, confiar en nuestro trabajo y rodear este sueño de perso
     <!-- GALERÍA DE PRODUCTOS EN MOVIMIENTO -->
     <section class="py-16 sm:py-20 bg-white overflow-hidden" id="instagram-feed">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 text-center space-y-2">
-        <span class="text-xs font-bold uppercase tracking-widest text-lila block">Nuestros Diseños</span>
-        <h2 class="font-editorial text-3xl sm:text-4xl text-ink font-normal">Galería Marmat Studio</h2>
+        <span class="text-xs font-bold uppercase tracking-widest text-mint-dark block">Nuestros Diseños</span>
+        <h2 class="font-sans text-3xl sm:text-4xl text-lila font-bold">Galería Marmat Studio</h2>
         <p class="text-ink-muted text-sm sm:text-base">Cada pieza es única, hecha con amor y atención al detalle.</p>
       </div>
 
@@ -2100,10 +2055,10 @@ Gracias por visitarnos, confiar en nuestro trabajo y rodear este sueño de perso
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         
         <div class="text-center space-y-2">
-          <span class="text-xs font-bold uppercase tracking-widest text-lila block">
+          <span class="text-xs font-bold uppercase tracking-widest text-mint-dark block">
             Dudas Comunes
           </span>
-          <h2 class="font-editorial text-3xl sm:text-4xl text-ink font-normal">
+          <h2 class="font-sans text-3xl sm:text-4xl text-lila font-bold">
             Preguntas Frecuentes
           </h2>
           <p class="text-ink-muted text-sm sm:text-base">
@@ -2115,7 +2070,7 @@ Gracias por visitarnos, confiar en nuestro trabajo y rodear este sueño de perso
           
           <!-- Pregunta 1 -->
           <div class="faq-item rounded-2xl bg-surface border border-surface-border overflow-hidden transition-colors">
-            <button type="button" class="faq-toggle w-full p-5 text-left flex items-center justify-between gap-4 font-editorial text-lg text-mint-dark">
+            <button type="button" class="faq-toggle w-full p-5 text-left flex items-center justify-between gap-4 font-sans text-lg font-bold text-lila">
               <span>¿Con cuánto tiempo de antelación debo pedir mi arreglo?</span>
               <span class="material-symbols-outlined faq-icon text-lila transition-transform duration-300">expand_more</span>
             </button>
@@ -2126,7 +2081,7 @@ Gracias por visitarnos, confiar en nuestro trabajo y rodear este sueño de perso
 
           <!-- Pregunta 2 -->
           <div class="faq-item rounded-2xl bg-surface border border-surface-border overflow-hidden transition-colors">
-            <button type="button" class="faq-toggle w-full p-5 text-left flex items-center justify-between gap-4 font-editorial text-lg text-mint-dark">
+            <button type="button" class="faq-toggle w-full p-5 text-left flex items-center justify-between gap-4 font-sans text-lg font-bold text-lila">
               <span>¿Cuánto tiempo duran los globos con helio y las flores?</span>
               <span class="material-symbols-outlined faq-icon text-lila transition-transform duration-300">expand_more</span>
             </button>
@@ -2137,7 +2092,7 @@ Gracias por visitarnos, confiar en nuestro trabajo y rodear este sueño de perso
 
           <!-- Pregunta 3 -->
           <div class="faq-item rounded-2xl bg-surface border border-surface-border overflow-hidden transition-colors">
-            <button type="button" class="faq-toggle w-full p-5 text-left flex items-center justify-between gap-4 font-editorial text-lg text-mint-dark">
+            <button type="button" class="faq-toggle w-full p-5 text-left flex items-center justify-between gap-4 font-sans text-lg font-bold text-lila">
               <span>¿Cuáles zonas cubren para entrega a domicilio en Costa Rica?</span>
               <span class="material-symbols-outlined faq-icon text-lila transition-transform duration-300">expand_more</span>
             </button>
@@ -2148,7 +2103,7 @@ Gracias por visitarnos, confiar en nuestro trabajo y rodear este sueño de perso
 
           <!-- Pregunta 4 -->
           <div class="faq-item rounded-2xl bg-surface border border-surface-border overflow-hidden transition-colors">
-            <button type="button" class="faq-toggle w-full p-5 text-left flex items-center justify-between gap-4 font-editorial text-lg text-mint-dark">
+            <button type="button" class="faq-toggle w-full p-5 text-left flex items-center justify-between gap-4 font-sans text-lg font-bold text-lila">
               <span>¿Cuáles métodos de pago aceptan?</span>
               <span class="material-symbols-outlined faq-icon text-lila transition-transform duration-300">expand_more</span>
             </button>
@@ -2168,7 +2123,7 @@ Gracias por visitarnos, confiar en nuestro trabajo y rodear este sueño de perso
         <span class="text-xs font-bold uppercase tracking-widest text-lila-soft block">
           Celebra Sin Límites
         </span>
-        <h2 class="font-editorial text-3xl sm:text-5xl font-normal leading-tight">
+        <h2 class="font-sans text-3xl sm:text-5xl text-white font-bold leading-tight">
           Hagamos realidad ese detalle que robará todas las miradas.
         </h2>
         <p class="text-lila-soft text-sm sm:text-lg max-w-xl mx-auto leading-relaxed">

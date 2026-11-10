@@ -127,6 +127,10 @@ body {
   outline-offset: -3px;
 }
 
+.product-card [class*="uppercase"][class*="tracking-widest"] {
+  color: var(--color-mint-dark);
+}
+
 .product-image-dialog {
   position: fixed;
   inset: 0;
