@@ -225,10 +225,10 @@
           </div>
 
           <div class="order-4 lg:order-none lg:col-span-5">
-            <div class="mx-auto aspect-[4/3] w-full max-w-[420px] overflow-hidden rounded-[1.75rem] border-4 border-white bg-white shadow-card-luxury sm:aspect-square">
-              <img src="assets/gallery/arreglo5.png"
+            <div class="mx-auto aspect-[5/6] w-full max-w-[420px] overflow-hidden rounded-[1.75rem] border-4 border-white bg-white shadow-card-luxury">
+              <img src="assets/gallery/hero.jpeg"
                   alt="Arreglo personalizado con globos y golosinas para una convivencia"
-                  class="h-full w-full object-cover object-[center_45%] transition-transform duration-700 hover:scale-[1.03]" />
+                  class="h-full w-full object-cover object-top" />
             </div>
           </div>
         </div>
@@ -258,7 +258,7 @@
         <!-- EXPLORA NUESTRAS CATEGORÍAS -->
         <div id="catalog-categories" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
           <button type="button" data-category="cumpleanos" class="catalog-category-card group text-left">
-            <img src="assets/gallery/arreglo7.png" alt="" class="catalog-category-image" />
+            <img src="assets/cat-cumple.jpg" alt="regalo cumpleaños" class="catalog-category-image" />
             <span class="catalog-category-copy">
               <span class="catalog-category-title">Cumpleaños</span>
               <span class="catalog-category-description">Detalles para celebrar</span>
@@ -421,7 +421,7 @@
           </article>
 
           <!-- PRODUCTO 2 -->
-          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="flores" data-categories="flores cumpleanos temporadas" data-featured="true">
+          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="flores" data-categories="flores temporadas" data-featured="true">
             <div>
               <div class="relative w-full aspect-[4/3] overflow-hidden bg-mint-soft/30">
                 <img src="assets/gallery/arreglo3.png" 
@@ -481,10 +481,10 @@
           <!-- PRODUCTO 3 -->
           <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="globos" data-categories="cumpleanos convivencias temporadas">
             <div>
-              <div class="relative w-full aspect-[4/3] overflow-hidden bg-lila-soft/30">
-                <img src="assets/gallery/globo2.png" 
+              <div class="relative w-full aspect-[3/4] overflow-hidden bg-white">
+                <img src="assets/cum-globoBurbuja.jpg"
                     alt="Globo Burbuja de Momentos" 
-                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
                 <span class="absolute top-3 left-3 bg-lila-dark text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
                   Globo
                 </span>
@@ -529,6 +529,97 @@
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
                   <path d="M20.52 3.48A11.85 11.85 0 0012.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.98L0 24l6.23-1.63a11.9 11.9 0 005.83 1.51h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.52-8.43zM12.07 21.87h-.01c-1.8 0-3.56-.48-5.1-1.39l-.37-.22-3.79.99 1.01-3.69-.24-.38a9.89 9.89 0 01-1.52-5.21c0-5.47 4.45-9.92 9.93-9.92 2.65 0 5.14 1.03 7.02 2.9 1.87 1.88 2.9 4.37 2.9 7.02 0 5.48-4.45 9.9-9.83 9.9zm5.45-7.44c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.88.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/>
                 </svg>
+                <span>Cotizar en WhatsApp</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="globos" data-categories="cumpleanos">
+            <div>
+              <div class="relative w-full aspect-[3/4] overflow-hidden bg-white">
+                <img src="assets/cum-BurbujaFantasía.png"
+                    alt="Escultura Burbuja de Fantasía"
+                    class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
+                <span class="absolute top-3 left-3 bg-lila-dark text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">Globo</span>
+                <div class="absolute top-3 right-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-ink shadow-sm">₡10,000</div>
+              </div>
+              <div class="p-5 sm:p-6 space-y-3">
+                <h3 class="font-sans text-2xl text-lila font-bold">Escultura Burbuja de Fantasía</h3>
+                <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">Una opción alegre, colorida y totalmente personalizada para decorar la celebración y sorprender a esa persona especial.</p>
+                <div class="rounded-2xl border border-lila-light/40 bg-lila-tint p-4">
+                  <div class="mb-3 flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-lila-dark">
+                    <span class="material-symbols-outlined text-[17px]" aria-hidden="true">inventory_2</span>
+                    <span>Incluye</span>
+                  </div>
+                  <ul class="space-y-2 text-xs leading-relaxed text-ink">
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Globo burbuja personalizado con nombre, edad y mensaje.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Diseño personalizado con la temática elegida.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Mini globos decorativos en su interior.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Base elaborada con globos en colores combinados.</span></li>
+                  </ul>
+                  <p class="mt-3 border-t border-lila-light/40 pt-3 text-[11px] leading-relaxed text-ink-muted">Se personaliza con la temática y los colores de tu preferencia, ideal para cumpleaños infantiles y otras celebraciones especiales. El diseño, los colores y la combinación de globos pueden variar según la temática elegida y el stock disponible.</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-5 sm:p-6 pt-0 space-y-3 border-t border-surface-border/60">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-left">
+                <div>
+                  <label class="block text-[11px] font-bold text-ink mb-1">Fecha de entrega (GAM)</label>
+                  <input type="date" class="order-date w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-[11px] font-bold text-ink mb-1">Personalización</label>
+                  <input type="text" placeholder="Nombre, edad, mensaje" class="order-phrase w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
+                </div>
+              </div>
+              <button type="button" onclick="sendProductQuote('Escultura Burbuja de Fantasía', '₡10,000', this)" class="catalog-quote-button w-full flex items-center justify-center gap-2 py-3 rounded-full bg-mint hover:bg-mint-hover text-white text-sm font-semibold shadow-mint-soft transition-all">
+                <span class="material-symbols-outlined text-lg" aria-hidden="true">chat</span>
+                <span>Cotizar en WhatsApp</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="globos" data-categories="cumpleanos">
+            <div>
+              <div class="relative w-full aspect-[3/4] overflow-hidden bg-white">
+                <img src="assets/cum-SolCelebración.png"
+                    alt="Arreglo Sol de Celebración con globo burbuja y girasoles"
+                    class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
+                <span class="absolute top-3 left-3 bg-mint text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">Arreglo floral</span>
+                <div class="absolute top-3 right-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-ink shadow-sm">₡25,000</div>
+              </div>
+              <div class="p-5 sm:p-6 space-y-3">
+                <h3 class="font-sans text-2xl text-lila font-bold">Arreglo Sol de Celebración</h3>
+                <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">Un regalo lleno de luz para celebrar una fecha especial. La alegría de los girasoles se combina con un globo burbuja personalizado para crear una sorpresa memorable.</p>
+                <div class="rounded-2xl border border-lila-light/40 bg-lila-tint p-4">
+                  <div class="mb-3 flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-lila-dark">
+                    <span class="material-symbols-outlined text-[17px]" aria-hidden="true">inventory_2</span>
+                    <span>Incluye</span>
+                  </div>
+                  <ul class="space-y-2 text-xs leading-relaxed text-ink">
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Globo burbuja personalizado con nombre, mensaje y edad.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Mini globos decorativos en su interior.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Seis girasoles, flores de complemento y follaje.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Tarjeta con dedicatoria.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Caja de madera decorada con lazo.</span></li>
+                  </ul>
+                  <p class="mt-3 border-t border-lila-light/40 pt-3 text-[11px] leading-relaxed text-ink-muted">Se personaliza con los datos y colores de tu preferencia. Las flores y los detalles decorativos pueden variar según la temporada y el stock disponible.</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-5 sm:p-6 pt-0 space-y-3 border-t border-surface-border/60">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-left">
+                <div>
+                  <label class="block text-[11px] font-bold text-ink mb-1">Fecha de entrega (GAM)</label>
+                  <input type="date" class="order-date w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-[11px] font-bold text-ink mb-1">Personalización</label>
+                  <input type="text" placeholder="Nombre, edad, mensaje" class="order-phrase w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
+                </div>
+              </div>
+              <button type="button" onclick="sendProductQuote('Arreglo Sol de Celebración', '₡25,000', this)" class="catalog-quote-button w-full flex items-center justify-center gap-2 py-3 rounded-full bg-mint hover:bg-mint-hover text-white text-sm font-semibold shadow-mint-soft transition-all">
+                <span class="material-symbols-outlined text-lg" aria-hidden="true">chat</span>
                 <span>Cotizar en WhatsApp</span>
               </button>
             </div>
@@ -591,7 +682,7 @@
           </article>
 
           <!-- PRODUCTO 5 -->
-          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="chocolates" data-categories="cumpleanos convivencias temporadas">
+          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="chocolates" data-categories="convivencias temporadas">
             <div>
               <div class="relative w-full aspect-[4/3] overflow-hidden bg-lila-soft/30">
                 <img src="assets/gallery/chocolate1.png" 
@@ -647,7 +738,7 @@
           </article>
 
           <!-- PRODUCTO 6 -->
-          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="tazas" data-categories="sublimacion-dtf cumpleanos convivencias temporadas">
+          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="tazas" data-categories="sublimacion-dtf convivencias temporadas">
             <div>
               <div class="relative w-full aspect-[4/3] overflow-hidden bg-mint-soft/30">
                 <img src="assets/gallery/taza1.png" 
@@ -703,7 +794,7 @@
           </article>
 
 
-          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="globos" data-categories="cumpleanos convivencias temporadas">
+          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="globos" data-categories="convivencias temporadas">
             <div>
               <div class="relative w-full aspect-[4/3] overflow-hidden bg-lila-soft/30">
                 <img src="assets/gallery/arreglo10.png" 
@@ -818,7 +909,7 @@
             </div>
           </article>
 
-          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="globos" data-categories="cumpleanos convivencias graduacion temporadas">
+          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="globos" data-categories="convivencias graduacion temporadas">
             <div>
               <div class="relative w-full aspect-[4/3] overflow-hidden bg-lila-soft/30">
                 <img src="assets/gallery/arreglo7.png" 
@@ -879,15 +970,15 @@
 
           <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="globos" data-categories="flores cumpleanos temporadas" data-featured="true">
             <div>
-              <div class="relative w-full aspect-[4/3] overflow-hidden bg-lila-soft/30">
-                <img src="assets/gallery/arreglo11.png" 
+              <div class="relative w-full aspect-[3/4] overflow-hidden bg-white">
+                <img src="assets/cum-GirasolesAlegría.jpg"
                     alt="Arreglo &quot;Girasoles de Alegría&quot;" 
-                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
                 <span class="absolute top-3 left-3 bg-lila-dark text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
-                  Globo
+                  Arreglo floral
                 </span>
                 <div class="absolute top-3 right-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-ink shadow-sm">
-                  ₡25,000 <span class="text-ink-muted font-normal"></span>
+                  ₡30,000 <span class="text-ink-muted font-normal"></span>
                 </div>
               </div>
               <div class="p-5 sm:p-6 space-y-3">
@@ -903,13 +994,15 @@
                     <span>Incluye</span>
                   </div>
                   <ul class="space-y-2 text-xs leading-relaxed text-ink">
-                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Globo burbuja personalizado con nombre y mensaje. </span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Globo personalizado con nombre y mensaje.</span></li>
                     <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Hermoso arreglo de girasoles frescos.</span></li>
                     <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Taza personalizada con diseño exclusivo.</span></li>
-                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Snacks y Chips personalizados</span></li>
-                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span> Caja decorativa con acabados elegantes y lazo de lujo.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Snacks surtidos según disponibilidad.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Chips personalizados con temática especial.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Caja decorativa con acabados elegantes y lazo de lujo.</span></li>
                   </ul>
-                  <p class="mt-3 border-t border-lila-light/40 pt-3 text-[11px] leading-relaxed text-ink-muted">Personalizable: El diseño, colores, mensaje, taza, snacks y temática pueden adaptarse completamente a la ocasión y preferencias del cliente.</p>
+                  <p class="mt-3 border-t border-lila-light/40 pt-3 text-[11px] leading-relaxed text-ink-muted">Personalizable: El diseño, los colores, el mensaje, la taza, los snacks y la temática pueden adaptarse completamente a la ocasión y preferencias del cliente.</p>
+                  <p class="mt-2 text-[11px] leading-relaxed text-ink-muted">Un regalo lleno de luz, color y detalles únicos que transmite cariño y alegría desde el primer momento.</p>
                 </div>
               </div>
             </div>
@@ -922,14 +1015,463 @@
                   <input type="date" class="order-date w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
                 </div>
                 <div>
-                  <label class="block text-[11px] font-bold text-ink mb-1">Frase o dedicatoria</label>
-                  <input type="text" placeholder="Ej: Para la mujer de mi vida" class="order-phrase w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
+                  <label class="block text-[11px] font-bold text-ink mb-1">Personalización</label>
+                  <input type="text" placeholder="Nombre, mensaje, tema" class="order-phrase w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
                 </div>
               </div>
-              <button type="button" onclick="sendProductQuote('Arreglo Girasoles de Alegría', '₡25,000', this)" class="catalog-quote-button w-full flex items-center justify-center gap-2 py-3 rounded-full bg-mint hover:bg-mint-hover text-white text-sm font-semibold shadow-mint-soft transition-all">
+              <button type="button" onclick="sendProductQuote('Arreglo Girasoles de Alegría', '₡30,000', this)" class="catalog-quote-button w-full flex items-center justify-center gap-2 py-3 rounded-full bg-mint hover:bg-mint-hover text-white text-sm font-semibold shadow-mint-soft transition-all">
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
                   <path d="M20.52 3.48A11.85 11.85 0 0012.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.98L0 24l6.23-1.63a11.9 11.9 0 005.83 1.51h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.52-8.43zM12.07 21.87h-.01c-1.8 0-3.56-.48-5.1-1.39l-.37-.22-3.79.99 1.01-3.69-.24-.38a9.89 9.89 0 01-1.52-5.21c0-5.47 4.45-9.92 9.93-9.92 2.65 0 5.14 1.03 7.02 2.9 1.87 1.88 2.9 4.37 2.9 7.02 0 5.48-4.45 9.9-9.83 9.9zm5.45-7.44c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.88.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/>
                 </svg>
+                <span>Cotizar en WhatsApp</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="globos" data-categories="cumpleanos">
+            <div>
+              <div class="relative w-full aspect-[3/4] overflow-hidden bg-white">
+                <img src="assets/cum-DestelloAmor.png" alt="Arreglo Destellos de Amor con girasoles, rosas y globo" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
+                <span class="absolute top-3 left-3 bg-mint text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">Arreglo floral</span>
+                <div class="absolute top-3 right-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-ink shadow-sm">₡30,000</div>
+              </div>
+              <div class="p-5 sm:p-6 space-y-3">
+                <h3 class="font-sans text-2xl text-lila font-bold">Arreglo Destellos de Amor</h3>
+                <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">Una combinación vibrante de flores, colores y buenos deseos, creada para celebrar a esa persona especial y llenar su día de alegría.</p>
+                <div class="rounded-2xl border border-lila-light/40 bg-lila-tint p-4">
+                  <div class="mb-3 flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-lila-dark">
+                    <span class="material-symbols-outlined text-[17px]" aria-hidden="true">inventory_2</span>
+                    <span>Incluye</span>
+                  </div>
+                  <ul class="space-y-2 text-xs leading-relaxed text-ink">
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Globo burbuja personalizado con nombre y mensaje.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Globos decorativos en su interior.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Combinación de girasoles y rosas rojas.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Flores de complemento y follaje decorativo.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Tarjeta con mensaje personalizado.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Caja de madera decorada con lazo.</span></li>
+                  </ul>
+                  <p class="mt-3 border-t border-lila-light/40 pt-3 text-[11px] leading-relaxed text-ink-muted">Se personaliza con el nombre, el mensaje y los colores de tu preferencia. Las flores, tonalidades y detalles decorativos pueden variar según la temporada y el stock disponible.</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-5 sm:p-6 pt-0 space-y-3 border-t border-surface-border/60">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-left">
+                <div>
+                  <label class="block text-[11px] font-bold text-ink mb-1">Fecha de entrega (GAM)</label>
+                  <input type="date" class="order-date w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-[11px] font-bold text-ink mb-1">Nombre y mensaje</label>
+                  <input type="text" placeholder="Nombre y dedicatoria" class="order-phrase w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
+                </div>
+              </div>
+              <button type="button" onclick="sendProductQuote('Arreglo Destellos de Amor', '₡30,000', this)" class="catalog-quote-button w-full flex items-center justify-center gap-2 py-3 rounded-full bg-mint hover:bg-mint-hover text-white text-sm font-semibold shadow-mint-soft transition-all">
+                <span class="material-symbols-outlined text-lg" aria-hidden="true">chat</span>
+                <span>Cotizar en WhatsApp</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="globos" data-categories="cumpleanos">
+            <div>
+              <div class="relative w-full aspect-[3/4] overflow-hidden bg-white">
+                <img src="assets/cum-DulcePasión.png" alt="Arreglo Dulce Pasión con globo y snacks personalizados" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
+                <span class="absolute top-3 left-3 bg-lila-dark text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">Globo</span>
+                <div class="absolute top-3 right-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-ink shadow-sm">₡14,500</div>
+              </div>
+              <div class="p-5 sm:p-6 space-y-3">
+                <h3 class="font-sans text-2xl text-lila font-bold">Arreglo Dulce Pasión</h3>
+                <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">Un detalle lleno de color y sabor, creado para celebrar a esa persona especial con la temática de su equipo, personaje o afición favorita.</p>
+                <div class="rounded-2xl border border-lila-light/40 bg-lila-tint p-4">
+                  <div class="mb-3 flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-lila-dark">
+                    <span class="material-symbols-outlined text-[17px]" aria-hidden="true">inventory_2</span>
+                    <span>Incluye</span>
+                  </div>
+                  <ul class="space-y-2 text-xs leading-relaxed text-ink">
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Globo burbuja personalizado con nombre y mensaje.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Mini globos decorativos en su interior.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Globo metálico de estrella.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Tres dulces o snacks a elección.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Chip bag personalizada con chocolates.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Base decorada con lazo.</span></li>
+                  </ul>
+                  <p class="mt-3 border-t border-lila-light/40 pt-3 text-[11px] leading-relaxed text-ink-muted">Se personaliza con el nombre, la temática y los colores de tu preferencia. Puedes agregar más dulces, snacks u otros productos por un costo adicional. Las opciones de dulces y snacks, sabores, marcas y productos mostrados en la fotografía pueden variar según el stock.</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-5 sm:p-6 pt-0 space-y-3 border-t border-surface-border/60">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-left">
+                <div>
+                  <label class="block text-[11px] font-bold text-ink mb-1">Fecha de entrega (GAM)</label>
+                  <input type="date" class="order-date w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-[11px] font-bold text-ink mb-1">Personalización</label>
+                  <input type="text" placeholder="Nombre, mensaje, equipo" class="order-phrase w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
+                </div>
+              </div>
+              <button type="button" onclick="sendProductQuote('Arreglo Dulce Pasión', '₡14,500', this)" class="catalog-quote-button w-full flex items-center justify-center gap-2 py-3 rounded-full bg-mint hover:bg-mint-hover text-white text-sm font-semibold shadow-mint-soft transition-all">
+                <span class="material-symbols-outlined text-lg" aria-hidden="true">chat</span>
+                <span>Cotizar en WhatsApp</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="globos" data-categories="cumpleanos">
+            <div>
+              <div class="relative w-full aspect-[3/4] overflow-hidden bg-white">
+                <img src="assets/cum-CumpleFutbolero.png" alt="Arreglo Cumpleaños Futbolero con globo, snacks y decoración de fútbol" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
+                <span class="absolute top-3 left-3 bg-lila-dark text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">Globo</span>
+                <div class="absolute top-3 right-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-ink shadow-sm">₡14,500</div>
+              </div>
+              <div class="p-5 sm:p-6 space-y-3">
+                <h3 class="font-sans text-2xl text-lila font-bold">Arreglo Cumpleaños Futbolero</h3>
+                <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">Una sorpresa llena de sabor y espíritu futbolero para celebrar a ese fanático especial en su cumpleaños.</p>
+                <div class="rounded-2xl border border-lila-light/40 bg-lila-tint p-4">
+                  <div class="mb-3 flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-lila-dark">
+                    <span class="material-symbols-outlined text-[17px]" aria-hidden="true">inventory_2</span>
+                    <span>Incluye</span>
+                  </div>
+                  <ul class="space-y-2 text-xs leading-relaxed text-ink">
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Globo burbuja personalizado con nombre y mensaje.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Mini globos decorativos en su interior.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Globo metálico en forma de estrella.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Variedad de dulces y snacks.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Detalles personalizados con temática de fútbol.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Base decorada con lazo.</span></li>
+                  </ul>
+                  <p class="mt-3 border-t border-lila-light/40 pt-3 text-[11px] leading-relaxed text-ink-muted">Se personaliza con el nombre, el mensaje y la temática de tu preferencia. Los dulces y snacks se eligen entre las opciones disponibles y pueden variar según el stock.</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-5 sm:p-6 pt-0 space-y-3 border-t border-surface-border/60">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-left">
+                <div>
+                  <label class="block text-[11px] font-bold text-ink mb-1">Fecha de entrega (GAM)</label>
+                  <input type="date" class="order-date w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-[11px] font-bold text-ink mb-1">Personalización</label>
+                  <input type="text" placeholder="Nombre, mensaje, equipo" class="order-phrase w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
+                </div>
+              </div>
+              <button type="button" onclick="sendProductQuote('Arreglo Cumpleaños Futbolero', '₡14,500', this)" class="catalog-quote-button w-full flex items-center justify-center gap-2 py-3 rounded-full bg-mint hover:bg-mint-hover text-white text-sm font-semibold shadow-mint-soft transition-all">
+                <span class="material-symbols-outlined text-lg" aria-hidden="true">chat</span>
+                <span>Cotizar en WhatsApp</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="globos" data-categories="cumpleanos">
+            <div>
+              <div class="relative w-full aspect-[3/4] overflow-hidden bg-white">
+                <img src="assets/cum-DulceEncanto.jpg" alt="Arreglo Dulce Encanto con globo burbuja y dulces personalizados" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
+                <span class="absolute top-3 left-3 bg-lila-dark text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">Globo</span>
+                <div class="absolute top-3 right-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-ink shadow-sm">₡14,500</div>
+              </div>
+              <div class="p-5 sm:p-6 space-y-3">
+                <h3 class="font-sans text-2xl text-lila font-bold">Arreglo Dulce Encanto</h3>
+                <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">Un detalle lleno de color y dulzura, creado para celebrar un cumpleaños y hacer sentir muy especial a quien lo recibe.</p>
+                <div class="rounded-2xl border border-lila-light/40 bg-lila-tint p-4">
+                  <div class="mb-3 flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-lila-dark">
+                    <span class="material-symbols-outlined text-[17px]" aria-hidden="true">inventory_2</span>
+                    <span>Incluye</span>
+                  </div>
+                  <ul class="space-y-2 text-xs leading-relaxed text-ink">
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Globo burbuja personalizado con nombre y mensaje.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Mini globos decorativos en su interior.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Globo metálico de estrella.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Tres dulces o snacks a elección.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Bolsita personalizada con chocolates.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Base decorada con lazo.</span></li>
+                  </ul>
+                  <p class="mt-3 border-t border-lila-light/40 pt-3 text-[11px] leading-relaxed text-ink-muted">Se personaliza con el nombre, la temática y los colores de tu preferencia. Puedes agregar más dulces, snacks u otros productos por un costo adicional. Los dulces o snacks se eligen entre las opciones disponibles; las fotos son ilustrativas y los productos pueden variar según el stock.</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-5 sm:p-6 pt-0 space-y-3 border-t border-surface-border/60">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-left">
+                <div>
+                  <label class="block text-[11px] font-bold text-ink mb-1">Fecha de entrega (GAM)</label>
+                  <input type="date" class="order-date w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-[11px] font-bold text-ink mb-1">Personalización</label>
+                  <input type="text" placeholder="Nombre, tema, colores" class="order-phrase w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
+                </div>
+              </div>
+              <button type="button" onclick="sendProductQuote('Arreglo Dulce Encanto', '₡14,500', this)" class="catalog-quote-button w-full flex items-center justify-center gap-2 py-3 rounded-full bg-mint hover:bg-mint-hover text-white text-sm font-semibold shadow-mint-soft transition-all">
+                <span class="material-symbols-outlined text-lg" aria-hidden="true">chat</span>
+                <span>Cotizar en WhatsApp</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="globos" data-categories="cumpleanos">
+            <div>
+              <div class="relative w-full aspect-[3/4] overflow-hidden bg-white">
+                <img src="assets/cum-FiestaSabor.png" alt="Arreglo Fiesta con Sabor con globo y snacks personalizados" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
+                <span class="absolute top-3 left-3 bg-lila-dark text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">Globo</span>
+                <div class="absolute top-3 right-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-ink shadow-sm">₡15,000</div>
+              </div>
+              <div class="p-5 sm:p-6 space-y-3">
+                <h3 class="font-sans text-2xl text-lila font-bold">Arreglo Fiesta con Sabor</h3>
+                <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">Una opción divertida y llena de color para celebrar un cumpleaños de manera especial. Combina globos, snacks y detalles personalizados para sorprender con un regalo único.</p>
+                <div class="rounded-2xl border border-lila-light/40 bg-lila-tint p-4">
+                  <div class="mb-3 flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-lila-dark">
+                    <span class="material-symbols-outlined text-[17px]" aria-hidden="true">inventory_2</span>
+                    <span>Incluye</span>
+                  </div>
+                  <ul class="space-y-2 text-xs leading-relaxed text-ink">
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Globo burbuja personalizado con nombre, edad y mensaje.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Un globo metálico.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Tres snacks a elección.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Chip bag personalizada.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Chocolate personalizado.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Base decorada.</span></li>
+                  </ul>
+                  <p class="mt-3 border-t border-lila-light/40 pt-3 text-[11px] leading-relaxed text-ink-muted">Se personaliza con el nombre, la edad, la temática y los colores de tu preferencia. Puedes agregar más snacks, chocolates u otros productos por un costo adicional. Las opciones, sabores y marcas pueden variar según disponibilidad y stock; las fotos son ilustrativas.</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-5 sm:p-6 pt-0 space-y-3 border-t border-surface-border/60">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-left">
+                <div>
+                  <label class="block text-[11px] font-bold text-ink mb-1">Fecha de entrega (GAM)</label>
+                  <input type="date" class="order-date w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-[11px] font-bold text-ink mb-1">Personalización</label>
+                  <input type="text" placeholder="Nombre, edad, mensaje" class="order-phrase w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
+                </div>
+              </div>
+              <button type="button" onclick="sendProductQuote('Arreglo Fiesta con Sabor', '₡15,000', this)" class="catalog-quote-button w-full flex items-center justify-center gap-2 py-3 rounded-full bg-mint hover:bg-mint-hover text-white text-sm font-semibold shadow-mint-soft transition-all">
+                <span class="material-symbols-outlined text-lg" aria-hidden="true">chat</span>
+                <span>Cotizar en WhatsApp</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="globos" data-categories="cumpleanos">
+            <div>
+              <div class="relative w-full aspect-[3/4] overflow-hidden bg-white">
+                <img src="assets/cum-SonrisasAmarillas.jpg" alt="Arreglo Sonrisas Amarillas con globo de flor sonriente y dulces" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
+                <span class="absolute top-3 left-3 bg-lila-dark text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">Globo</span>
+                <div class="absolute top-3 right-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-ink shadow-sm">₡14,500</div>
+              </div>
+              <div class="p-5 sm:p-6 space-y-3">
+                <h3 class="font-sans text-2xl text-lila font-bold">Arreglo Sonrisas Amarillas</h3>
+                <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">Un detalle alegre y lleno de color para celebrar un cumpleaños y regalar una gran sonrisa.</p>
+                <div class="rounded-2xl border border-lila-light/40 bg-lila-tint p-4">
+                  <div class="mb-3 flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-lila-dark">
+                    <span class="material-symbols-outlined text-[17px]" aria-hidden="true">inventory_2</span>
+                    <span>Incluye</span>
+                  </div>
+                  <ul class="space-y-2 text-xs leading-relaxed text-ink">
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Globo burbuja personalizado con nombre y mensaje.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Mini globos decorativos en su interior.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Globo metálico en forma de flor con carita sonriente.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Dulces y snacks.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Bolsita personalizada.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Caja decorada con lazo.</span></li>
+                  </ul>
+                  <p class="mt-3 border-t border-lila-light/40 pt-3 text-[11px] leading-relaxed text-ink-muted">Se personaliza con el nombre, el mensaje y los colores de tu preferencia. Los dulces y snacks se eligen entre las opciones disponibles y pueden variar según el stock.</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-5 sm:p-6 pt-0 space-y-3 border-t border-surface-border/60">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-left">
+                <div>
+                  <label class="block text-[11px] font-bold text-ink mb-1">Fecha de entrega (GAM)</label>
+                  <input type="date" class="order-date w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-[11px] font-bold text-ink mb-1">Nombre y mensaje</label>
+                  <input type="text" placeholder="Nombre y dedicatoria" class="order-phrase w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
+                </div>
+              </div>
+              <button type="button" onclick="sendProductQuote('Arreglo Sonrisas Amarillas', '₡14,500', this)" class="catalog-quote-button w-full flex items-center justify-center gap-2 py-3 rounded-full bg-mint hover:bg-mint-hover text-white text-sm font-semibold shadow-mint-soft transition-all">
+                <span class="material-symbols-outlined text-lg" aria-hidden="true">chat</span>
+                <span>Cotizar en WhatsApp</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="globos" data-categories="cumpleanos">
+            <div>
+              <div class="relative w-full aspect-[3/4] overflow-hidden bg-white">
+                <img src="assets/cum-AbrazoInolvidable.png" alt="Arreglo Abrazo Inolvidable con globo y peluche" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
+                <span class="absolute top-3 left-3 bg-lila-dark text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">Peluche & globo</span>
+                <div class="absolute top-3 right-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-ink shadow-sm">₡25,000</div>
+              </div>
+              <div class="p-5 sm:p-6 space-y-3">
+                <h3 class="font-sans text-2xl text-lila font-bold">Arreglo Abrazo Inolvidable</h3>
+                <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">Un detalle lleno de ternura y alegría, ideal para sorprender en un cumpleaños y regalar un abrazo que permanecerá en el recuerdo.</p>
+                <div class="rounded-2xl border border-lila-light/40 bg-lila-tint p-4">
+                  <div class="mb-3 flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-lila-dark">
+                    <span class="material-symbols-outlined text-[17px]" aria-hidden="true">inventory_2</span>
+                    <span>Incluye</span>
+                  </div>
+                  <ul class="space-y-2 text-xs leading-relaxed text-ink">
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Globo burbuja personalizado con nombre y mensaje.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Mini globos decorativos en su interior.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Peluche grande de Snoopy.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Bolsita personalizada con chocolates.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Caja de madera decorada.</span></li>
+                  </ul>
+                  <p class="mt-3 border-t border-lila-light/40 pt-3 text-[11px] leading-relaxed text-ink-muted">Se personaliza con el nombre, el mensaje y los colores de tu preferencia. Puedes agregar más chocolates, snacks u otros productos por un costo adicional. El modelo del peluche, los chocolates y los colores pueden variar según el stock disponible.</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-5 sm:p-6 pt-0 space-y-3 border-t border-surface-border/60">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-left">
+                <div>
+                  <label class="block text-[11px] font-bold text-ink mb-1">Fecha de entrega (GAM)</label>
+                  <input type="date" class="order-date w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-[11px] font-bold text-ink mb-1">Nombre y mensaje</label>
+                  <input type="text" placeholder="Nombre y dedicatoria" class="order-phrase w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
+                </div>
+              </div>
+              <button type="button" onclick="sendProductQuote('Arreglo Abrazo Inolvidable', '₡25,000', this)" class="catalog-quote-button w-full flex items-center justify-center gap-2 py-3 rounded-full bg-mint hover:bg-mint-hover text-white text-sm font-semibold shadow-mint-soft transition-all">
+                <span class="material-symbols-outlined text-lg" aria-hidden="true">chat</span>
+                <span>Cotizar en WhatsApp</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="globos" data-categories="cumpleanos flores">
+            <div>
+              <div class="relative w-full aspect-[3/4] overflow-hidden bg-white">
+                <img src="assets/cum-GirasolesIluminan.jpg" alt="Arreglo Girasoles que Iluminan con globo burbuja" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
+                <span class="absolute top-3 left-3 bg-mint text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">Arreglo floral</span>
+                <div class="absolute top-3 right-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-ink shadow-sm">₡25,000</div>
+              </div>
+              <div class="p-5 sm:p-6 space-y-3">
+                <h3 class="font-sans text-2xl text-lila font-bold">Girasoles que Iluminan</h3>
+                <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">Un detalle lleno de alegría para celebrar cumpleaños, logros o simplemente recordarle a alguien lo especial que es.</p>
+                <div class="rounded-2xl border border-lila-light/40 bg-lila-tint p-4">
+                  <div class="mb-3 flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-lila-dark">
+                    <span class="material-symbols-outlined text-[17px]" aria-hidden="true">inventory_2</span>
+                    <span>Incluye</span>
+                  </div>
+                  <ul class="space-y-2 text-xs leading-relaxed text-ink">
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Arreglo de girasoles naturales.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Follaje y delicado complemento floral.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Globo burbuja personalizado con nombre y mensaje.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Caja de madera decorada.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Tarjeta con mensaje especial.</span></li>
+                  </ul>
+                  <p class="mt-3 border-t border-lila-light/40 pt-3 text-[11px] leading-relaxed text-ink-muted">Personalizamos el arreglo a tu gusto: nombre, mensaje, colores y temática para hacerlo único.</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-5 sm:p-6 pt-0 space-y-3 border-t border-surface-border/60">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-left">
+                <div>
+                  <label class="block text-[11px] font-bold text-ink mb-1">Fecha de entrega (GAM)</label>
+                  <input type="date" class="order-date w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-[11px] font-bold text-ink mb-1">Nombre y mensaje</label>
+                  <input type="text" placeholder="Nombre y dedicatoria" class="order-phrase w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
+                </div>
+              </div>
+              <button type="button" onclick="sendProductQuote('Girasoles que Iluminan', '₡25,000', this)" class="catalog-quote-button w-full flex items-center justify-center gap-2 py-3 rounded-full bg-mint hover:bg-mint-hover text-white text-sm font-semibold shadow-mint-soft transition-all">
+                <span class="material-symbols-outlined text-lg" aria-hidden="true">chat</span>
+                <span>Cotizar en WhatsApp</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="globos" data-categories="cumpleanos">
+            <div>
+              <div class="relative w-full aspect-[3/4] overflow-hidden bg-white">
+                <img src="assets/cum-DulceCelebración.png" alt="Caja Dulce Celebración con globo, peluche y chocolates" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
+                <span class="absolute top-3 left-3 bg-lila-dark text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">Globo & peluche</span>
+                <div class="absolute top-3 right-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-ink shadow-sm">₡18,500</div>
+              </div>
+              <div class="p-5 sm:p-6 space-y-3">
+                <h3 class="font-sans text-2xl text-lila font-bold">Caja Dulce Celebración</h3>
+                <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">Un regalo especial para celebrar un cumpleaños y sorprender con una combinación de globos, chocolates, snacks y un tierno peluche.</p>
+                <div class="rounded-2xl border border-lila-light/40 bg-lila-tint p-4">
+                  <div class="mb-3 flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-lila-dark">
+                    <span class="material-symbols-outlined text-[17px]" aria-hidden="true">inventory_2</span>
+                    <span>Incluye</span>
+                  </div>
+                  <ul class="space-y-2 text-xs leading-relaxed text-ink">
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Globo burbuja personalizado con mini globos en su interior.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Globos metálicos de estrella.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Peluche pequeño.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Cuatro snacks o chocolates.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Chocolate Milka personalizado.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Chip bag personalizada, rellena de chocolatitos Hershey's.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Caja decorada con lazo.</span></li>
+                  </ul>
+                  <p class="mt-3 border-t border-lila-light/40 pt-3 text-[11px] leading-relaxed text-ink-muted">Personalizable con nombre, mensaje y temática. El peluche y los productos pueden variar según disponibilidad.</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-5 sm:p-6 pt-0 space-y-3 border-t border-surface-border/60">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-left">
+                <div>
+                  <label class="block text-[11px] font-bold text-ink mb-1">Fecha de entrega (GAM)</label>
+                  <input type="date" class="order-date w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-[11px] font-bold text-ink mb-1">Personalización</label>
+                  <input type="text" placeholder="Nombre, mensaje, tema" class="order-phrase w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
+                </div>
+              </div>
+              <button type="button" onclick="sendProductQuote('Caja Dulce Celebración', '₡18,500', this)" class="catalog-quote-button w-full flex items-center justify-center gap-2 py-3 rounded-full bg-mint hover:bg-mint-hover text-white text-sm font-semibold shadow-mint-soft transition-all">
+                <span class="material-symbols-outlined text-lg" aria-hidden="true">chat</span>
+                <span>Cotizar en WhatsApp</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="globos" data-categories="cumpleanos">
+            <div>
+              <div class="relative w-full aspect-[3/4] overflow-hidden bg-white">
+                <img src="assets/cum-PasiónRojinegra.jpg" alt="Arreglo Pasión Rojinegra con cojín de la Liga, globos y snacks" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
+                <span class="absolute top-3 left-3 bg-lila-dark text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">Globo & fútbol</span>
+                <div class="absolute top-3 right-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-ink shadow-sm">₡40,000</div>
+              </div>
+              <div class="p-5 sm:p-6 space-y-3">
+                <h3 class="font-sans text-2xl text-lila font-bold">Arreglo Pasión Rojinegra</h3>
+                <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">Un regalo ideal para sorprender a esa persona que vive con orgullo su pasión por la Liga. Una combinación especial de globos, snacks y detalles futboleros.</p>
+                <div class="rounded-2xl border border-lila-light/40 bg-lila-tint p-4">
+                  <div class="mb-3 flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-lila-dark">
+                    <span class="material-symbols-outlined text-[17px]" aria-hidden="true">inventory_2</span>
+                    <span>Incluye</span>
+                  </div>
+                  <ul class="space-y-2 text-xs leading-relaxed text-ink">
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Globo burbuja personalizado con mini globos en su interior.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Globos metálicos de estrella.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Cojín de balón con diseño de la Liga.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Taza personalizada.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Variedad de snacks y bebidas.</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lila"></span><span>Caja decorada con lazo.</span></li>
+                  </ul>
+                  <p class="mt-3 border-t border-lila-light/40 pt-3 text-[11px] leading-relaxed text-ink-muted">Personalizable con nombre y mensaje. Los snacks, las bebidas y algunos detalles pueden variar según disponibilidad.</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-5 sm:p-6 pt-0 space-y-3 border-t border-surface-border/60">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-left">
+                <div>
+                  <label class="block text-[11px] font-bold text-ink mb-1">Fecha de entrega (GAM)</label>
+                  <input type="date" class="order-date w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-[11px] font-bold text-ink mb-1">Nombre y mensaje</label>
+                  <input type="text" placeholder="Nombre y dedicatoria" class="order-phrase w-full px-3 py-1.5 rounded-xl bg-white text-ink text-xs border border-surface-border focus:ring-2 focus:ring-lila focus:outline-none" />
+                </div>
+              </div>
+              <button type="button" onclick="sendProductQuote('Arreglo Pasión Rojinegra', '₡40,000', this)" class="catalog-quote-button w-full flex items-center justify-center gap-2 py-3 rounded-full bg-mint hover:bg-mint-hover text-white text-sm font-semibold shadow-mint-soft transition-all">
+                <span class="material-symbols-outlined text-lg" aria-hidden="true">chat</span>
                 <span>Cotizar en WhatsApp</span>
               </button>
             </div>
@@ -992,7 +1534,7 @@
             </div>
           </article>
 
-          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="globos" data-categories="cumpleanos convivencias temporadas">
+          <article class="product-card bg-surface rounded-3xl overflow-hidden border border-surface-border shadow-sm hover:shadow-card-luxury transition-all duration-300 flex flex-col justify-between group" data-category="globos" data-categories="convivencias temporadas">
             <div>
               <div class="relative w-full aspect-[4/3] overflow-hidden bg-lila-soft/30">
                 <img src="assets/gallery/arreglo9.png" 
@@ -1071,9 +1613,7 @@
               
               <div class="absolute bottom-6 left-6 right-6 text-white space-y-1">
                 <span class="text-xs uppercase tracking-widest font-bold text-mint-light">Marmat Studio • CR</span>
-                <p class="font-editorial text-lg sm:text-xl not-italic font-normal text-lila-soft">
-                  "Cada pétalo y cada curva de globo tiene una razón de ser y un destino de felicidad."
-                </p>
+              
               </div>
             </div>
 
@@ -1111,14 +1651,14 @@
                 <strong class="text-ink font-semibold">¿Qué significa Marmat? </strong> 
                 El nombre <span class="text-lila-dark font-bold">Marmat</span> une a mis hijos, Mariana y Matías, dos de mis mayores motivos para seguir soñando. La angelita del logo representa a mi mamá, que está en el cielo y ocupa un lugar muy especial en mi corazón.
 
-Los tonos lila y verde agua que nos identifican fueron elegidos para transmitir calidez y armonía, y reflejar el cariño con que preparamos cada creación.
+                Los tonos lila y verde agua que nos identifican fueron elegidos para transmitir calidez y armonía, y reflejar el cariño con que preparamos cada creación.
               </p>
 
               <p>
                 <strong class="text-ink font-semibold">Nuestra Misión: </strong> 
                 Hoy construyo este sueño junto a Wesley, mi pareja y socio. Juntos hemos creado un lugar para imaginar, personalizar y preparar regalos que acompañen momentos especiales. Cada pedido nos permite ser parte de una historia, una celebración o una sorpresa.
 
-Gracias por visitarnos, confiar en nuestro trabajo y rodear este sueño de personas tan especiales. Deseamos que cada detalle de Marmat lleve un poquito de amor, ilusión y alegría.
+                Gracias por visitarnos, confiar en nuestro trabajo y rodear este sueño de personas tan especiales. Deseamos que cada detalle de Marmat lleve un poquito de amor, ilusión y alegría.
               </p>
             </div>
 
@@ -1377,7 +1917,7 @@ Gracias por visitarnos, confiar en nuestro trabajo y rodear este sueño de perso
               Encontrá Marmat Studio
             </h2>
             <p class="max-w-xl text-sm sm:text-base leading-relaxed text-ink-muted">
-              Visitá nuestro local y conocé nuestros regalos y creaciones personalizadas. Abrí el mapa para ver la ubicación y obtener indicaciones desde donde estés.
+              Visitá nuestro local en Santo Domingo de Heredia, Centro Comercial Casa Vieja, local #8 y conocé nuestros regalos y creaciones personalizadas. Abrí el mapa para ver la ubicación y obtener indicaciones desde donde estés.
             </p>
             <a href="https://maps.app.goo.gl/YfmoWjrSBaJFe3U37" target="_blank" rel="noopener noreferrer" class="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-mint px-6 py-3 text-sm font-semibold text-white shadow-mint-soft transition-colors hover:bg-mint-hover">
               <span>Cómo llegar con Google Maps</span>
@@ -1993,7 +2533,7 @@ Gracias por visitarnos, confiar en nuestro trabajo y rodear este sueño de perso
           </div>
           <!-- GRUPO A duplicado para loop infinito -->
           <div class="gallery-group" aria-hidden="true">
-           <div class="gallery-card group">
+          <div class="gallery-card group">
               <img src="assets/gallery/globo1.png" alt="Globo Graduación" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
               <div class="gallery-card-overlay">
                 <span class="gallery-card-label">Arreglo Personalizable con Globo y Snacks</span>
@@ -2042,7 +2582,7 @@ Gracias por visitarnos, confiar en nuestro trabajo y rodear este sueño de perso
       <!-- CTA Instagram -->
       <div class="text-center mt-10">
         <a href="https://www.instagram.com/marmatstudio.cr/" target="_blank" rel="noopener noreferrer"
-           class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-lila text-white text-sm font-bold shadow-lila-soft hover:bg-lila-hover hover:scale-105 transition-all">
+          class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-lila text-white text-sm font-bold shadow-lila-soft hover:bg-lila-hover hover:scale-105 transition-all">
           <svg class="h-[18px] w-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.75" fill="currentColor" stroke="none"/></svg>
           Ver más en Instagram @marmatstudio.cr
         </a>
@@ -2127,12 +2667,12 @@ Gracias por visitarnos, confiar en nuestro trabajo y rodear este sueño de perso
           Hagamos realidad ese detalle que robará todas las miradas.
         </h2>
         <p class="text-lila-soft text-sm sm:text-lg max-w-xl mx-auto leading-relaxed">
-          Nuestro equipo de diseño floral y balloon artists está en línea para ayudarte a escoger cada detalle con calidez, distinción y puntualidad.
+          Nuestro equipo está en línea para ayudarte a escoger cada detalle con calidez, distinción y puntualidad.
         </p>
         <div class="pt-2">
           <a href="https://wa.me/50671653777?text=Hola%20Marmat%20Studio!%20Quisiera%20asesor%C3%ADa%20personalizada%20para%20crear%20un%20arreglo%20exclusivo" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white text-lila-dark hover:bg-surface text-sm sm:text-base font-bold shadow-2xl hover:scale-105 transition-all">
             <span class="material-symbols-outlined text-[22px] text-mint">chat</span>
-            <span>Conversar con Marmat Concierge en WhatsApp</span>
+            <span>Conversar con Marmat Studio en WhatsApp</span>
           </a>
         </div>
       </div>
@@ -2180,10 +2720,23 @@ Gracias por visitarnos, confiar en nuestro trabajo y rodear este sueño de perso
           <p class="text-sm text-gray-300 leading-relaxed">
             Cobertura garantizada en todo el país. Envíos programados a cada rincón de Costa Rica.
           </p>
-          <div class="rounded-2xl border border-white/10 bg-white/5 p-4 text-xs sm:text-sm text-gray-300">
-            <span class="mb-2 block font-semibold text-mint-light">Horario de Tienda & Entregas</span>
-            <p>Lunes a Domingo<br />8:00 AM - 6:00 PM</p>
-            <p class="mt-2">Atención por WhatsApp<br /><span class="text-white">+506 7165-3777</span></p>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-3 text-xs text-gray-300">
+            <span class="mb-2 block font-semibold text-mint-light">Horario de atención</span>
+            <dl class="space-y-1">
+              <div class="flex items-center justify-between gap-1">
+                <dt class="font-medium text-white"><span class="lg:hidden">Lunes a viernes</span><span class="hidden lg:inline">Lun. a vie.</span></dt>
+                <dd class="whitespace-nowrap">9:00 a. m. - 6:00 p. m.</dd>
+              </div>
+              <div class="flex items-center justify-between gap-1">
+                <dt class="font-medium text-white">Sábados</dt>
+                <dd class="whitespace-nowrap">9:00 a. m. - 5:00 p. m.</dd>
+              </div>
+              <div class="flex items-center justify-between gap-1">
+                <dt class="font-medium text-white">Domingos</dt>
+                <dd class="whitespace-nowrap">9:00 a. m. - 3:00 p. m.</dd>
+              </div>
+            </dl>
+            <p class="mt-2 flex items-center justify-between gap-2 border-t border-white/10 pt-2">WhatsApp <span class="whitespace-nowrap font-medium text-white">+506 7165-3777</span></p>
           </div>
         </div>
 
